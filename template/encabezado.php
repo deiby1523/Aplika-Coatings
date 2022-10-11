@@ -19,14 +19,29 @@
 </head>
 <body>
 
+<?php
+$Inicio = "Inicio";
+$Productos = "Productos";
+$Clientes = "Clientes";
+$Solicitud = "Solicitud";
+
+if (!isset($_GET['pag_actual'])) {
+    $_GET['pag_actual'] = $Inicio;
+}
+
+$Pagina = $_GET['pag_actual'];
+
+
+?>
+
 <header>
         <nav class="menu">
             <img src="img/logoAPK.png" alt="">
-            <ul>
-                <li><a class="underline" href="index.php">Inicio</a></li>
-                <li><a class="underline" href="pages/product.php">Productos</a></li>
-                <li><a class="underline" href="pages/client.php">Clientes</a></li>
-                <li><a class="underline" href="Datos_proyecto.php">Solicitud</a></li>
+            <ul><!---------------------------------->
+                <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: orange;'"); } ?> href="index.php?pag_actual=Inicio">Inicio</a></li>
+                <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: orange;'"); } ?> href="pages/product.php?pag_actual=Productos">Productos</a></li>
+                <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: orange;'"); } ?> href="pages/client.php?pag_actual=Clientes">Clientes</a></li>
+                <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: orange;'"); } ?> href="Datos_proyecto.php?pag_actual=Solicitud">Solicitud</a></li>
             </ul>
         </nav>
 </header>

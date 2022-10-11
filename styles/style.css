@@ -32,7 +32,7 @@ header ul li {
 }
 
 header ul li a {
-    color: white !important;
+    color: white ;
     background: transparent;
     position: relative;
     text-decoration: none;

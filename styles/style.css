@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* estilos generales del menu encabezado y pie de pagina  */
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #3d6076;
+    height: 80px;
+    table-layout: fixed;  
+}
+.menu img {
+   height: 50px;
+   width: 13rem;
+   margin: 0 12px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+header ul li a {
+    color: white !important;
+    background: transparent;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.menu nav h1{
+    display: none;
+}
+
+/* #meni{
+    width: 100%;
+    height: 100vh;
+    background-size: cover; */
+/* } */
+
+
+
+.menu .underline {
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul li .underline:hover {
+    color: #f28e2a !important;
+}
+
+.menu ul li .underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f28e2a;
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out;
+    margin-top: 2px;
+}
+
+.menu ul li .underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* fin de estilos geerales de encabezado y pie de pagina  */

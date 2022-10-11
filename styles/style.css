@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-
+    overflow: hidden;
 }
 
 /* estilos generales del menu encabezado y pie de pagina  */
@@ -22,6 +22,8 @@
 
 header ul {
     display: flex;
+    position: sticky;
+    top: 0;
 }
 
 header ul li {
@@ -37,10 +39,6 @@ header ul li a {
     letter-spacing: 0.5px;
     padding: 0 10px;
     font-size: 20px;
-}
-
-.menu nav h1{
-    display: none;
 }
 
 /* #meni{
@@ -68,9 +66,10 @@ header ul li a {
     height: 2px;
     bottom: 0;
     left: 0;
+    /* transition: .3s ease-out ; */
     background-color: #f28e2a;
     transform-origin: bottom right;
-    transition: transform 0.6s ease-out;
+    transition: transform 0.6s ease-out all;
     margin-top: 2px;
 }
 

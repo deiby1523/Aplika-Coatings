@@ -10,22 +10,22 @@
 <body>
 <div class="login-box">
   <img class="logoAPK" src="img/logoAPK.png">
-  <form>
+  <form method="POST" action="validar_usuario.php">
     <div class="user-box">
-      <input type="text" name="" required="">
+      <input type="text" name="username" required="">
       <label>Username</label>
     </div>
     <div class="user-box">
-      <input type="password" name="" required="">
+      <input type="password" name="password" required="">
       <label>Password</label>
     </div>
-    <a href="#">
+    <Button type="submit">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
       Ingresar
-    </a>
+    </Button>
   </form>
 </div>
 	

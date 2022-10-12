@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 11-10-2022 a las 21:11:17
+-- Tiempo de generación: 12-10-2022 a las 14:18:11
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.3.21
 
@@ -393,6 +393,27 @@ INSERT INTO `sika` (`id`, `codigo`, `producto`, `presentacion`, `precio`, `porce
 (137, '695798', 'Epoxifenolico Serie 45(AB)ocre', 6, 1684735, 55, 8),
 (138, '171273', 'Coaltar Epoxico (AB) CO', 5, 1195130, 80, 9),
 (139, '632844', 'Coaltar Epoxico (AB) CO', 1.25, 333970, 80, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin');
 
 --
 -- Restricciones para tablas volcadas

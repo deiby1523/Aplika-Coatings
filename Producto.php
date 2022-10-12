@@ -1,6 +1,6 @@
 <!----------Encabezado -------------->
 <?php
-include('template/encabezado.php');
+include("template/encabezado.php");
 ?>
 
 
@@ -11,7 +11,7 @@ include('template/encabezado.php');
 $db = 'recubrimientos';
 $host = 'localhost';
 $username = 'root';
-$password = '';
+$password = '123456';
 $dbname = 'recubrimientos';
 
 $conexion = mysqli_connect( $host, $username, $password ) or die ("No se ha podido conectar al servidor de Base de datos");

@@ -94,7 +94,6 @@
                                 <input class="camp-input">
                             </td>
                         </tr>
-                        
                 </table>
             </div>
             <!-- Datos del Proyecto ----------------------------------------------------------->

@@ -39,7 +39,7 @@ $Pagina = $_GET['pag_actual'];
             <img src="img/logoAPK.png" alt="">
             <ul><!---------------------------------->
                 <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: orange;'"); } ?> href="index.php?pag_actual=Inicio">Inicio</a></li>
-                <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: orange;'"); } ?> href="pages/product.php?pag_actual=Productos">Productos</a></li>
+                <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: orange;'"); } ?> href="pages/producto.php?pag_actual=Productos">Productos</a></li>
                 <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: orange;'"); } ?> href="pages/client.php?pag_actual=Clientes">Clientes</a></li>
                 <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: orange;'"); } ?> href="Datos_proyecto.php?pag_actual=Solicitud">Solicitud</a></li>
             </ul>

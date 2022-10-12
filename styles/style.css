@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 /* estilos generales del menu encabezado y pie de pagina  */
@@ -41,13 +40,6 @@ header ul li a {
     font-size: 20px;
 }
 
-/* #meni{
-    width: 100%;
-    height: 100vh;
-    background-size: cover; */
-/* } */
-
-
 
 .menu .underline {
     display: inline-block;
@@ -66,10 +58,9 @@ header ul li a {
     height: 2px;
     bottom: 0;
     left: 0;
-    /* transition: .3s ease-out ; */
+    transition: .3s ease-out all;
     background-color: #f28e2a;
     transform-origin: bottom right;
-    transition: transform 0.6s ease-out all;
     margin-top: 2px;
 }
 
@@ -79,3 +70,48 @@ header ul li a {
 }
 
 /* fin de estilos geerales de encabezado y pie de pagina  */
+
+
+/* estilos de Datos_proyecto.php */
+.form-data{
+    border: none !important;
+}
+
+.row .row-paket{
+    margin: 20px 0px 0px 35px;
+}
+
+.row .row-paket2{
+    margin: 20px 0px 0px 35px;
+}
+.row .row-paket2 .paket{
+    width:29.5%;
+}
+.row .row-paket3{
+    margin: 10px 0px 0px 35px;
+}
+
+.separador{
+    margin: 2rem;
+}
+
+.tb-tableGeneral{
+    margin: 10px 0px 0px 35px; 
+    font-size: 11px
+}
+
+.tb-tableGeneral table {
+    padding: 2rem;
+}
+.camp-input_Code{
+    width: 8%;
+}
+
+td .camp-input{
+    width: 100%;
+}
+
+div .container-button button{
+    float: right;
+    margin-right: 30px;
+}

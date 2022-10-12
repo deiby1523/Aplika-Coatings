@@ -1,13 +1,9 @@
 <?php include("template/encabezado.php"); ?>
 
 
-
-
-
-        <form method='POST' class='form-control' style='box-shadow: black -10px 12px 20px 0px;' action='sistemas.php'>
-            <!-- Datos del Proyecto ----------------------------------------------------------->
+        <form method='POST' class='form-control form-data' action='sistemas.php'>
             <div class="row">
-                <div class="row" style="margin: 20px 0px 0px 35px;">
+                <div class="row row-paket">
 
                     <div class="col-2">
                         <label for="proyecto_name" class="col-form-label">Nombre del Proyecto</label>
@@ -19,11 +15,11 @@
 
                 </div>
 
-                <div class="row" style="margin: 20px 0px 0px 35px;">                    
+                <div class="row row-paket2">                    
                     <div class="col-2">
                         <label for="empresa_nit" style="padding-top:10px;">NIT</label>
                     </div>
-                    <div class="col-3" style="width:29.5%;">
+                    <div class="col-3 paket">
                         <div class="input-group mb-3">
                             <input type="text" id="empresa_nit" class="form-control" name="empresa_nit">
                             <button class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -34,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="row" style="margin: 10px 0px 0px 35px;">
+                <div class="row row-paket3">
                     <div class="col-2">
                         <label for="empresa_name" class="col-form-label">Empresa</label>
                     </div>
@@ -47,10 +43,10 @@
             </div>
 
             
-            <br><br><br><br>
+           <hr class="separador">
             <!---------------------------------------------------------------------------------->
 
-            <div class="row" style="margin: 10px 0px 0px 35px; font-size: 11px">
+            <div class="row tb-tableGeneral">
                 <table class="table">
                     <thead">
                         <th >Código</th>
@@ -71,51 +67,44 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="width: 7%;">
-                                <input style="width: 100%;">
+                            <td class="camp-input_Code">
+                                <input class="camp-input">
                             </td>
-                            <td style="width: 10%;"></td>
+                            <td class="camp_name-product" style="width: 10%;"></td>
                             <td></td>
                             <td></td>
                             <td>
-                                <input style="width: 100%;">
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <input style="width: 100%;">
-                            </td>
-                            <td></td>
-                            <td>
-                                <input style="width: 100%;">
+                                <input class="camp-input">
                             </td>
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td>
+                                <input class="camp-input">
+                            </td>
                             <td></td>
                             <td>
-                                <input style="width: 100%;">
+                                <input class="camp-input">
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input class="camp-input">
                             </td>
                         </tr>
                         
                 </table>
             </div>
-
-<br><br><br><br>
-
-
-
-
-
+            <!-- Datos del Proyecto ----------------------------------------------------------->
+            
                 <div class="row">
-                    <div class="col-md-12">
-                        <button style="float:right; margin-right: 30px;" type="submit" class="btn btn-primary btn-md-4" name="submit">Siguiente</button>
+                    <div class="col-md-12 container-button">
+                        <button type="submit" class="btn btn-primary btn-md-4" name="submit">Siguiente</button>
                     </div>
                      
                 </div>
-                <br><br><br>
-
         </form>
 
 

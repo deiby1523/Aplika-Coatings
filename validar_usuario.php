@@ -1,3 +1,5 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <?php
   session_start();
    
@@ -20,12 +22,17 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
   $consulta = "SELECT * FROM user WHERE username='$username' AND password=SHA2('$password',256)";
   $resultado = mysqli_query($conexion,$consulta);
 
-  if (mysqli_num_rows($resultado) > 0) {
-      $_SESSION['username'] = $username;
-      header("Location: home.php"); 
-  } else{
-    echo 'El username o password es incorrecto, <a href="index.php">vuelva a intenarlo</a>.<br/>';
-  }
+  
+    
+      if (mysqli_num_rows($resultado) > 0) {
+        $_SESSION['username'] = $username;
+        header("Location: home.php"); 
+    } else{
+        header("location: index.php?error=true");
+    }
+  
 
  
 ?>
+
+

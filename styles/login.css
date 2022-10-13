@@ -89,7 +89,8 @@ html {
 	transition: .5s;
 	margin-top: 20px;
 	letter-spacing: 4px;
-	left: 87px;
+	left: 60px;
+	width: 10rem;
   }
   
   .login-box a:hover {
@@ -180,4 +181,9 @@ html {
 	50%,100% {
 	  bottom: 100%;
 	}
+  }
+
+  button{
+	background-color: transparent;
+	border: none;
   }

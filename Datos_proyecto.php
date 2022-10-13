@@ -1,52 +1,72 @@
 <?php include("template/encabezado.php"); ?>
 
+        <h1>Solicitud de sistema general</h1>
 
+        <hr class="separador">
+
+
+    <div class="container">
         <form method='POST' class='form-control form-data' action='sistemas.php'>
-            <div class="row">
-                <div class="row row-paket">
 
-                    <div class="col-2">
-                        <label for="proyecto_name" class="col-form-label">Nombre del Proyecto</label>
-                    </div>
-
-                    <div class="col-3">
-                        <input type="text" id="proyecto_name" name="proyecto_name" class="form-control">
-                    </div>
-
+            <div class="input-group">
+                <span class="input-group-text">Información de la Empresa</span>
+                <div class="row">
+                    <input type="text" aria-label="First name" placeholder="Nit" class="form-control">
+                    <input disabled type="text" aria-label="Last name" placeholder="Razon Social" class="form-control">
                 </div>
-
-                <div class="row row-paket2">                    
-                    <div class="col-2">
-                        <label for="empresa_nit" style="padding-top:10px;">NIT</label>
-                    </div>
-                    <div class="col-3 paket">
-                        <div class="input-group mb-3">
-                            <input type="text" id="empresa_nit" class="form-control" name="empresa_nit">
-                            <button class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+                <div class="row">
+                    <input disabled type="text" aria-label="Last name" placeholder="Direccion" class="form-control">
+                    <input disabled type="text" aria-label="Last name" placeholder="Telefono" class="form-control">
+                    <!--  -->
                 </div>
-
-                <div class="row row-paket3">
-                    <div class="col-2">
-                        <label for="empresa_name" class="col-form-label">Empresa</label>
-                    </div>
-
-                    <div class="col-4">
-                        <input type="text" id="empresa_name" class="form-control" name="empresa_name">
-                    </div>
-                </div>
-
+            </div>
+            <br>
+            <div class="input-group mb-2">
+                <label class="input-group-text" for="inputGroupSelect01">Asesor</label>
+                <select class="form-select" id="inputGroupSelect01" require>
+                  <option selected disabled></option>
+                  <option value="1">sergio</option>
+                  <option value="2">deiby</option>
+                  <option value="3">jovani</option>
+                </select>
+            </div>
+            <div class="input-group mb-2">
+                <label class="input-group-text" for="inputGroupSelect01">Marca</label>
+                <select class="form-select" id="inputGroupSelect01" require>
+                  <option selected disabled></option>
+                  <option value="1">xxx</option>
+                  <option value="2">xxx</option>
+                  <option value="3">xxx</option>
+                </select>
             </div>
 
+            <br><br>
+                <h2>Capa de imprimación</h2>
+            <br>
+            <div class="input-group">
+                <span class="input-group-text">Capa de imprimación</span>
+                <div class="row">
+                    <select class="form-select" id="inputGroupSelect01" require>
+                        <option selected disabled>Tipo</option>
+                        <option value="1">xxx</option>
+                        <option value="2">xxx</option>
+                        <option value="3">xxx</option>
+                    </select>
+                    <input disabled type="text" aria-label="Last name" placeholder="EPS" class="form-control">
+                </div>
+                <div class="row">
+                    <input disabled type="text" aria-label="Last name" placeholder="Desperdicio" class="form-control">
+                    <input disabled type="text" aria-label="Last name" placeholder="Area" class="form-control">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    
             
-           <hr class="separador">
             <!---------------------------------------------------------------------------------->
 
-            <div class="row tb-tableGeneral">
+            <div hidden class="row tb-tableGeneral">
                 <table class="table">
                     <thead">
                         <th >Código</th>
@@ -104,7 +124,6 @@
                     </div>
                      
                 </div>
-        </form>
 
 
 

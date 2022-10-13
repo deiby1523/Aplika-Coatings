@@ -125,3 +125,7 @@ div .container-button button{
     float: right;
     margin-right: 30px;
 }
+
+form div .center{
+    align-items: center;
+}

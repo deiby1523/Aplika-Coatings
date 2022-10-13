@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION["username"])) {
+    Header('Location: index.php');
+}
+    
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,6 +50,7 @@ $Pagina = $_GET['pag_actual'];
                 <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: orange;'"); } ?> href="producto.php?pag_actual=Productos">Productos</a></li>
                 <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: orange;'"); } ?> href="client.php?pag_actual=Clientes">Clientes</a></li>
                 <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: orange;'"); } ?> href="Datos_proyecto.php?pag_actual=Solicitud">Solicitud</a></li>
+                <li><a class="underline" href="cerrar_sesion.php">Salir</a></li>
             </ul>
         </nav>
 </header>

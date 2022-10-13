@@ -9,27 +9,23 @@
 
 $db = 'recubrimientos';
 $host = 'localhost';
-$username = 'root';
-$password = '123456';
+$db_username = 'root';
+$db_password = '123456';
 $dbname = 'recubrimientos';
 
-$conexion = mysqli_connect( $host, $username, $password ) or die ("No se ha podido conectar al servidor de Base de datos");
+$conexion = mysqli_connect( $host, $db_username, $db_password ) or die ("No se ha podido conectar al servidor de Base de datos");
 $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a la base de datos");
    
   // Consulta segura para evitar inyecciones SQL.
-  $consulta = "SELECT * FROM user WHERE username='$username' AND password= '$password'";
+  $consulta = "SELECT * FROM user WHERE username='$username' AND password=SHA2('$password',256)";
   $resultado = mysqli_query($conexion,$consulta);
-   
-  // Verificando si el usuario existe en la base de datos.
-  if($resultado){
-    // Guardo en la sesión el username del usuario.
-    $_SESSION['username'] = $username;
-     
-    // Redirecciono al usuario a la página principal del sitio.
-    //header("HTTP/1.1 302 Moved Temporarily"); 
-    header("Location: home.php"); 
-  }else{
+
+  if (mysqli_num_rows($resultado) > 0) {
+      $_SESSION['username'] = $username;
+      header("Location: home.php"); 
+  } else{
     echo 'El username o password es incorrecto, <a href="index.php">vuelva a intenarlo</a>.<br/>';
   }
+
  
 ?>

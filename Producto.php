@@ -18,7 +18,6 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
 
 
 # Consulta de productos desde la base de datos ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 $consulta = "SELECT `id`,`codigo`,`producto`,`presentacion`,`precio`,`porcentaje_solidos`, (SELECT categoria FROM categorias WHERE id = id_categoria) as categoria FROM sika";
 $productos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 

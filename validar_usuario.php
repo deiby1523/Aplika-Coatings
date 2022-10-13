@@ -29,7 +29,7 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
     //header("HTTP/1.1 302 Moved Temporarily"); 
     header("Location: home.php"); 
   }else{
-    echo 'El username o password es incorrecto, <a href="index.html">vuelva a intenarlo</a>.<br/>';
+    echo 'El username o password es incorrecto, <a href="index.php">vuelva a intenarlo</a>.<br/>';
   }
  
 ?>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 12-10-2022 a las 14:18:11
--- Versión del servidor: 5.7.31
--- Versión de PHP: 7.3.21
+-- Tiempo de generación: 13-10-2022 a las 17:54:43
+-- Versión del servidor: 8.0.27
+-- Versión de PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `categorias`;
 CREATE TABLE IF NOT EXISTS `categorias` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `categoria` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Volcado de datos para la tabla `categorias`
@@ -57,11 +57,11 @@ INSERT INTO `categorias` (`id`, `categoria`) VALUES
 
 DROP TABLE IF EXISTS `clientes`;
 CREATE TABLE IF NOT EXISTS `clientes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(200) NOT NULL,
-  `nit` bigint(15) NOT NULL,
+  `nit` bigint NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -78,15 +78,15 @@ INSERT INTO `clientes` (`id`, `nombre`, `nit`) VALUES
 
 DROP TABLE IF EXISTS `prueba_sika`;
 CREATE TABLE IF NOT EXISTS `prueba_sika` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `codigo` varchar(40) NOT NULL,
   `producto` varchar(100) NOT NULL,
   `presentacion` float NOT NULL,
-  `precio` int(11) NOT NULL,
-  `porcentaje_solidos` int(3) NOT NULL,
-  `id_categoria` int(10) NOT NULL,
+  `precio` int NOT NULL,
+  `porcentaje_solidos` int NOT NULL,
+  `id_categoria` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=140 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=140 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Volcado de datos para la tabla `prueba_sika`
@@ -239,13 +239,13 @@ INSERT INTO `prueba_sika` (`id`, `codigo`, `producto`, `presentacion`, `precio`,
 
 DROP TABLE IF EXISTS `sika`;
 CREATE TABLE IF NOT EXISTS `sika` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `codigo` varchar(40) NOT NULL,
   `producto` varchar(100) NOT NULL,
   `presentacion` float NOT NULL,
-  `precio` int(11) NOT NULL,
-  `porcentaje_solidos` int(3) NOT NULL,
-  `id_categoria` int(10) NOT NULL DEFAULT '1',
+  `precio` int NOT NULL,
+  `porcentaje_solidos` int NOT NULL,
+  `id_categoria` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `codigo` (`codigo`),
   KEY `Categoria` (`id_categoria`)
@@ -402,18 +402,20 @@ INSERT INTO `sika` (`id`, `codigo`, `producto`, `presentacion`, `precio`, `porce
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Volcado de datos para la tabla `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'admin');
+(1, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'),
+(2, 'jduarte', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
+(3, 'dprada', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92');
 
 --
 -- Restricciones para tablas volcadas

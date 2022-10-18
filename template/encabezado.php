@@ -51,6 +51,11 @@ $Pagina = $_GET['pag_actual'];
 
 ?>
 
+
+
+
+
+
 <header>
         <nav class="menu">
             <img src="img/logoAPK.png" href="home.php?pag_actual=Inicio">
@@ -58,7 +63,14 @@ $Pagina = $_GET['pag_actual'];
                 <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: #F28E2A;'"); } ?> href="home.php?pag_actual=Inicio"><i class="fa-solid fa-house"></i>&nbspInicio</a></li>
                 <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: #F28E2A;'"); } ?> href="producto.php?pag_actual=Productos"><i class="fa-brands fa-product-hunt"></i>&nbspProductos</a></li>
                 <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: #F28E2A;'"); } ?> href="clientes.php?pag_actual=Clientes"><i class="fa-solid fa-users"></i>&nbspClientes</a></li>
-                <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="Datos_proyecto.php?pag_actual=Solicitud">Solicitud <i class="fa-light fa-list-dropdown"></i></a></li>
+                <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="Datos_proyecto.php?pag_actual=Solicitud"><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>
+            
+                <ul>
+                    <li><a href="#">coopenesa</a></li>
+                </ul>
+            
+            
+            </li>
                 <li><a class="underline" href="cerrar_sesion.php">Salir &nbsp<i class="fa-solid fa-right-from-bracket"></i></a></li>
             </ul>
         </nav>

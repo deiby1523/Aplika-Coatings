@@ -7,7 +7,7 @@
 	--color-segundarioNaranjaClaro: #F8A556; 
 }
 
-*{
+body{
     margin: 0;
     padding: 0;
 }
@@ -50,6 +50,15 @@ header ul li a {
     font-size: 20px;
 }
 
+header .menu ul li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    
+}
+header .menu ul li:hover > ul{
+    display: block;
+}
 
 .menu .underline {
     display: inline-block;
@@ -102,7 +111,19 @@ header ul li a {
 }
 
 .separador{
-    margin: 2rem;
+    margin: 1rem;
+}
+
+.container{
+    margin-top: 3rem;
+    
+    overflow-x: hidden;
+}
+
+
+form h2{
+    margin-top: 50px ;
+    margin-bottom: 20px;
 }
 
 .tb-tableGeneral{
@@ -129,3 +150,40 @@ div .container-button button{
 form div .center{
     align-items: center;
 }
+
+h1  {
+    margin-top: 15px !important;
+    margin-left: 40px;
+}
+
+.form-control .disabled:disabled {
+    background-color: white;
+}
+div .add{
+    width: 40% ;
+}
+
+div .producto{
+    margin-top: 30px;
+    width: 54% ;
+}
+
+div .barrera{
+    width: 126%;
+}
+
+div .float-eps{
+    padding-left: 0;
+}
+
+div .form-select{
+    height: 58px;
+    width: 97%;
+}
+
+
+
+
+
+
+

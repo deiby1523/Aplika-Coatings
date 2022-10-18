@@ -127,7 +127,7 @@ header .menu ul li:hover > ul{
 
 .container{
     margin-top: 3rem;
-    
+    border: none    ;
     overflow-x: hidden;
 }
 
@@ -165,6 +165,10 @@ form div .center{
 h1  {
     margin-top: 15px !important;
     margin-left: 40px;
+}
+
+form{
+    border: none !important;
 }
 
 .form-control .disabled:disabled {

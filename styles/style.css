@@ -88,6 +88,17 @@ header .menu ul li:hover > ul{
     transform-origin: bottom left;
 }
 
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 190px;
+    background-color: rgba(0, 0, 0, .5);
+    margin-top: 30px;
+}
+
+.menu-vertical li:hover
+
 /* fin de estilos geerales de encabezado y pie de pagina  */
 
 
@@ -158,6 +169,7 @@ h1  {
 
 .form-control .disabled:disabled {
     background-color: white;
+    cursor: not-allowed;
 }
 div .add{
     width: 40% ;

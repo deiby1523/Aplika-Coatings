@@ -12,7 +12,7 @@
                 <span class="input-group-text">Información de la Empresa</span>
                 <div class="row">
                     <input type="text" aria-label="First name" placeholder="Nit" class="form-control">
-                    <input disabled type="text" aria-label="Last name" placeholder="Razon Social" class="form-control disabled">
+                    <input disabled type="text" aria-label="Last name" placeholder="Nombre " class="form-control disabled">
                 </div>
                 <div class="row">
                     <input disabled type="text" aria-label="Last name" placeholder="Direccion" class="form-control disabled">

@@ -61,14 +61,12 @@ $Pagina = $_GET['pag_actual'];
             <img src="img/logoAPK.png" href="home.php?pag_actual=Inicio">
             <ul><!---------------------------------->
                 <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: #F28E2A;'"); } ?> href="home.php?pag_actual=Inicio"><i class="fa-solid fa-house"></i>&nbspInicio</a></li>
-                <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: #F28E2A;'"); } ?> href="producto.php?pag_actual=Productos"><i class="fa-brands fa-product-hunt"></i>&nbspProductos</a></li>
-                <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: #F28E2A;'"); } ?> href="clientes.php?pag_actual=Clientes"><i class="fa-solid fa-users"></i>&nbspClientes</a></li>
+                <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: #F28E2A;'"); } ?> href="cliente.php?pag_actual=Clientes"><i class="fa-solid fa-users"></i>&nbspClientes</a></li>
                 <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>
             
                 <ul class="menu-vertical">
-                    <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="Datos_proyecto.php?pag_actual=Solicitud">Solicitud</a></li>
-                    <li><a class="underline" href="#">CSS</a></li>
-                    <li><a class="underline" href="#">JAVASCRIPT</a></li>
+                    <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="Datos_proyecto.php?pag_actual=Solicitud">Generales</a></li>
+                    <li><a class="underline" href="#">Especificos</a></li>
                 </ul>
             
             

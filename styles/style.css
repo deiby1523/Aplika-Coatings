@@ -92,12 +92,16 @@ header .menu ul li:hover > ul{
     position: absolute;
     display: none;
     list-style: none;
-    width: 190px;
+    width: 165px;
     background-color: rgba(0, 0, 0, .5);
     margin-top: 30px;
+    border-radius: 15px;
 }
 
-.menu-vertical li:hover
+.menu-vertical a{
+    position: absolute;
+    right: 40px;
+}
 
 /* fin de estilos geerales de encabezado y pie de pagina  */
 

@@ -27,6 +27,8 @@ if(!isset($_SESSION["username"])) {
 
     <!-- script de switAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- script de Jquery -->
     
     
     <!-- fontwamesomw -->

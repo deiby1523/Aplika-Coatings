@@ -1,9 +1,10 @@
 <?php include("template/encabezado.php"); ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="cliente/cliente.js"></script>
 
         <h1 class="titleDato">Solicitud de sistema general</h1>
 
         <hr class="separador">
-
 
     <div class="container">
         <form method='POST' class='form-control form-data' action='sistemas.php'>
@@ -11,12 +12,12 @@
             <div class="input-group texting">
                 <span class="input-group-text">Información de la Empresa</span>
                 <div class="row">
-                    <input type="text" aria-label="First name" placeholder="Nit" class="form-control">
-                    <input disabled type="text" aria-label="Last name" placeholder="Nombre " class="form-control disabled">
+                    <input type="text" aria-label="First name" placeholder="Nit" class="form-control" name="inputnit" id="inputnit">
+                    <input disabled type="text" aria-label="Last name" placeholder="Nombre " class="form-control disabled" id="nombre_cliente">
                 </div>
                 <div class="row">
-                    <input disabled type="text" aria-label="Last name" placeholder="Direccion" class="form-control disabled">
-                    <input disabled type="text" aria-label="Last name" placeholder="Telefono" class="form-control disabled">
+                    <input disabled type="text" aria-label="Last name" placeholder="Direccion" class="form-control disabled" id="direccion_cliente">
+                    <input disabled type="text" aria-label="Last name" placeholder="Telefono" class="form-control disabled" id="telefono_cliente">
                     
                 </div>
             </div>
@@ -41,6 +42,9 @@
             </div>
 
                 <h2 >Capa de imprimación</h2>
+                <br>
+                
+                <br>
 
             <div class="input-group imprimacion">
                 <span class="input-group-text">Capa de imprimación</span>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 19-10-2022 a las 13:16:50
--- Versión del servidor: 5.7.31
--- Versión de PHP: 7.3.21
+-- Tiempo de generación: 19-10-2022 a las 21:13:24
+-- Versión del servidor: 8.0.27
+-- Versión de PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,13 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `asesores`
+--
+
+DROP TABLE IF EXISTS `asesores`;
+CREATE TABLE IF NOT EXISTS `asesores` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+
+--
+-- Volcado de datos para la tabla `asesores`
+--
+
+INSERT INTO `asesores` (`id`, `nombre`) VALUES
+(1, 'Juan Manuel Arenas'),
+(2, 'Edwin Javier Duran'),
+(3, 'Juan David Duarte Duran');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `clientes`
 --
 
 DROP TABLE IF EXISTS `clientes`;
 CREATE TABLE IF NOT EXISTS `clientes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nit` bigint(20) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nit` bigint NOT NULL,
   `nombre` varchar(200) NOT NULL,
   `celular` varchar(100) NOT NULL,
   `correo` varchar(120) NOT NULL,
@@ -38,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `ciudad` varchar(120) NOT NULL,
   `direccion` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -101,7 +123,8 @@ INSERT INTO `clientes` (`id`, `nit`, `nombre`, `celular`, `correo`, `departament
 (54, 1038404574, 'CRISTIAN CAMILO DUQUE GALLEGO', '...', '...', 'Boyacá', 'Puerto Boyacá', 'CR 3  3  12'),
 (55, 1038419012, 'MARIA ISABEL BURITICA CLAVIJO', '...', '...', 'Sucre', 'Sincelejo', 'CR 19  23  61 CEN'),
 (56, 1042417842, 'LAURENS MARIA BOLIVAR MEZA', '...', '...', 'Atlántico', 'Barranquilla', 'CR 50  76  82'),
-(57, 1042428494, 'SHIRLEY PAOLA NIEBLES NAVARRO NIEBLES NAVARRO', '...', '...', 'Santander', 'Bucaramanga', 'ALMIRANTE COLON MZ U LT 14 SEGUNTA ETAPA');
+(57, 1042428494, 'SHIRLEY PAOLA NIEBLES NAVARRO NIEBLES NAVARRO', '...', '...', 'Santander', 'Bucaramanga', 'ALMIRANTE COLON MZ U LT 14 SEGUNTA ETAPA'),
+(58, 123456789, 'Ecopetrol Colombia', '3003214567', 'ecopetrol@gmail.com', 'Santander', 'Bucaramanga', 'Carrera 49 #45-03');
 
 -- --------------------------------------------------------
 
@@ -111,7 +134,7 @@ INSERT INTO `clientes` (`id`, `nit`, `nombre`, `celular`, `correo`, `departament
 
 DROP TABLE IF EXISTS `productos`;
 CREATE TABLE IF NOT EXISTS `productos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `referencia` varchar(100) NOT NULL,
   `marca` varchar(100) NOT NULL,
   `producto` varchar(120) NOT NULL,
@@ -122,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `relacion_mezcla` varchar(120) NOT NULL,
   `resina` varchar(100) NOT NULL,
   `endurecedor` varchar(100) NOT NULL,
-  `solidos` int(11) NOT NULL,
+  `solidos` int NOT NULL,
   `disolvente` varchar(100) NOT NULL,
   `eps` varchar(100) NOT NULL,
   `vida_mezcla` varchar(100) NOT NULL,
@@ -130,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `repintabilidad` varchar(100) NOT NULL,
   `preparacion_superficie` varchar(120) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=536 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=536 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Volcado de datos para la tabla `productos`
@@ -683,11 +706,11 @@ INSERT INTO `productos` (`id`, `referencia`, `marca`, `producto`, `tipo`, `capa`
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL,
   `password` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Volcado de datos para la tabla `user`

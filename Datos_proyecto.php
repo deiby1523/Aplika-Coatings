@@ -181,6 +181,76 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
 
 
 
+
+
+
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        <h2>Capa Acabado.</h2>
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+
+      <div class="input-group ">
+                <span class="input-group-text">  Capa de Acabado  </span>
+                <div class="row">
+                    <select class="form-select" id="inputGroupSelect01" require>
+                        <option selected disabled>Tipo</option>
+                        <option value="1">Zinc inorg</option>
+                        <option value="2">Zinc org</option>
+                        <option value="3">Epoxifenocol</option>
+                    </select>
+                    <div class="form-floating float-eps">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                        <label for="floatingInputGroup1">Espesor de pelicula seca</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-floating float-eps">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                        <label for="floatingInputGroup1">Desperdicio</label>
+                    </div>
+                    <div class="form-floating float-eps">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                        <label for="floatingInputGroup1">Area</label>
+                    </div>
+                </div>
+                <div class="input-group producto mb-2">
+                    <label class="input-group-text " for="inputGroupSelect01">Producto</label>
+                    <select class="form-select" id="inputGroupSelect01" require>
+                        <option selected disabled></option>
+                        <option value="1">sergio</option>
+                        <option value="2">deiby</option>
+                        <option value="3">jovani</option>
+                    </select>
+                </div>
+            </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </form>
     </div>
 

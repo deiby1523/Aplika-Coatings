@@ -101,6 +101,7 @@ header .menu ul li:hover > ul{
 .menu-vertical a{
     position: absolute;
     right: 40px;
+    margin-bottom: 5px;
 }
 
 /* fin de estilos geerales de encabezado y pie de pagina  */

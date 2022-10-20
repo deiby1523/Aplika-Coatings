@@ -35,15 +35,15 @@ if(isset($_POST['marca']) && isset($_POST['solidos'])){
     $marca = $_POST['marca'];
 
     $consulta = "SELECT * FROM productos Where capa = 'imprimante' AND marca = '$marca' AND solidos >= $min AND solidos <= $max";
-    $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-    
+    $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");   
     if (mysqli_num_rows($resultado) > 0 ) {
         while ($producto = mysqli_fetch_array($resultado)) {
             
             ?>
             <option value='<?php echo $producto['referencia']; ?>'> <?php echo $producto['producto']; ?></option>";
             <?php
-        }  
+        }
+        echo "<option> --------- Sin Imprimación --------- </option>"; 
     } else {
     echo "";
     }

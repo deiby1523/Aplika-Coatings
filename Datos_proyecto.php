@@ -99,7 +99,7 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                 <div class="input-group producto mb-2">
                     <label class="input-group-text " for="select_imprimante">Producto</label>
                     <select class="form-select" id="select_imprimante" require>
-                        <option selected disabled></option>
+                        
                     </select>
                 </div>
             </div>
@@ -109,11 +109,11 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
             <div class="input-group barrera">
                 <span class="input-group-text">  Capa de Barrera  </span>
                 <div class="row">
-                    <select class="form-select" id="inputGroupSelect01" require>
+                    <select class="form-select" id="select_tipobar" require>
                         <option selected disabled>Tipo</option>
-                        <option value="1">Zinc inorg</option>
-                        <option value="2">Zinc org</option>
-                        <option value="3">Epoxifenocol</option>
+                        <option value="1">Barrera</option>
+                        <option value="2">Autoimprimante</option>
+                        <option value="3">Especial</option>
                     </select>
                     <div class="form-floating float-eps">
                         <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
@@ -131,12 +131,10 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                     </div>
                 </div>
                 <div class="input-group producto mb-2">
-                    <label class="input-group-text " for="inputGroupSelect01">Producto</label>
-                    <select class="form-select" id="inputGroupSelect01" require>
+                    <label class="input-group-text " for="select_barrera">Producto</label>
+                    <select class="form-select" id="select_barrera" require>
                         <option selected disabled></option>
-                        <option value="1">sergio</option>
-                        <option value="2">deiby</option>
-                        <option value="3">jovani</option>
+
                     </select>
                 </div>
             </div>
@@ -147,11 +145,12 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
             <div class="input-group ">
                 <span class="input-group-text">  Capa de Acabado  </span>
                 <div class="row">
-                    <select class="form-select" id="inputGroupSelect01" require>
+                    <select class="form-select" id="select_tipobase" require>
                         <option selected disabled>Tipo</option>
-                        <option value="1">Zinc inorg</option>
-                        <option value="2">Zinc org</option>
-                        <option value="3">Epoxifenocol</option>
+                        <option value="1">Alquidica</option>
+                        <option value="2">Epóxica</option>
+                        <option value="3">Poliuretano</option>
+                        <option value="4">Acrílica</option>
                     </select>
                     <div class="form-floating float-eps">
                         <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
@@ -169,12 +168,10 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                     </div>
                 </div>
                 <div class="input-group producto mb-2">
-                    <label class="input-group-text " for="inputGroupSelect01">Producto</label>
-                    <select class="form-select" id="inputGroupSelect01" require>
+                    <label class="input-group-text " for="select_acabado">Producto</label>
+                    <select class="form-select" id="select_acabado" require>
                         <option selected disabled></option>
-                        <option value="1">sergio</option>
-                        <option value="2">deiby</option>
-                        <option value="3">jovani</option>
+
                     </select>
                 </div>
             </div>

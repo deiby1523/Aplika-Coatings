@@ -10,6 +10,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: ubuntu, sans-serif;
 }
 
 /* estilos generales del menu encabezado y pie de pagina  */
@@ -202,9 +203,27 @@ div .form-select{
     width: 97%;
 }
 
+form .input-group  span{
+    background: var(--color-segundarioGrisClaro2);
+    color: var(--color-segundarioGrisOscuro);
+    border-radius: 12px;
+}
 
+form .input-group .amp{
+    background: var(--color-segundarioGrisClaro2);
+    color: var(--color-segundarioGrisOscuro);
+    border-radius: 12px;
+}
+.accordion .accordion-item .accordion-button:notx(.collapsed){
+    background: var(--color-segundarioNaranjaClaro)!important;
+}
 
+.accordion .accordion-item .accordion-button:not(.collapsed) {
+    color: white;
+    background: var(--color-segundarioNaranjaClaro);
+    border-radius: 10px;
+}
 
-
-
-
+.accordion .accordion-item .accordion-button:focus {
+    box-shadow: none;
+}

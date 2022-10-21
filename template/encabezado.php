@@ -66,7 +66,7 @@ $Pagina = $_GET['pag_actual'];
                 <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>
             
                 <ul class="menu-vertical">
-                    <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="Datos_proyecto.php?pag_actual=Solicitud">Generales</a></li>
+                    <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="sistema_general.php?pag_actual=Solicitud">Generales</a></li>
                     <li><a class="underline" href="#">Especificos</a></li>
                 </ul>
             

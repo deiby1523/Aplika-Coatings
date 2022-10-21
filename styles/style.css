@@ -108,7 +108,7 @@ header .menu ul li:hover > ul{
 /* fin de estilos geerales de encabezado y pie de pagina  */
 
 
-/* estilos de Datos_proyecto.php */
+/* --------------------------------------------------- estilos de sistema_general.php ---------------------------------------------- */
 .form-data{
     border: none !important;
 }
@@ -227,3 +227,29 @@ form .input-group .amp{
 .accordion .accordion-item .accordion-button:focus {
     box-shadow: none;
 }
+
+/* --------------------------------------------------- fin estilos de sistema_general.php ---------------------------------------------- */
+
+
+
+/* --------------------------------------------------- estilos de listar-cliente ------------------------------------------------------- */
+
+form .g-2, .gy-2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

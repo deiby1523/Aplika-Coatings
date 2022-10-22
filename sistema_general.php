@@ -68,11 +68,11 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                   <option value="International Paint">International Paint</option>
                 </select>
             </div>
+            <br><br><br>
 
-
-            <div class="check form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Misma Áera para todo</label>
+            <div class="input-group add mb-2" style="height: 60px;">
+                <label class="input-group-text amp" for="area" style="width: 17%;"><strong>Area</strong></label>
+                <input type="text" class="form-control" id="area">
             </div>
 
             
@@ -116,10 +116,7 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                         <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
                         <label for="floatingInputGroup1">Desperdicio</label>
                     </div>
-                    <div class="form-floating float-eps">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-                        <label for="floatingInputGroup1">Area</label>
-                    </div>
+                    
                 </div>
 
                 <div class="input-group producto mb-2">
@@ -159,10 +156,6 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                         <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
                         <label for="floatingInputGroup1">Desperdicio</label>
                     </div>
-                    <div class="form-floating float-eps">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-                        <label for="floatingInputGroup1">Area</label>
-                    </div>
                 </div>
                 <div class="input-group producto mb-2">
                     <label class="input-group-text amp" for="select_barrera"><strong>Producto</strong></label>
@@ -201,10 +194,6 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                     <div class="form-floating float-eps">
                         <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
                         <label for="floatingInputGroup1">Desperdicio</label>
-                    </div>
-                    <div class="form-floating float-eps">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-                        <label for="floatingInputGroup1">Area</label>
                     </div>
                 </div>
                 <div class="input-group producto mb-2">

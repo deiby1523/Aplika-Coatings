@@ -43,8 +43,8 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                     <input disabled type="text" aria-label="Last name" placeholder="Telefono" class="form-control disabled" id="telefono_cliente">
                 </div>
                 <div class="col-3">
-                    <input disabled type="text" aria-label="Last name" placeholder="Departamento" class="form-control disabled" id="direccion_cliente">
-                    <input disabled type="text" aria-label="Last name" placeholder="Correo" class="form-control disabled" id="telefono_cliente">
+                    <input disabled type="text" aria-label="Last name" placeholder="Departamento" class="form-control disabled" id="dep_cliente">
+                    <input disabled type="text" aria-label="Last name" placeholder="Correo" class="form-control disabled" id="correo_cliente">
                 </div>
             </div>
             <br>

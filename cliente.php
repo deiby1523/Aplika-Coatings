@@ -84,7 +84,7 @@ $productos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en l
 		</div>
         <div class="col-md-6">
 			<div class="d-grid gap-2">
-				<a class="btn btn-succes" href="crear_cliente.php" style="background-color: #F28E2A; color:white; float: right">Crear Cliente</a>
+				<a class="btn btn-succes" href="crear_cliente.php?pag_actual=Crear Cliente" style="background-color: #F28E2A; color:white; float: right">Crear Cliente</a>
         	</div>
 		</div>
 		

@@ -16,7 +16,7 @@ if(isset($_POST['nit'])){
         $cliente = mysqli_fetch_array($resultado);  
         echo $cliente['celular'];
     } else {
-    echo "No se ha encontrado el cliente";
+    echo "...";
     }
 } else {
     echo "";

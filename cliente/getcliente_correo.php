@@ -14,7 +14,7 @@ if(isset($_POST['nit'])){
     $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
     if (mysqli_num_rows($resultado) > 0 ) {
         $empresa = mysqli_fetch_array($resultado);  
-        echo $empresa['direccion'];
+        echo $empresa['correo'];
     } else {
     echo "...";
     }

@@ -87,3 +87,64 @@ $(document).on('keyup', '#inputnit', function()
         obtener_cliente_direccion();
     }
 });
+
+
+$(obtener_cliente_departamento());
+
+function obtener_cliente_departamento(nit)
+{
+    $.ajax({
+        url : 'cliente/getcliente_departamento.php',
+        type : 'POST',
+        dataType : 'HTML',
+        data : { nit : nit },
+    })
+
+    .done(function(departamento){
+        var departamento_c = document.getElementById("dep_cliente");
+        departamento_c.value = departamento;
+    })
+}
+
+$(document).on('keyup', '#inputnit', function()
+{
+    var valorBusqueda = $(this).val();
+    if (valorBusqueda != "")
+    {
+        obtener_cliente_departamento(valorBusqueda);
+    }
+    else
+    {
+        obtener_cliente_departamento();
+    }
+});
+
+$(obtener_cliente_correo());
+
+function obtener_cliente_correo(nit)
+{
+    $.ajax({
+        url : 'cliente/getcliente_correo.php',
+        type : 'POST',
+        dataType : 'HTML',
+        data : { nit : nit },
+    })
+
+    .done(function(correo){
+        var correo_c = document.getElementById("correo_cliente");
+        correo_c.value = correo;
+    })
+}
+
+$(document).on('keyup', '#inputnit', function()
+{
+    var valorBusqueda = $(this).val();
+    if (valorBusqueda != "")
+    {
+        obtener_cliente_correo(valorBusqueda);
+    }
+    else
+    {
+        obtener_cliente_correo();
+    }
+});

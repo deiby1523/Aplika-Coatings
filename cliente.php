@@ -17,10 +17,28 @@ if (isset($_GET['msg'])){
 	</div>
 
 <?php
-} else {
+} elseif ($_GET['msg'] == 'error') {
 	?>
 	<div class="alert alert-danger alert-dismissible fade show" style="margin-top: -4.6%; width: 31%; z-index: 6; position: fixed; display: grid; margin-left: 67%;" role="alert">
 	  <strong>Error</strong>Ocurrio un error al momento de crear el cliente...
+	  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+
+<?php
+
+} elseif ($_GET['msg'] == 'errorb') {
+	?>
+	<div class="alert alert-danger alert-dismissible fade show" style="margin-top: -4.6%; width: 31%; z-index: 6; position: fixed; display: grid; margin-left: 67%;" role="alert">
+	  <strong>Error</strong>Ocurrio un error, no fue posible eliminar el cliente...
+	  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+
+<?php
+
+} elseif ($_GET['msg'] == 'okb') {
+	?>
+	<div class="alert alert-success alert-dismissible fade show" style="margin-top: -4.6%; width: 31%; z-index: 6; position: fixed; display: grid; margin-left: 67%;" role="alert">
+	  <strong>Se ha eliminado el cliente</strong>El cliente fue borrado satisfactoriamente de la base de datos...
 	  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	</div>
 
@@ -66,7 +84,7 @@ $productos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en l
 		</div>
         <div class="col-md-6">
 			<div class="d-grid gap-2">
-				<a class="btn btn-succes" href="crear_cliente.php" style="background-color: #ff7c00; color:white; float: right">Crear Cliente</a>
+				<a class="btn btn-succes" href="crear_cliente.php" style="background-color: #F28E2A; color:white; float: right">Crear Cliente</a>
         	</div>
 		</div>
 		
@@ -97,7 +115,7 @@ $productos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en l
 			while ($columna = mysqli_fetch_array( $productos))
 			{
 				echo "<tr>";
-				echo "<td>" . $columna['nit'] . "</td><td>" . $columna['nombre'] . "</td><td>" . $columna['celular'] . "</td><td>" . $columna['correo'] . "</td><td>" . $columna['departamento'] . "</td><td>" . $columna['ciudad'] . "</td><td>" . $columna['direccion'] . "</td><td><a href='#' class='btn'><i class='fa-solid fa-pencil'></i></a><a href='#' class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
+				echo "<td>" . $columna['nit'] . "</td><td>" . $columna['nombre'] . "</td><td>" . $columna['celular'] . "</td><td>" . $columna['correo'] . "</td><td>" . $columna['departamento'] . "</td><td>" . $columna['ciudad'] . "</td><td>" . $columna['direccion'] . "</td><td><a href='editar_cliente.php?id=".$columna['id']."'"." class='btn'><i class='fa-solid fa-pencil'></i></a><a href='eliminar_cliente.php?id=".$columna['id']."'"." class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
 				echo "</tr>";
 			}
 

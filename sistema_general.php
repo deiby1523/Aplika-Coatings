@@ -98,7 +98,8 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                 <span class="input-group-text"><strong>Capa de imprimación</strong></span>
                 <div class="row">
                     <select class="form-select " id="select_solidos" required>
-                        <option selected disabled>Porcentaje de Solidos</option>
+                        <option value="0" selected>Porcentaje de Solidos</option>
+                        <option value="0">Cualquier %</option>
                         <option value="1">45% - 50%</option>
                         <option value="2">50% - 60%</option>
                         <option value="3">60% - 70%</option>
@@ -113,8 +114,8 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                 </div>
                 <div class="row">
                 <div class="form-floating float-eps">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-                        <label for="floatingInputGroup1">Desperdicio</label>
+                        <input value="30"type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                        <label for="floatingInputGroup1">Desperdicio (%)</label>
                     </div>
                     
                 </div>
@@ -153,8 +154,8 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                 </div>
                 <div class="row">
                 <div class="form-floating float-eps">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-                        <label for="floatingInputGroup1">Desperdicio</label>
+                    <input value="30" type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                        <label for="floatingInputGroup1">Desperdicio (%)</label>
                     </div>
                 </div>
                 <div class="input-group producto mb-2">
@@ -192,8 +193,8 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                 </div>
                 <div class="row">
                     <div class="form-floating float-eps">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-                        <label for="floatingInputGroup1">Desperdicio</label>
+                    <input value="30" type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                        <label for="floatingInputGroup1">Desperdicio (%)</label>
                     </div>
                 </div>
                 <div class="input-group producto mb-2">

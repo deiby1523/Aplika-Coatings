@@ -20,7 +20,7 @@ $(document).on('change', '#select_solidos', function()
 {
     var marca = $("#select_marca").val();
     var solidos = $("#select_solidos").val();
-    if (marca != "0" && solidos != "0")
+    if (marca != "0")
     {
         obtener_imprimante(marca,solidos);
     }
@@ -34,7 +34,7 @@ $(document).on('change','#select_marca', function()
 {
     var marca = $("#select_marca").val();
     var solidos = $("#select_solidos").val();
-    if (marca != "0" && solidos != "0")
+    if (marca != "0")
     {
         obtener_imprimante(marca,solidos);
     }

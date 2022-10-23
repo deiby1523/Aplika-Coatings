@@ -11,7 +11,10 @@ $conexion = mysqli_connect( $host, $username, $password ) or die ("No se ha podi
 $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a la base de datos");
 if(isset($_POST['marca']) && isset($_POST['solidos'])){
     $solidos = $_POST['solidos'];
-    if ($solidos == "1") {
+    if ($solidos == "0") {
+        $min = 45;
+        $max = 100;
+    }elseif ($solidos == "1") {
         $min = 45;
         $max = 50;
     } elseif ($solidos == "2") {
@@ -34,13 +37,13 @@ if(isset($_POST['marca']) && isset($_POST['solidos'])){
 
     $marca = $_POST['marca'];
 
-    $consulta = "SELECT * FROM productos Where capa = 'imprimante' AND marca = '$marca' AND solidos >= $min AND solidos <= $max";
+    $consulta = "SELECT * FROM productos Where (capa = 'imprimante' or capa = 'autoimprimante') AND (marca = '$marca') AND (solidos >= $min AND solidos <= $max)";
     $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");   
     if (mysqli_num_rows($resultado) > 0 ) {
         while ($producto = mysqli_fetch_array($resultado)) {
             
             ?>
-            <option value='<?php echo $producto['referencia']; ?>'> <?php echo $producto['producto']; ?></option>";
+            <option value='<?php echo $producto['referencia']; ?>'> <?php echo $producto['producto']; ?> - (<?php echo $producto['presentacion']; ?> GAL)</option>";
             <?php
         }
         echo "<option> --------- Sin Imprimación --------- </option>"; 

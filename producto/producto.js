@@ -12,7 +12,7 @@ function obtener_imprimante(marca,solidos)
     })
 
     .done(function(productos){
-        $("#select_imprimante").html(productos)
+        $("#select_imprimante").html(productos);
     })
 }
 
@@ -54,7 +54,7 @@ function obtener_barrera(marca,tipo)
     })
 
     .done(function(productos){
-        $("#select_barrera").html(productos)
+        $("#select_barrera").html(productos);
     })
 }
 
@@ -97,7 +97,7 @@ function obtener_acabado(marca,base)
     })
 
     .done(function(productos){
-        $("#select_acabado").html(productos)
+        $("#select_acabado").html(productos);
     })
 }
 

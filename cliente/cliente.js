@@ -148,3 +148,32 @@ $(document).on('keyup', '#inputnit', function()
         obtener_cliente_correo();
     }
 });
+
+$(obtener_cliente_tabla());
+
+function obtener_cliente_tabla(busqueda)
+{
+    $.ajax({
+        url : 'cliente/getcliente.php',
+        type : 'POST',
+        dataType : 'HTML',
+        data : { busqueda : busqueda },
+    })
+
+    .done(function(clientes){
+        $("#tabla_clientes").html(clientes);
+    })
+}
+
+$(document).on('keyup', '#busqueda_cliente', function()
+{
+    var valorbusqueda = $('#busqueda_cliente').val();
+    if (valorbusqueda != "")
+    {
+        obtener_cliente_tabla(valorbusqueda);
+    }
+    else
+    {
+        obtener_cliente_tabla();
+    }
+});

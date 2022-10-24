@@ -62,7 +62,7 @@ $(document).on('change', '#select_marca', function()
 {
     var marca = $("#select_marca").val();
     var tipo = $("#select_tipobar").val();
-    if (marca != "0" && tipo != "0")
+    if (marca != "0")
     {
         obtener_barrera(marca,tipo);
     }
@@ -76,7 +76,7 @@ $(document).on('change', '#select_tipobar', function()
 {
     var marca = $("#select_marca").val();
     var tipo = $("#select_tipobar").val();
-    if (marca != "0" && tipo != "0")
+    if (marca != "0")
     {
         obtener_barrera(marca,tipo);
     }
@@ -105,7 +105,7 @@ $(document).on('change', '#select_marca', function()
 {
     var marca = $("#select_marca").val();
     var base = $("#select_tipobase").val();
-    if (marca != "0" && base != "0")
+    if (marca != "0")
     {
         obtener_acabado(marca,base);
     }
@@ -119,7 +119,7 @@ $(document).on('change', '#select_tipobase', function()
 {
     var marca = $("#select_marca").val();
     var base = $("#select_tipobase").val();
-    if (marca != "0" && base != "0")
+    if (marca != "0")
     {
         obtener_acabado(marca,base);
     }

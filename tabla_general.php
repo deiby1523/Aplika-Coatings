@@ -6,6 +6,8 @@
 
 $cod_imprimante = $_POST['imprimante'];
 $imprimante_espesor = $_POST['imprimante_espesor'];
+$imprimante_desperdicio = $_POST['imprimante_desperdicio'];
+$imprimante_area = $_POST['area'];
 
 # Conexion con la base de datos --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -31,7 +33,7 @@ var_dump( $_POST );
 ?>
 
 <div class="container">
-    <table class='table table-hover table-striped-columns' id='tabla_clientes' style='width: 100%; margin: 0%'>
+    <table class='table table-hover table-striped-columns' style='width: 100%; margin: 0%'>
 	<thead>
 		<tr>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Código</th>
@@ -39,10 +41,10 @@ var_dump( $_POST );
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Presentacion</th>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Solidos % </th>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>EPS(Mils)</th>
-			<th style='text-align: center; vertical-align: middle;'>Rendimiento Teórico</th>
-			<th style='text-align: center; vertical-align: middle;'>Rendimiento Práctico</th>
-			<th style='text-align: center; vertical-align: middle;' >Desperdicio</th>
-            <th style='text-align: center; vertical-align: middle;'>Area</th>
+			<th style='text-align: center; vertical-align: middle;'>Rendimiento Teórico Mts2/GAL</th>
+            <th style='text-align: center; vertical-align: middle;'>Desperdicio</th>
+			<th style='text-align: center; vertical-align: middle;'>Rendimiento Práctico Mt2/GAL</th>
+            <th style='text-align: center; vertical-align: middle;' class='col-sm-2'>Area</th>
             <th style='text-align: center; vertical-align: middle;'>Cantidad de galones</th>
             <th style='text-align: center; vertical-align: middle;'>Cantidad de Unidades</th>
 		</tr>
@@ -54,9 +56,27 @@ var_dump( $_POST );
             echo "<td>" . $cod_imprimante . "</td>";
             echo "<td>" . $imprimante['producto'] . "</td>";
             echo "<td>" . $imprimante['presentacion'] . "</td>";
-            echo "<td>" . $imprimante['solidos'] . "</td>";
+            echo "<td id='imprimante_solidos'>" . $imprimante['solidos'] . "</td>";
+
+
+
             echo "<td><input id='imprimante_espesor' type='number' class='form-control' value='" . $imprimante_espesor. "'></td>";
-            echo "<td><input disabled class='form-control' id='rendimiento_teorico'></td>";
+      
+            echo "<td><input disabled class='form-control' id='imprimante_rendimiento_teorico'></td>";
+
+            echo "<td><input id='imprimante_desperdicio' type='number' class='form-control' value='" . $imprimante_desperdicio. "'></td>";
+
+            echo "<td><input disabled class='form-control' id='imprimante_rendimiento_practico'></td>";
+
+            echo "<td><input id='imprimante_area' type='number' class='form-control' value='" . $imprimante_area. "'></td>";
+
+            echo "<td><input disabled class='form-control' id='imprimante_galones'></td>";
+
+
+
+
+
+
 
 
             echo "</tr>";
@@ -74,5 +94,4 @@ var_dump( $_POST );
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="cliente/cliente.js"></script>
-<script src="producto/producto.js"></script>
+<script src="tabla.js"></script>

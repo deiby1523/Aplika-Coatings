@@ -71,21 +71,20 @@
             </div>
         </div>
         
-        <div class="row">
+        <div class="row button_cancelarCliente">
             <div class="col-md-6">
                 <div class="d-grid gap-2">
-		    		<a class="btn btn-danger" href="cliente.php" style="background-color: #b70000; color:white; float: right">Cancelar</a>
+		    		<a class="btn btn-danger" href="cliente.php">Cancelar</a>
             	</div>
 		    </div>
             <div class="col-md-6">
 		    	<div class="d-grid gap-2">
-		    		<button class="btn btn-succes" type="submit" style="background-color: #F28E2A; color:white; float: right">Crear Cliente</button>
+		    		<button class="btn btn-succes" type="submit">Crear Cliente</button>
             	</div>
 		    </div>
         </div>
     </div>
 </form>
-<br><br><br>
 
 
 <?php include("template/pie.php");?>

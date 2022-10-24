@@ -250,6 +250,10 @@ form .g-2, .gy-2{
 
 /* --------------------------------------------------- estilos de crear_cliente ------------------------------------------------------- */
 
+form{
+    margin-bottom: 3rem;
+}
+
 form .container .div_direccion{
     height: 100px;
     margin-bottom: 3rem;
@@ -259,6 +263,17 @@ form .container .div_direccion div input{
     height: 100px;
 }
 
+form .container .button_cancelarCliente div a{
+    background-color: #b70000; 
+    color:white; 
+    float: right
+}
+
+form .container .button_cancelarCliente div button{
+    background-color: var(--color-principalNaranja); 
+    color:white; 
+    float: right
+}
 
 
 

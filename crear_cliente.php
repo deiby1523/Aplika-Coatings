@@ -62,26 +62,26 @@
         </div>
 
 
-        <div class="row form-client" style="height: 100px;">
+        <div class="row form-client div_direccion">
             <div class="col-md">
                 <div class="form-floating">
-                   <input style="height: 100px;"type="text" class="form-control" id="floatingInputGrid" name="dir" required>
+                   <input type="text" class="form-control" id="floatingInputGrid" name="dir" required>
                    <label for="floatingInputGrid">Dirección</label>
                 </div>
             </div>
         </div>
-        <br><br><br>
+        
         <div class="row">
-        <div class="col-md-6">
-            <div class="d-grid gap-2">
-				<a class="btn btn-danger" href="cliente.php" style="background-color: #b70000; color:white; float: right">Cancelar</a>
-        	</div>
-		</div>
-        <div class="col-md-6">
-			<div class="d-grid gap-2">
-				<button class="btn btn-succes" type="submit" style="background-color: #F28E2A; color:white; float: right">Crear Cliente</button>
-        	</div>
-		</div>
+            <div class="col-md-6">
+                <div class="d-grid gap-2">
+		    		<a class="btn btn-danger" href="cliente.php" style="background-color: #b70000; color:white; float: right">Cancelar</a>
+            	</div>
+		    </div>
+            <div class="col-md-6">
+		    	<div class="d-grid gap-2">
+		    		<button class="btn btn-succes" type="submit" style="background-color: #F28E2A; color:white; float: right">Crear Cliente</button>
+            	</div>
+		    </div>
         </div>
     </div>
 </form>

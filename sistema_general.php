@@ -29,7 +29,7 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
         <hr class="separador">
 
     <div class="container">
-        <form method='POST' class='form-control form-data' action='sistemas.php'>
+        <form method='POST' class='form-control form-data' action='tabla_general.php'>
 
             <div class="input-group texting">
                 <span class="input-group-text"><strong>Información de la Empresa</strong></span>
@@ -208,6 +208,28 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
         </div>
     </div>
   </div>
+
+<br><br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="d-grid gap-2">
+            <a class="btn btn-danger" href="home.php?pag_actual=inicio" style="background-color: #b70000; color:white; float: right">Cancelar</a>
+			</div>
+		</div>
+        <div class="col-md-6">
+			<div class="d-grid gap-2">
+				<button class="btn btn-succes" type="submit" style="background-color: #F28E2A; color:white; float: right">Generar Tabla</button>
+        	</div>
+		</div>
+		
+	</div>
+</div>
+
+<br><br><br><br>
+
+
 </div>
 
 

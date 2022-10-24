@@ -73,13 +73,14 @@ if (isset($_GET['msg'])){
 			<div class="input-group mb-3">
 			  <input id="busqueda_cliente" name="busqueda_cliente" type="text" class="form-control" placeholder="Buscar cliente" aria-label="Recipient's username" aria-describedby="button-addon2">
 			  <button disabled class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i>
-  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-</svg></button>
+  				<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+				</svg>
+			  </button>
 			</div>
 		</div>
-        <div class="col-md-6">
+        <div class="col-md-6 button_Crear">
 			<div class="d-grid gap-2">
-				<a class="btn btn-succes" href="crear_cliente.php?pag_actual=Crear Cliente" style="background-color: #F28E2A; color:white; float: right">Crear Cliente</a>
+				<a class="btn btn-succes" href="crear_cliente.php?pag_actual=Crear Cliente">Crear Cliente</a>
         	</div>
 		</div>
 		

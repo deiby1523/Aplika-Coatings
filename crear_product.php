@@ -3,6 +3,8 @@
 <h1>Crear Producto</h1>
 <hr class="separador">
 
+<!--------------------------------------------------------- crear producto   ---------------------------------------------------------------------------------->
+
 
 <form action="">
     <div class="container">
@@ -43,9 +45,6 @@
                 <input type="text" class="form-control" style="width:30rem;" id="floatingInput" placeholder="name@example.com" required  autocomplete="off">
                 <label for="floatingInput">Nombre</label>
             </div>
-
-            
-            
         </div>
     </div>
 </form>

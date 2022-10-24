@@ -225,7 +225,6 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
 				<button class="btn btn-succes" type="submit" style="background-color: #F28E2A; color:white; float: right">Generar Tabla</button>
         	</div>
 		</div>
-		
 	</div>
 </div>
 

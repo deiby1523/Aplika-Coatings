@@ -4,9 +4,14 @@ body{
 
 .container .encabezado img{
     width: 20%;
+    margin-top: 10px;
     margin-left: 7rem;
 }
 
 .container .encabezado hr{
     width: 90%;
+}
+.container .encabezado .texto_Contenido p{
+    color: white;
+    margin-left: 8rem;
 }

@@ -55,7 +55,7 @@ var_dump( $_POST );
             echo "<tr>";
             echo "<td>" . $cod_imprimante . "</td>";
             echo "<td>" . $imprimante['producto'] . "</td>";
-            echo "<td>" . $imprimante['presentacion'] . "</td>";
+            echo "<td id='imprimante_presentacion'>" . $imprimante['presentacion'] . "</td>";
             echo "<td id='imprimante_solidos'>" . $imprimante['solidos'] . "</td>";
 
 
@@ -71,6 +71,9 @@ var_dump( $_POST );
             echo "<td><input id='imprimante_area' type='number' class='form-control' value='" . $imprimante_area. "'></td>";
 
             echo "<td><input disabled class='form-control' id='imprimante_galones'></td>";
+
+            echo "<td><input disabled class='form-control' id='imprimante_unidades'></td>";
+
 
 
 

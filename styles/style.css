@@ -248,6 +248,16 @@ form .g-2, .gy-2{
 /* --------------------------------------------------- cerrar estilos de cliente ------------------------------------------------------- */
 
 
+/* --------------------------------------------------- estilos de botones ------------------------------------------------------- */
+form .container .row .cancelar .cancel a{
+    background-color: red; color:white; float: right
+}
+form .container .row .agregar .agrega button{
+    background-color: var(--color-principalNaranja); color:white; float: right
+}
+
+/* --------------------------------------------------- cerrar estilos de botones ------------------------------------------------------- */
+
 /* --------------------------------------------------- estilos de crear_cliente ------------------------------------------------------- */
 
 form{
@@ -280,4 +290,11 @@ form .container .button_cancelarCliente div button{
 
 /* --------------------------------------------------- estilos de crear_producto ------------------------------------------------------- */
 
+form .container .row .col .row .select{
+    margin-bottom: 1rem;
+}
+
+form .container .row .col .row .text{
+    margin-bottom: 1rem;
+}
 

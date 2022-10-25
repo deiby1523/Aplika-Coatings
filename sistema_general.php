@@ -214,19 +214,19 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
 <br><br>
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-6">
-			<div class="d-grid gap-2">
-            <a class="btn btn-danger" href="home.php?pag_actual=inicio" style="background-color: #b70000; color:white; float: right">Cancelar</a>
-			</div>
-		</div>
-        <div class="col-md-6">
-			<div class="d-grid gap-2">
-				<button class="btn btn-succes" type="submit" style="background-color: #F28E2A; color:white; float: right">Generar Tabla</button>
-        	</div>
-		</div>
-	</div>
-</div>
+	    <div class="row">
+		    <div class="cancelar col-md-6">
+			    <div class="cancel d-grid gap-2">
+                    <a class="btn btn-danger" href="home.php?pag_actual=inicio">Cancelar</a>
+			    </div>
+		    </div>
+            <div class="agregar col-md-6">
+			    <div class="agrega d-grid gap-2">
+				    <button class="btn btn-succes" type="submit">Generar Tabla</button>
+        	    </div>
+		    </div>
+	    </div>
+    </div>
 
 <br><br><br><br>
 

@@ -8,6 +8,7 @@
     <div class="container">
 
         <div class="row">
+            
             <div class="col">
 
                 <div class="row">
@@ -61,7 +62,7 @@
                 <div class="row">
                     <div class="input-group add mb-3" style="width: 100%">
                         <label style="width: 38%;" class="input-group-text amp" for="relacion_mezcla"><strong>Relacion Mezcla</strong></label>
-                        <input type="text" class="form-control" id="floatingInput" name="presentacion" placeholder="  A : B  " style="height: 150%;" required  autocomplete="off">
+                        <input type="text" class="form-control" id="floatingInput" name="relacion_mezcla" placeholder="  A : B  " style="height: 150%;" required  autocomplete="off">
                     </div>
                 </div>
 
@@ -102,11 +103,6 @@
                 </div>
 
             </div>
-
-
-
-
-
 
             <div class="col">
 
@@ -179,16 +175,12 @@
 
             </div>
 
-
-
-
-
         </div> <!-- Row Main -->
         
         <div class="row">
             <div class="input-group add mb-3 mt-3" style="width: 100%">
                 <label style="width: 19%;" class="input-group-text amp" for="preparecion_superficie"><strong>Preparación de Superficie</strong></label>
-                <input type="text" class="form-control" id="floatingInput" placeholder="   Segun norma NACE-SSPC" name="secado" style="height: 150%;" required  autocomplete="off">
+                <input type="text" class="form-control" id="floatingInput" placeholder="   Segun norma NACE-SSPC" name="preparacion_superficie" style="height: 150%;" required  autocomplete="off">
             </div>
         </div> <!-- Row 2 Preparación de superficie -->
 

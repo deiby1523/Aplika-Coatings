@@ -63,9 +63,9 @@ $Pagina = $_GET['pag_actual'];
             <ul><!---------------------------------->
                 <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: #F28E2A;'"); } ?> href="home.php?pag_actual=Inicio"><i class="fa-solid fa-house"></i>&nbspInicio</a></li>
                 <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspUsuarios</a>
+                <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: #F28E2A;'"); } ?> href="producto.php?pag_actual=Productos" > Productos</a><li>
                 <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: #F28E2A;'"); } ?> href="cliente.php?pag_actual=Clientes"><i class="fa-solid fa-users"></i>&nbspClientes</a></li>
                 <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>
-                <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: #F28E2A;'"); } ?> href="producto.php?pag_actual=Productos" ><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>
 
             
                 <ul class="menu-vertical">

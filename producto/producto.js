@@ -128,3 +128,32 @@ $(document).on('change', '#select_tipobase', function()
         obtener_acabado();
     }
 });
+
+$(obtener_producto_tabla());
+
+function obtener_producto_tabla(busqueda)
+{
+    $.ajax({
+        url : 'producto/getproducto.php',
+        type : 'POST',
+        dataType : 'HTML',
+        data : { busqueda : busqueda },
+    })
+
+    .done(function(productos){
+        $("#tabla_productos").html(productos);
+    })
+}
+
+$(document).on('keyup', '#busqueda_producto', function()
+{
+    var valorbusqueda = $('#busqueda_producto').val();
+    if (valorbusqueda != "")
+    {
+        obtener_producto_tabla(valorbusqueda);
+    }
+    else
+    {
+        obtener_producto_tabla();
+    }
+});

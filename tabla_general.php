@@ -1,5 +1,6 @@
-<?php include("template/encabezado.php"); ?>
-
+<?php 
+$_GET['pag_actual'] =  "Tabla Generada";
+include("template/encabezado.php"); ?>
 
 <?php
 

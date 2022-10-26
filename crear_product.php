@@ -50,6 +50,7 @@
                     <div class="row">
                         <div class="text form-floating">
                             <input type="text" class="form-control" id="floatingInput" placeholder="Unidad" required  autocomplete="off">
+                            <label for="floatingInput">Unidad</label>
                         </div>
                     </div>
                 </div>
@@ -119,12 +120,10 @@
                     </select>
                 </div>
                 <div class="row">
-                    <select class="select form-select form-select-lg " aria-label=".form-select-lg example">
-                        <option selected>Disolvente</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                    <div class="text form-floating">
+                        <input type="text" class="form-control"  id="floatingInput" placeholder="name@example.com" required  autocomplete="off">
+                        <label for="floatingInput">Disolvente</label>
+                    </div>
                 </div>
             </div>
         </div>

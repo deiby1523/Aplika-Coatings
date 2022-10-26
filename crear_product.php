@@ -9,25 +9,26 @@
         <div class="row">
             <div class="col">
                 <div class="row">
-                    <div class="text form-floating">
-                        <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" required  autocomplete="off">
-                        <label for="floatingInput">Referencia</label>
+                    <div class="input-group add mb-3" style="width: 100%">
+                        <label class="input-group-text amp" for="Referencia"><strong>Referencia</strong></label>
+                        <input type="number" class="form-control" id="floatingInput" style="height: 150%;" required  autocomplete="off">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="text form-floating">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required  autocomplete="off">
-                        <label for="floatingInput">Producto</label>
+                    <div class="input-group add mb-3" style="width: 100%">
+                        <label class="input-group-text amp" for="Producto"><strong>Producto</strong></label>
+                        <input type="number" class="form-control" id="floatingInput" style="height: 150%;" required  autocomplete="off">
                     </div>
-                </div>
-            </div>
-            <div class="col">
+                    </div>
                 <div class="row">
-                    <select class="select form-select form-select-lg" aria-label=".form-select-lg example">
-                        <option selected>Marca</option>
-                        <option value="1">Sika</option>
-                        <option value="2">International Paint</option>
+                <div class="input-group add mb-3" style="width: 100%">
+                    <label class="input-group-text amp" for="select_marca"><strong>Marca</strong></label>
+                    <select name="marca" class="form-select" id="select_marca" required>
+                        <option selected disabled></option>
+                        <option value="Sika">Sika</option>
+                        <option value="International Paint">International Paint</option>
                     </select>
+                </div>
                 </div>
                 <div class="row">
                     <select class="select form-select form-select-lg " aria-label=".form-select-lg example">

@@ -40,6 +40,7 @@ if(!isset($_SESSION["username"])) {
 
 <?php
 $Inicio = "Inicio";
+$Usuarios = "Usuarios";
 $Productos = "Productos";
 $Clientes = "Clientes";
 $Solicitud = "Solicitud";
@@ -62,7 +63,7 @@ $Pagina = $_GET['pag_actual'];
             <img src="./img/logoAPK.png" href="home.php?pag_actual=Inicio">
             <ul><!---------------------------------->
                 <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: #F28E2A;'"); } ?> href="home.php?pag_actual=Inicio"><i class="fa-solid fa-house"></i>&nbspInicio</a></li>
-                <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: #F28E2A;'"); } ?> href="home.php?pag_actual=Inicio"><i class="fa-solid fa-circle-user"></i>&nbspUsuarios</a></li>
+                <li><a class="underline" <?php if($Pagina == $Usuarios) { echo ("style='color: #F28E2A;'"); } ?> href="crear_user.php?pag_actual=Usuarios"><i class="fa-solid fa-circle-user"></i>&nbspUsuarios</a></li>
                 <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: #F28E2A;'"); } ?> href="producto.php?pag_actual=Productos"><i class="fa-solid fa-boxes-stacked"></i>&nbspProductos</a></li>
                 <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: #F28E2A;'"); } ?> href="cliente.php?pag_actual=Clientes"><i class="fa-solid fa-users"></i>&nbspClientes</a></li>
                 <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>            

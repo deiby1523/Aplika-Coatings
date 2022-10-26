@@ -62,19 +62,15 @@ $Pagina = $_GET['pag_actual'];
             <img src="./img/logoAPK.png" href="home.php?pag_actual=Inicio">
             <ul><!---------------------------------->
                 <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: #F28E2A;'"); } ?> href="home.php?pag_actual=Inicio"><i class="fa-solid fa-house"></i>&nbspInicio</a></li>
-                <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspUsuarios</a>
-                <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: #F28E2A;'"); } ?> href="producto.php?pag_actual=Productos" > Productos</a><li>
+                <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: #F28E2A;'"); } ?> href="home.php?pag_actual=Inicio"><i class="fa-solid fa-circle-user"></i>&nbspUsuarios</a></li>
+                <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: #F28E2A;'"); } ?> href="producto.php?pag_actual=Productos"><i class="fa-solid fa-boxes-stacked"></i>&nbspProductos</a></li>
                 <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: #F28E2A;'"); } ?> href="cliente.php?pag_actual=Clientes"><i class="fa-solid fa-users"></i>&nbspClientes</a></li>
-                <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>
-
-            
-                <ul class="menu-vertical">
-                    <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="sistema_general.php?pag_actual=Solicitud">Generales</a></li>
-                    <li><a class="underline" href="#">Especificos</a></li>
-                </ul>
-            
-            
-            </li>
+                <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>            
+                    <ul class="menu-vertical">
+                        <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="sistema_general.php?pag_actual=Solicitud">Generales</a></li>
+                        <li><a class="underline" href="#">Especificos</a></li>
+                    </ul>
+                </li>
                 <li><a class="underline" href="cerrar_sesion.php">Salir &nbsp<i class="fa-solid fa-right-from-bracket"></i></a></li>
             </ul>
         </nav>

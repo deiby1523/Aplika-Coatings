@@ -102,6 +102,13 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="input-group add mb-3 mt-3" style="width: 100%">
+                        <label style="width: 38%;" class="input-group-text amp" for="repintabilidad"><strong>Repintabilidad</strong></label>
+                        <input type="text" class="form-control" id="floatingInput" placeholder="   Tiempo de repintabilidad del recubrimiento" name="repintabilidad" style="height: 150%;" required  autocomplete="off">
+                    </div>
+                </div>
+
             </div>
 
             <div class="col">
@@ -109,7 +116,7 @@
                 <div class="row">
                     <div class="input-group add mb-3" style="width: 100%">
                         <label style="width: 22%;" class="input-group-text amp" for="Producto"><strong>Producto</strong></label>
-                        <input type="text" class="form-control" id="floatingInput" style="height: 150%;" required  autocomplete="off">
+                        <input name="producto" type="text" class="form-control" id="floatingInput" style="height: 150%;" required  autocomplete="off">
                     </div>
                 </div>
 
@@ -141,7 +148,7 @@
 
                 <div class="row">
                     <div class="input-group add mb-3" style="width: 100%">
-                        <input type="text" class="form-control" id="floatingInput" name="otra_resina" placeholder="Otra Resina" style="height: 150%;" required  autocomplete="off">
+                        <input type="text" class="form-control" id="floatingInput" name="otra_resina" placeholder="Otra Resina" style="height: 150%;"  autocomplete="off">
                     </div>
                 </div>
 
@@ -154,14 +161,14 @@
 
                 <div class="row">
                     <div class="input-group add mb-3" style="width: 100%; margin-top:20px">
-                        <input type="text" class="form-control" id="floatingInput" name="otro_endurecedor" placeholder="Otra Endurecedor" style="height: 150%;" required  autocomplete="off">
+                        <input type="text" class="form-control" id="floatingInput" name="otro_endurecedor" placeholder="Otra Endurecedor" style="height: 150%;"  autocomplete="off">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-group add mb-3" style="width: 100%; margin-top: 20px;">
                         <label style="width: 45%;" class="input-group-text amp" for="tipo"><strong>Espesor Recomendado</strong></label>
-                        <input type="text" class="form-control" id="floatingInput" name="solidos" placeholder="   (Mils)" style="height: 150%;" required  autocomplete="off">
+                        <input type="text" class="form-control" id="floatingInput" name="espesor_recomendado" placeholder="   (Mils)" style="height: 150%;" required  autocomplete="off">
                     </div>
                 </div>
 
@@ -177,7 +184,7 @@
 
         </div> <!-- Row Main -->
         
-        <div class="row">
+        <div class="row" style="height: 100px">
             <div class="input-group add mb-3 mt-3" style="width: 100%">
                 <label style="width: 19%;" class="input-group-text amp" for="preparecion_superficie"><strong>Preparación de Superficie</strong></label>
                 <input type="text" class="form-control" id="floatingInput" placeholder="   Segun norma NACE-SSPC" name="preparacion_superficie" style="height: 150%;" required  autocomplete="off">
@@ -189,7 +196,7 @@
         <div class="row button_cancelarCliente">
             <div class="col-md-6">
                 <div class="d-grid gap-2">
-		    		<a class="btn btn-danger" href="cliente.php">Cancelar</a>
+		    		<a class="btn btn-danger" href="producto.php">Cancelar</a>
             	</div>
 		    </div>
             <div class="col-md-6">

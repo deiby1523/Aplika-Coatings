@@ -157,3 +157,16 @@ $(document).on('keyup', '#busqueda_producto', function()
         obtener_producto_tabla();
     }
 });
+
+$(document).on('input', '#busqueda_producto', function()
+{
+    var valorbusqueda = $('#busqueda_producto').val();
+    if (valorbusqueda != "")
+    {
+        obtener_producto_tabla(valorbusqueda);
+    }
+    else
+    {
+        obtener_producto_tabla();
+    }
+});

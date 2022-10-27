@@ -35,6 +35,17 @@ if(!isset($_SESSION["username"])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title> Aplika <?php echo $_GET['pag_actual'] ?></title>
+
+    <!-- scrip de cambio de pestaña  -->
+    <script>
+	    var title = document.title,
+	    	newTitle = "Aplika Control Corrosion...";
+	        document.addEventListener("visibilitychange", function() {
+	    	document.title = ((document.hidden) ? newTitle : title);
+	    });
+    </script>
+
+
 </head>
 <body>
 
@@ -57,15 +68,14 @@ $Pagina = $_GET['pag_actual'];
 
 
 
-
 <header>
         <nav class="menu">
             <img src="./img/logoAPK.png" href="home.php?pag_actual=Inicio">
             <ul><!---------------------------------->
                 <li><a class="underline" <?php if($Pagina == $Inicio) { echo ("style='color: #F28E2A;'"); } ?> href="home.php?pag_actual=Inicio"><i class="fa-solid fa-house"></i>&nbspInicio</a></li>
                 <li><a class="underline" <?php if($Pagina == $Usuarios) { echo ("style='color: #F28E2A;'"); } ?> href="crear_user.php?pag_actual=Usuarios"><i class="fa-solid fa-circle-user"></i>&nbspUsuarios</a></li>
-                <li><a class="underline" <?php if($Pagina == $Productos) { echo ("style='color: #F28E2A;'"); } ?> href="producto.php?pag_actual=Productos"><i class="fa-solid fa-boxes-stacked"></i>&nbspProductos</a></li>
-                <li><a class="underline" <?php if($Pagina == $Clientes) { echo ("style='color: #F28E2A;'"); } ?> href="cliente.php?pag_actual=Clientes"><i class="fa-solid fa-users"></i>&nbspClientes</a></li>
+                <li><a class="underline" <?php if($Pagina == $Productos OR $Pagina == "Crear Producto") { echo ("style='color: #F28E2A;'"); } ?> href="producto.php?pag_actual=Productos"><i class="fa-solid fa-boxes-stacked"></i>&nbspProductos</a></li>
+                <li><a class="underline" <?php if($Pagina == $Clientes OR $Pagina == "Crear Cliente") { echo ("style='color: #F28E2A;'"); } ?> href="cliente.php?pag_actual=Clientes"><i class="fa-solid fa-users"></i>&nbspClientes</a></li>
                 <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>            
                     <ul class="menu-vertical">
                         <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="sistema_general.php?pag_actual=Solicitud">Generales</a></li>

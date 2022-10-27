@@ -86,10 +86,9 @@ $dompdf->load_html(ob_get_clean());//y ponemos todo lo que se capturo con ob_sta
 
 $dompdf->set_paper('A4', 'landscape');
 $dompdf->render();
-$dompdf->stream('document.pdf');
+$dompdf->stream('ReporteAPK.pdf');
 
 /*
-
 require_once 'librerias/dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
@@ -102,7 +101,6 @@ $dompdf->load_html(ob_get_clean());//y ponemos todo lo que se capturo con ob_sta
 $dompdf->set_paper('A4', 'landscape');
 $dompdf->render();
 $dompdf->stream('document.pdf');
-
 */
 
 

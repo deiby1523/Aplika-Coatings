@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="crearPdf.php">creae pdf</a>
+   
 </body>
 </html>
 <?php include("template/pie.php");?>

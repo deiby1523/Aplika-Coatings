@@ -7,11 +7,14 @@ $dompdf = new Dompdf();
 ob_start(); //iniciamos un output buffer
 
 ?>
-
+<link rel="stylesheet" href="main.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <?php
 #var_dump($_POST);
+$nit = $_POST['nit'];
+$asesor = $_POST['asesor'];
+
 $cod_imprimante = $_POST['cod_imprimante'];
 $cod_barrera = $_POST['cod_barrera'];
 $cod_acabado = $_POST['cod_acabado'];
@@ -66,14 +69,24 @@ $consulta = "SELECT * FROM productos WHERE referencia = '$cod_acabado'";
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 $acabado = mysqli_fetch_array( $resultado );
 
+$consulta = "SELECT * FROM clientes WHERE nit = '$nit'";
+$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+$empresa = mysqli_fetch_array( $resultado );
+
 ?>
 <div class="container">
-<table class='table' style='width: 100%; margin: 0%'>
+	<br>
+	<h1><?php echo $empresa['nombre']; ?></h1>
+	<h3><?php echo $empresa['nit']; ?></h3>
+	<br><br>
+	<h2>Asesor: </h2><h2><?php echo $asesor; ?></h2>
+<table class='table_report' style="width: 200px;
+    margin-rigth: 400px; !important">
 
 	<thead>
 		<tr>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Código</th>
-			<th style='text-align: center; vertical-align: middle;' class='col-md-3'>Producto</th>
+			<th style='text-align: center; vertical-align: middle; width: 30px;' class='col-md-3'>Producto</th>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Presentacion</th>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Solidos % </th>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>EPS(Mils)</th>
@@ -84,7 +97,7 @@ $acabado = mysqli_fetch_array( $resultado );
             <th style='text-align: center; vertical-align: middle;'>Cantidad de galones</th>
             <th style='text-align: center; vertical-align: middle;'>Cantidad de Unidades</th>
 		</tr>
-	  </thead>
+	</thead>
 	  <tbody>
         <tr>
         <?php 
@@ -135,7 +148,8 @@ $acabado = mysqli_fetch_array( $resultado );
 require_once('reportes.php'); // llamamos el archivo que se supone contiene el html y dejamoso que se renderize
 $dompdf->load_html(ob_get_clean());//y ponemos todo lo que se capturo con ob_start() para que sea capturado por DOMPDF
 
-$dompdf->set_paper('A4', 'landscape');
+#$dompdf->set_paper('letter', 'portrait');
+$dompdf->set_paper(array(0, 0, 700, 1000), 'portrait');
 $dompdf->render();
 $dompdf->stream('ReporteAPK.pdf', array("attachment" => true));
 

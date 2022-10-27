@@ -10,7 +10,9 @@ include("template/encabezado.php"); ?>
 
 <?php
 
-
+$nit = $_POST['nit'];
+$asesor = $_POST['asesor'];
+ 
 $cod_imprimante = $_POST['imprimante'];
 $imprimante_espesor = $_POST['imprimante_espesor'];
 $imprimante_desperdicio = $_POST['imprimante_desperdicio'];   #Imprimante POST[]
@@ -60,7 +62,10 @@ $acabado = mysqli_fetch_array( $resultado );
 <div class="container">
     <input type="hidden" name="cod_imprimante" value="<?php echo $cod_imprimante; ?>">
     <input type="hidden" name="cod_barrera" value="<?php echo $cod_barrera; ?>">
-    <input type="hidden" name="cod_acabado" value="<?php echo $cod_acabado; ?>">    
+    <input type="hidden" name="cod_acabado" value="<?php echo $cod_acabado; ?>">   
+    <input type="hidden" name="nit" value="<?php echo $nit; ?>">    
+    <input type="hidden" name="asesor" value="<?php echo $asesor; ?>">    
+ 
 <div class="row button_cancelarCliente">
             <div class="col-md-2">
                 <div class="d-grid gap-2">

@@ -4,6 +4,8 @@ require_once 'librerias/dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
 
+
+
 ob_start(); //iniciamos un output buffer
 
 ?>
@@ -73,15 +75,33 @@ $consulta = "SELECT * FROM clientes WHERE nit = '$nit'";
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 $empresa = mysqli_fetch_array( $resultado );
 
+
+$nombreImagen = "img/marcaAPLIKA.png";
+$imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
+
 ?>
+
+<div class="container_general">
+	<div class="encabezado">
+		<img src="<?php echo $imagenBase64 ?>" 
+		style=" width: 230px; height: 100px	;">
+		<hr>
+	</div>
+
+	<p style="font-size: 20px; margin-top:4rem;">
+		Estimad@   <strong><?php echo $empresa['nombre']; ?></strong> con nit: <strong><?php echo $empresa['nit']; ?></strong>.<br><br>
+		Este calculo de rendimiento fue realizado por el asesor <?php echo $asesor; ?>, para determinar el rendimiento del siguiente <br> 
+		sistema de recubrimientos.
+	</p>
+
+
+
+</div>
+
+
 <div class="container">
-	<br>
-	<h1><?php echo $empresa['nombre']; ?></h1>
-	<h3><?php echo $empresa['nit']; ?></h3>
-	<br><br>
-	<h2>Asesor: </h2><h2><?php echo $asesor; ?></h2>
-<table class='table_report' style="width: 200px;
-    margin-rigth: 400px; !important">
+<table class='table_report' style="width: 100px;
+    margin: 1rem -130px; !important">
 
 	<thead>
 		<tr>
@@ -148,8 +168,12 @@ $empresa = mysqli_fetch_array( $resultado );
 require_once('reportes.php'); // llamamos el archivo que se supone contiene el html y dejamoso que se renderize
 $dompdf->load_html(ob_get_clean());//y ponemos todo lo que se capturo con ob_start() para que sea capturado por DOMPDF
 
+$options = $dompdf->getOptions();
+$options-> set(array('isRemoteEnabled'=> true));
+$dompdf->setOptions($options);
+
 #$dompdf->set_paper('letter', 'portrait');
-$dompdf->set_paper(array(0, 0, 700, 1000), 'portrait');
+$dompdf->set_paper(array(0, 0, 790, 1000), 'portrait');
 $dompdf->render();
 $dompdf->stream('ReporteAPK.pdf', array("attachment" => true));
 

@@ -202,26 +202,180 @@ $acabado = mysqli_fetch_array( $resultado );
   $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
   $imprimante_espesor_recomendado = mysqli_fetch_array( $resultado );
 
+  $consulta = "SELECT vida_mezcla FROM productos WHERE referencia = '$cod_imprimante'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $imprimante_vida_mezcla = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT repintabilidad FROM productos WHERE referencia = '$cod_imprimante'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $imprimante_repintabilidad = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT secado FROM productos WHERE referencia = '$cod_imprimante'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $imprimante_secado = mysqli_fetch_array( $resultado );
+
+    # Recomendaciones barrera ---------------------------------------------------------------------------------------------------------
+  $consulta = "SELECT preparacion_superficie FROM productos WHERE referencia = '$cod_barrera'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $barrera_preparacion_superficie = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT disolvente FROM productos WHERE referencia = '$cod_barrera'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $barrera_disolvente = mysqli_fetch_array( $resultado ); 
+
+  $consulta = "SELECT eps FROM productos WHERE referencia = '$cod_barrera'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $barrera_espesor_recomendado = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT vida_mezcla FROM productos WHERE referencia = '$cod_barrera'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $barrera_vida_mezcla = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT repintabilidad FROM productos WHERE referencia = '$cod_barrera'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $barrera_repintabilidad = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT secado FROM productos WHERE referencia = '$cod_barrera'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $barrera_secado = mysqli_fetch_array( $resultado );
+
+    # Recomendaciones acabado ---------------------------------------------------------------------------------------------------------
+  $consulta = "SELECT preparacion_superficie FROM productos WHERE referencia = '$cod_acabado'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $acabado_preparacion_superficie = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT disolvente FROM productos WHERE referencia = '$cod_acabado'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $acabado_disolvente = mysqli_fetch_array( $resultado ); 
+
+  $consulta = "SELECT eps FROM productos WHERE referencia = '$cod_acabado'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $acabado_espesor_recomendado = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT vida_mezcla FROM productos WHERE referencia = '$cod_acabado'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $acabado_vida_mezcla = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT repintabilidad FROM productos WHERE referencia = '$cod_acabado'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $acabado_repintabilidad = mysqli_fetch_array( $resultado );
+
+  $consulta = "SELECT secado FROM productos WHERE referencia = '$cod_acabado'";
+  $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+  $acabado_secado = mysqli_fetch_array( $resultado );
+
   ?>
-  <br><br><br><br>
+
+<?php 
+if($cod_imprimante != 0) {
+?>
+
+  <br>
+  <h2><?php echo $imprimante['producto']; ?></h2>
+  <br>
   <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">Preparación de Superficie:</span>
     <input type="text" name="imprimante_preparacion_superficie" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_preparacion_superficie[0]; ?>">
   </div>
 
-  <br>
   <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">disolvente:</span>
     <input type="text" name="imprimante_disolvente" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_disolvente[0]; ?>">
   </div>
-  <br>
   <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">Espesor Recomendado:</span>
     <input type="text" name="imprimante_espesor_recomendado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_espesor_recomendado[0]; ?> Mils">
   </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Vida de la mezcla</span>
+    <input type="text" name="imprimante_vida_mezcla" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_vida_mezcla[0]; ?>">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Secado al tacto</span>
+    <input type="text" name="imprimante_secado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_secado[0]; ?>">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Repintabilidad</span>
+    <input type="text" name="imprimante_repintabilidad" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_repintabilidad[0]; ?>">
+  </div>
+
+<?php
+}
+if ($cod_barrera != 0) {
+?>
 
 
   <br>
+  <h2><?php echo $barrera['producto']; ?></h2>
+  <br>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Preparación de Superficie:</span>
+    <input type="text" name="barrera_preparacion_superficie" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_preparacion_superficie[0]; ?>">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">disolvente:</span>
+    <input type="text" name="barrera_disolvente" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_disolvente[0]; ?>">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Espesor Recomendado:</span>
+    <input type="text" name="barrera_espesor_recomendado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_espesor_recomendado[0]; ?> Mils">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Vida de la mezcla</span>
+    <input type="text" name="barrera_vida_mezcla" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_vida_mezcla[0]; ?>">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Secado al tacto</span>
+    <input type="text" name="barrera_secado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_secado[0]; ?>">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Repintabilidad</span>
+    <input type="text" name="barrera_repintabilidad" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_repintabilidad[0]; ?>">
+  </div>
+
+  <?php
+}
+if ($cod_acabado != 0) {
+?>
+
+
+  <br>
+  <h2><?php echo $acabado['producto']; ?></h2>
+  <br>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Preparación de Superficie:</span>
+    <input type="text" name="acabado_preparacion_superficie" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_preparacion_superficie[0]; ?>">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">disolvente:</span>
+    <input type="text" name="acabado_disolvente" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_disolvente[0]; ?>">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Espesor Recomendado:</span>
+    <input type="text" name="acabado_espesor_recomendado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_espesor_recomendado[0]; ?> Mils">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Vida de la mezcla</span>
+    <input type="text" name="acabado_vida_mezcla" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_vida_mezcla[0]; ?>">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Secado al tacto</span>
+    <input type="text" name="acabado_secado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_secado[0]; ?>">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Repintabilidad</span>
+    <input type="text" name="acabado_repintabilidad" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_repintabilidad[0]; ?>">
+  </div>
+
+  <?php
+}
+?>
+  <!------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+  <br><br><br>
   <div class="input-group">
     <span class="input-group-text">Observaciones adicionales:</span>
     <textarea class="form-control" name="observaciones adicionales" aria-label="With textarea"></textarea>
@@ -246,7 +400,6 @@ $dompdf->set_paper('A4', 'landscape');
 $dompdf->render();
 $dompdf->stream('document.pdf', array("attachment" => true));
 */
-
 
 include("template/pie.php");
 ?>

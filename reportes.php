@@ -93,17 +93,14 @@ $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nomb
 		Este calculo de rendimiento fue realizado por el asesor <?php echo $asesor; ?>, para determinar el rendimiento del siguiente <br> 
 		sistema de recubrimientos.
 	</p>
-
-
-
 </div>
 
 
 <div class="container">
-<table class='table_report' style="width: 100px;
-    margin: 1rem -130px; !important">
+<table class='table_report' style="width: 200px;
+    margin-rigth: 400px; !important; border: solid black 1px">
 
-	<thead>
+	<thead style="border: solid black 1px">
 		<tr>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Código</th>
 			<th style='text-align: center; vertical-align: middle; width: 30px;' class='col-md-3'>Producto</th>
@@ -118,40 +115,135 @@ $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nomb
             <th style='text-align: center; vertical-align: middle;'>Cantidad de Unidades</th>
 		</tr>
 	</thead>
-	  <tbody>
-        <tr>
+	  <tbody style="border: solid black 1px; border-spacing: 0px">
+        <tr >
         <?php 
-            echo "<td>" . $imprimante['referencia'] . "</td><td>" . $imprimante['producto'] . "</td><td>" . $imprimante['presentacion'] . "</td><td>" . $imprimante['solidos'] . "</td><td>" . $_POST['imprimante_espesor'] . "</td><td>" . $_POST['imprimante_rendimiento_teorico'] . "</td><td>" . $_POST['imprimante_desperdicio'] . "</td><td>" . $_POST['imprimante_rendimiento_practico'] . "</td><td>" . $_POST['imprimante_area'] . "</td><td>" . round($_POST['imprimante_galones'], 2) . "</td><td>" . $_POST['imprimante_unidades'] . "</td>";
-        ?>
-        </tr>   
-		<tr>
-        <?php 
-            echo "<td>" . $barrera['referencia'] . "</td><td>" . $barrera['producto'] . "</td><td>" . $barrera['presentacion'] . "</td><td>" . $barrera['solidos'] . "</td><td>" . $_POST['barrera_espesor'] . "</td><td>" . $_POST['barrera_rendimiento_teorico'] . "</td><td>" . $_POST['barrera_desperdicio'] . "</td><td>" . $_POST['barrera_rendimiento_practico'] . "</td><td>" . $_POST['barrera_area'] . "</td><td>" . round($_POST['barrera_galones'], 2) . "</td><td>" . $_POST['barrera_unidades'] . "</td>";
+            echo "<td style='border: solid black 1px'>" . $imprimante['referencia'] . "</td><td style='border: solid black 1px'>" . $imprimante['producto'] . "</td><td style='border: solid black 1px'>" . $imprimante['presentacion'] . "</td><td style='border: solid black 1px'>" . $imprimante['solidos'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_espesor'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_rendimiento_teorico'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_desperdicio'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_rendimiento_practico'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_area'] . "</td><td style='border: solid black 1px'>" . round($_POST['imprimante_galones'], 2) . "</td><td style='border: solid black 1px' style='border: solid black 1px'>" . $_POST['imprimante_unidades'] . "</td>";
         ?>
         </tr> 
-		<tr>
+		&nbsp;  
+		<tr style="border: solid black 1px">
         <?php 
-            echo "<td>" . $acabado['referencia'] . "</td><td>" . $acabado['producto'] . "</td><td>" . $acabado['presentacion'] . "</td><td>" . $acabado['solidos'] . "</td><td>" . $_POST['acabado_espesor'] . "</td><td>" . $_POST['acabado_rendimiento_teorico'] . "</td><td>" . $_POST['acabado_desperdicio'] . "</td><td>" . $_POST['acabado_rendimiento_practico'] . "</td><td>" . $_POST['acabado_area'] . "</td><td>" . round($_POST['acabado_galones'], 2) . "</td><td>" . $_POST['acabado_unidades'] . "</td>";
+            echo "<td style='border: solid black 1px'>" . $barrera['referencia'] . "</td><td style='border: solid black 1px'>" . $barrera['producto'] . "</td><td style='border: solid black 1px'>" . $barrera['presentacion'] . "</td><td style='border: solid black 1px'>" . $barrera['solidos'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_espesor'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_rendimiento_teorico'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_desperdicio'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_rendimiento_practico'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_area'] . "</td><td style='border: solid black 1px'>" . round($_POST['barrera_galones'], 2) . "</td><td style='border: solid black 1px' style='border: solid black 1px'>" . $_POST['barrera_unidades'] . "</td>";
+        ?>
+        </tr> 
+		&nbsp;
+		<tr style="border: solid black 1px">
+        <?php 
+            echo "<td style='border: solid black 1px'>" . $acabado['referencia'] . "</td><td style='border: solid black 1px'>" . $acabado['producto'] . "</td><td style='border: solid black 1px'>" . $acabado['presentacion'] . "</td><td style='border: solid black 1px'>" . $acabado['solidos'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_espesor'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_rendimiento_teorico'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_desperdicio'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_rendimiento_practico'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_area'] . "</td><td style='border: solid black 1px'>" . round($_POST['acabado_galones'], 2) . "</td><td style='border: solid black 1px' style='border: solid black 1px'>" . $_POST['acabado_unidades'] . "</td>";
         ?>
         </tr> 
 	   </tbody>
 	   </table>
-	   <br><br><br><br>
-  		<div class="input-group mb-3">
-  		  <span class="input-group-text" id="basic-addon1">Preparación de Superficie:</span>
-  		  <p class="form-control"><?php echo $_POST['imprimante_preparacion_superficie']; ?> </p>
-  		</div>
 
-  		<br>
-  		<div class="input-group mb-3">
-  		  <span class="input-group-text" id="basic-addon1">disolvente:</span>
-  		  <p class="form-control"><?php echo $_POST['imprimante_disolvente']; ?></p>
-  		</div>
-  		<br>
-  		<div class="input-group mb-3">
-  		  <span class="input-group-text" id="basic-addon1">Espesor Recomendado:</span>
-  		  <p class="form-control"><?php echo $_POST['imprimante_espesor_recomendado']; ?></p>
-  		</div>
+
+	   <br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="container">
+
+	<table style="font-size: 12px">
+	<thead>
+		<th>
+		</th>
+			Caracteristica
+		<th>
+			<?php echo $imprimante['producto']; ?>
+		</th>
+		<th>
+			<?php echo $barrera['producto']; ?>
+		</th>
+		<th>
+			<?php echo $acabado['producto']; ?>
+		</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				Preparacion de superficie
+			</td>
+			<td>
+				<?php echo $_POST['imprimante_preparacion_superficie']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['barrera_preparacion_superficie']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['acabado_preparacion_superficie']; ?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Disolvente
+			</td>
+			<td>
+				<?php echo $_POST['imprimante_disolvente']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['barrera_disolvente']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['acabado_disolvente']; ?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Espesor Recomendado
+			</td>
+			<td>
+				<?php echo $_POST['imprimante_espesor_recomendado']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['barrera_espesor_recomendado']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['acabado_espesor_recomendado']; ?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Vida de la mezcla
+			</td>
+			<td>
+				<?php echo $_POST['imprimante_vida_mezcla']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['barrera_vida_mezcla']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['acabado_vida_mezcla']; ?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Secado al tacto
+			</td>
+			<td>
+				<?php echo $_POST['imprimante_secado']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['barrera_secado']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['acabado_secado']; ?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Repintabilidad
+			</td>
+			<td>
+				<?php echo $_POST['imprimante_repintabilidad']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['barrera_repintabilidad']; ?>
+			</td>
+			<td>
+				<?php echo $_POST['acabado_repintabilidad']; ?>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+
+</div>
 
 
   		<br>

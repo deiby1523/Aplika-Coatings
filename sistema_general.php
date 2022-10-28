@@ -15,7 +15,7 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
 
 
 # Consulta de productos desde la base de datos ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$consulta = "SELECT * FROM asesores";
+$consulta = "SELECT * FROM user WHERE rol = 'asesor'";
 $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 
 ?>

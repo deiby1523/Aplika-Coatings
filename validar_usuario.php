@@ -21,11 +21,13 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
   // Consulta segura para evitar inyecciones SQL.
   $consulta = "SELECT * FROM user WHERE username='$username' AND password=SHA2('$password',256)";
   $resultado = mysqli_query($conexion,$consulta);
+  $usuario = mysqli_fetch_array($resultado);
 
   
     
       if (mysqli_num_rows($resultado) > 0) {
-        $_SESSION['username'] = $username;
+        $_SESSION['username'] = $usuario['nombre'];
+        $_SESSION['user_rol'] = $usuario['rol'];
         header("Location: home.php"); 
     } else{
         header("location: index.php?error=true");

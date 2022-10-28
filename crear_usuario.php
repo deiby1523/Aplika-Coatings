@@ -4,24 +4,25 @@
 <hr class="separador">
 
 <!------------------------------------------------------ formulario --------------------------------------------------------------------------------->
-<form action="">
+<form action="guardar_usuario.php" method="POST">
     <div class="container">
         <div class="row g-2">
             <div class="form-floating ">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required  autocomplete="off">
+                <input name="nombre" type="text" class="form-control" required  autocomplete="off">
                 <label for="floatingInput">Nombre</label>
             </div>
 
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required autocomplete="off">
+                <input name="username" type="text" class="form-control" required autocomplete="off">
                 <label for="floatingInput">Usuario</label>
             </div>
 
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com" required autocomplete="off">
+                <input name="password" type="password" class="form-control" required autocomplete="off">
                 <label for="floatingInput">Contraseña</label>
             </div>
         </div>
+        <br><br>
 
         <div class="row button_cancelarCliente">
             <div class="col-md-6">
@@ -31,7 +32,7 @@
 		    </div>
             <div class="col-md-6">
 		    	<div class="d-grid gap-2">
-		    		<button class="btn btn-succes" type="submit">Crear Cliente</button>
+		    		<button class="btn btn-succes" type="submit">Crear Usuario</button>
             	</div>
 		    </div>
         </div>

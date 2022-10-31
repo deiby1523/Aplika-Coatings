@@ -1,4 +1,5 @@
 <?php 
+$_GET['pag_actual'] = 'Sistema General';
 
 #require_once 'librerias/dompdf/autoload.inc.php';
 #use Dompdf\Dompdf;
@@ -74,8 +75,8 @@ $acabado = mysqli_fetch_array( $resultado );
 <br>
 <div class="container">
   
-    <table class='table table-hover table-striped-columns' style='width: 100%; margin: 0%'>
-	<thead>
+    <table class='table table-hover table-bordered' style='width: 100%; margin: 0%; border-radius: 10px'>
+	<thead class="table-secondary">
 		<tr>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Código</th>
 			<th style='text-align: center; vertical-align: middle;' class='col-md-3'>Producto</th>

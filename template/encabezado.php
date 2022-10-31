@@ -86,8 +86,8 @@ if ($_SESSION['user_rol'] == 'admin') {
                 <li><a class="underline" <?php if($Pagina == $Clientes OR $Pagina == "Crear Cliente") { echo ("style='color: #F28E2A;'"); } ?> href="cliente.php?pag_actual=Clientes"><i class="fa-solid fa-users"></i>&nbspClientes</a></li>
                 <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> ><i class="fa-solid fa-angle-down"></i>&nbspSistemas</a>            
                     <ul class="menu-vertical">
-                        <li><a class="underline" <?php if($Pagina == $Solicitud) { echo ("style='color: #F28E2A;'"); } ?> href="sistema_general.php?pag_actual=Solicitud">Generales</a></li>
-                        <li><a class="underline" href="#">Especificos</a></li>
+                        <li><a class="underline" <?php if($Pagina == 'Solicitud_General') { echo ("style='color: #F28E2A;'"); } ?> href="sistema_general.php?pag_actual=Solicitud_General">Generales</a></li>
+                        <li><a class="underline" <?php if($Pagina == 'Solicitud_Espeficica') { echo ("style='color: #F28E2A;'"); } ?>href="sistema_especifico.php?pag_actual=Solicitud_Especifica">Especificos</a></li>
                     </ul>
                 </li>
                 <li><a class="underline" href="cerrar_sesion.php">Salir &nbsp<i class="fa-solid fa-right-from-bracket"></i></a></li>

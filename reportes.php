@@ -98,17 +98,24 @@ $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nomb
 $nombreImagen2 = "img/encabezado2.png";
 $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen2));
 
+$nombreImagen3 = "img/membrete.jpg";
+$imagenBase643 = "data:image/jpg;base64," . base64_encode(file_get_contents($nombreImagen3));
+
 ?>
+
+<img style="margin-top: -5.6% ; margin-left: -10%; z-index: -1; position: absolute; width: 122%; height: 107%;" src="<?php echo $imagenBase643; ?>;">
+	
+
 
 <div class="container_general">
 	<div class="encabezado">
-		<img src="<?php echo $imagenBase64 ?>" 
-		style=" width: 200px; height: 100px	;">
+		<!-- <img src="<?php #echo $imagenBase64 ?>" 
+		style=" width: 200px; height: 100px	;"> -->
 		<img src="<?php echo $imagenBase642 ?>" 
 		style=" width: 340px; height: 88px; position: relative;
-		left: 445px;
+		left: 650px; top: 2rem;
 		">
-		<hr style="margin:0;">
+		<!-- <hr style="margin:0;"> -->
 	</div>
 
 	<p style="font-size: 20px; margin-top:4rem;">
@@ -419,6 +426,7 @@ if ((isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) OR (isset
 
 	   
 </div>
+
 <?php
 
 require_once('reportes.php'); // llamamos el archivo que se supone contiene el html y dejamoso que se renderize

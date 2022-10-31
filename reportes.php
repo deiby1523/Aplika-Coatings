@@ -117,8 +117,9 @@ $imagenBase643 = "data:image/jpg;base64," . base64_encode(file_get_contents($nom
 		">
 		<!-- <hr style="margin:0;"> -->
 	</div>
+	<br><br>
 
-	<p style="font-size: 20px; margin-top:6rem;">
+	<p style="margin-left: 5.5%;font-size: 20px; margin-top:5rem; font-family: Helvetica">
 		Estimado(a)   <strong><?php echo $empresa['nombre']; ?></strong> con nit: <strong><?php echo $empresa['nit']; ?></strong>.<br><br>
 		Este calculo de rendimiento fue realizado por el asesor <strong><?php echo $asesor; ?></strong>, para determinar el rendimiento del siguiente 
 		sistema de recubrimientos.
@@ -126,25 +127,26 @@ $imagenBase643 = "data:image/jpg;base64," . base64_encode(file_get_contents($nom
 </div>
 
 
+
 <div class="container">
 <?php
 if ((isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) OR (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) OR (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0))
 	{
 ?>
-<table class='table_report' style="width: 200px;
-    margin: 2rem -160px; !important; border: solid black 1px">
+<table class='table_report' style="width: 160% !important;
+    margin-top: 40px; margin-left: -160px; border: solid black 1px; font-family: Helvetica; font-size: 14px;">
 
 	<thead style="border: solid black 1px">
 		<tr>
-			<th style='text-align: center; vertical-align: middle; margin-rigth:2px;' class='col-sm-1'>Código</th>
-			<th style='text-align: center; vertical-align: middle; width: 30px;' class='col-md-3'>Producto</th>
-			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Presentacion</th>
+			<th style="text-align: center; vertical-align: middle; margin-rigth:2px; margin:3px" class='col-sm-1'>Código</th>
+			<th style='text-align: center; vertical-align: middle; width: 110%;'>Producto</th>
+			<th style="text-align: center; vertical-align: middle;" class='col-sm-1'>Presentacion</th>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Solidos % </th>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>EPS(Mils)</th>
 			<th style='text-align: center; vertical-align: middle;'>Rendimiento Teórico Mts2/GAL</th>
             <th style='text-align: center; vertical-align: middle;'>Desperdicio</th>
 			<th style='text-align: center; vertical-align: middle;'>Rendimiento Práctico Mt2/GAL</th>
-            <th style='text-align: center; vertical-align: middle;' class='col-sm-2'>Area</th>
+            <th style='text-align: center; vertical-align: middle; width: 70px' class='col-sm-2'>Area Mt2</th>
             <th style='text-align: center; vertical-align: middle;'>Cantidad de galones</th>
             <th style='text-align: center; vertical-align: middle;'>Cantidad de Unidades</th>
 		</tr>
@@ -156,7 +158,7 @@ if ((isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) OR (isset
 
         <tr >
         <?php 
-            echo "<td style='border: solid black 1px'>" . $imprimante['referencia'] . "</td><td style='border: solid black 1px'>" . $imprimante['producto'] . "</td><td style='border: solid black 1px; aling-items: center;'>" . $imprimante['presentacion'] . "</td><td style='border: solid black 1px'>" . $imprimante['solidos'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_espesor'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_rendimiento_teorico'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_desperdicio'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_rendimiento_practico'] . "</td><td style='border: solid black 1px'>" . $_POST['imprimante_area'] . "</td><td style='border: solid black 1px'>" . round($_POST['imprimante_galones'], 2) . "</td><td style='border: solid black 1px' style='border: solid black 1px'>" . $_POST['imprimante_unidades'] . "</td>";
+            echo "<td style='border: solid black 1px'>" . $imprimante['referencia'] . "</td><td style='border: solid black 1px'>" . $imprimante['producto'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $imprimante['presentacion'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $imprimante['solidos'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['imprimante_espesor'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['imprimante_rendimiento_teorico'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['imprimante_desperdicio'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['imprimante_rendimiento_practico'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['imprimante_area'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . round($_POST['imprimante_galones'], 2) . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['imprimante_unidades'] . "</td>";
         ?>
         </tr>
 		<?php
@@ -168,7 +170,7 @@ if ((isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) OR (isset
 		?>
 		<tr style="border: solid black 1px">
         <?php 
-            echo "<td style='border: solid black 1px'>" . $barrera['referencia'] . "</td><td style='border: solid black 1px'>" . $barrera['producto'] . "</td><td style='border: solid black 1px'>" . $barrera['presentacion'] . "</td><td style='border: solid black 1px'>" . $barrera['solidos'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_espesor'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_rendimiento_teorico'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_desperdicio'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_rendimiento_practico'] . "</td><td style='border: solid black 1px'>" . $_POST['barrera_area'] . "</td><td style='border: solid black 1px'>" . round($_POST['barrera_galones'], 2) . "</td><td style='border: solid black 1px' style='border: solid black 1px'>" . $_POST['barrera_unidades'] . "</td>";
+            echo "<td style='border: solid black 1px'>" . $barrera['referencia'] . "</td><td style='border: solid black 1px'>" . $barrera['producto'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $barrera['presentacion'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $barrera['solidos'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['barrera_espesor'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['barrera_rendimiento_teorico'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['barrera_desperdicio'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['barrera_rendimiento_practico'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['barrera_area'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . round($_POST['barrera_galones'], 2) . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['barrera_unidades'] . "</td>";
         ?>
         </tr> 
 		<?php
@@ -180,7 +182,7 @@ if ((isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) OR (isset
 		?>
 		<tr style="border: solid black 1px">
         <?php 
-            echo "<td style='border: solid black 1px'>" . $acabado['referencia'] . "</td><td style='border: solid black 1px'>" . $acabado['producto'] . "</td><td style='border: solid black 1px'>" . $acabado['presentacion'] . "</td><td style='border: solid black 1px'>" . $acabado['solidos'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_espesor'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_rendimiento_teorico'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_desperdicio'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_rendimiento_practico'] . "</td><td style='border: solid black 1px'>" . $_POST['acabado_area'] . "</td><td style='border: solid black 1px'>" . round($_POST['acabado_galones'], 2) . "</td><td style='border: solid black 1px' style='border: solid black 1px'>" . $_POST['acabado_unidades'] . "</td>";
+            echo "<td style='border: solid black 1px'>" . $acabado['referencia'] . "</td><td style='border: solid black 1px'>" . $acabado['producto'] . "</td><td style='text-align: center; vertical-align: middle; border: solid bstyle='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $acabado['presentacion'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $acabado['solidos'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['acabado_espesor'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['acabado_rendimiento_teorico'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['acabado_desperdicio'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['acabado_rendimiento_practico'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['acabado_area'] . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . round($_POST['acabado_galones'], 2) . "</td><td style='text-align: center; vertical-align: middle; border: solid black 1px; aling-items: center;'>" . $_POST['acabado_unidades'] . "</td>";
         ?>
         </tr> 
 		<?php
@@ -201,10 +203,10 @@ if ((isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) OR (isset
 	{
 ?>
 
-	<table style="font-size: 18px;  width: 50rem;">
+	<table style="margin-left: -30px;font-family: Helvetica ;font-size: 15px;  width: 50rem;">
 	<thead>
 		<th>
-			Caracteristica
+			
 		</th>
 		<?php
 	  	if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
@@ -416,13 +418,19 @@ if ((isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) OR (isset
 
 </div>
 
-
-  		<br>
+<?php
+if ($_POST['observaciones_adicionales'] != "") 
+{
+	?>
+	<br><br>
   		<div class="input-group">
-  		  <span class="input-group-text">Observaciones adicionales:</span>
-			<textarea class="form-control" style="width: 32rem;" aria-label="With textarea"><?php echo $_POST['observaciones_adicionales']; ?></textarea>
+  		  <span style="font-family: Helvetica" class="input-group-text"><strong>Observaciones adicionales:</strong></span>
+			<textarea class="form-control" style="background-color: transparent ;font-family: Helvetica; width: 32rem; height: 150px" aria-label="With textarea"><?php echo $_POST['observaciones_adicionales']; ?></textarea>
   		</div>
-  		<br><br><br>
+<?php
+}
+?>
+
 
 	   
 </div>

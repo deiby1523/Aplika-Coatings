@@ -118,7 +118,7 @@ $imagenBase643 = "data:image/jpg;base64," . base64_encode(file_get_contents($nom
 		<!-- <hr style="margin:0;"> -->
 	</div>
 
-	<p style="font-size: 20px; margin-top:4rem;">
+	<p style="font-size: 20px; margin-top:6rem;">
 		Estimado(a)   <strong><?php echo $empresa['nombre']; ?></strong> con nit: <strong><?php echo $empresa['nit']; ?></strong>.<br><br>
 		Este calculo de rendimiento fue realizado por el asesor <strong><?php echo $asesor; ?></strong>, para determinar el rendimiento del siguiente 
 		sistema de recubrimientos.

@@ -9,7 +9,6 @@ $dompdf = new Dompdf();
 ob_start(); //iniciamos un output buffer
 
 ?>
-<link rel="stylesheet" href="main.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <?php
@@ -96,7 +95,7 @@ $nombreImagen = "img/marcaAPLIKA.png";
 $imagenBase64 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen));
 
 
-$nombreImagen2 = "img/logoSGS.png";
+$nombreImagen2 = "img/encabezado2.png";
 $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nombreImagen2));
 
 ?>
@@ -104,16 +103,16 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 <div class="container_general">
 	<div class="encabezado">
 		<img src="<?php echo $imagenBase64 ?>" 
-		style=" width: 230px; height: 100px	;">
+		style=" width: 200px; height: 100px	;">
 		<img src="<?php echo $imagenBase642 ?>" 
-		style=" width: 100px; height: 75px; position: relative;
-		left: 600px;
+		style=" width: 340px; height: 88px; position: relative;
+		left: 445px;
 		">
-		<hr>
+		<hr style="margin:0;">
 	</div>
 
 	<p style="font-size: 20px; margin-top:4rem;">
-		Estimad@   <strong><?php echo $empresa['nombre']; ?></strong> con nit: <strong><?php echo $empresa['nit']; ?></strong>.<br><br>
+		Estimado(a)   <strong><?php echo $empresa['nombre']; ?></strong> con nit: <strong><?php echo $empresa['nit']; ?></strong>.<br><br>
 		Este calculo de rendimiento fue realizado por el asesor <strong><?php echo $asesor; ?></strong>, para determinar el rendimiento del siguiente 
 		sistema de recubrimientos.
 	</p>
@@ -200,7 +199,7 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 	<tbody>
 		<tr>
 			<td>
-				Preparacion de superficie
+				<strong>Preparacion de superficie</strong>
 			</td>
 			<td>
 				<?php echo $_POST['imprimante_preparacion_superficie']; ?>
@@ -214,7 +213,7 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 		</tr>
 		<tr>
 			<td>
-				Disolvente
+				<strong>Disolvente</strong>
 			</td>
 			<td>
 				<?php echo $_POST['imprimante_disolvente']; ?>
@@ -228,7 +227,7 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 		</tr>
 		<tr>
 			<td>
-				Espesor Recomendado
+				<strong>Espesor Recomendado</strong>
 			</td>
 			<td>
 				<?php echo $_POST['imprimante_espesor_recomendado']; ?>
@@ -242,7 +241,7 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 		</tr>
 		<tr>
 			<td>
-				Vida de la mezcla
+				<strong>Vida de la mezcla</strong>
 			</td>
 			<td>
 				<?php echo $_POST['imprimante_vida_mezcla']; ?>
@@ -256,7 +255,7 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 		</tr>
 		<tr>
 			<td>
-				Secado al tacto
+				<strong>Secado al tacto</strong>
 			</td>
 			<td>
 				<?php echo $_POST['imprimante_secado']; ?>
@@ -270,7 +269,7 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 		</tr>
 		<tr>
 			<td>
-				Repintabilidad
+				<strong>Repintabilidad</strong>
 			</td>
 			<td>
 				<?php echo $_POST['imprimante_repintabilidad']; ?>

@@ -16,7 +16,7 @@ ob_start(); //iniciamos un output buffer
 $nit = $_POST['nit'];
 $asesor = $_POST['asesor'];
 
-if (isset($_POST['cod_imprimante'])) {
+if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
 $cod_imprimante = $_POST['cod_imprimante'];
 $imprimante_espesor = $_POST['imprimante_espesor'];
 $imprimante_rendimiento_teorico = $_POST['imprimante_rendimiento_teorico'];
@@ -27,7 +27,7 @@ $imprimante_galones = $_POST['imprimante_galones'];
 $imprimante_unidades = $_POST['imprimante_unidades'];
 }
 
-if (isset($_POST['cod_barrera'])) {
+if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
 $cod_barrera = $_POST['cod_barrera'];
 $barrera_espesor = $_POST['barrera_espesor'];
 $barrera_rendimiento_teorico = $_POST['barrera_rendimiento_teorico'];
@@ -38,7 +38,7 @@ $barrera_galones = $_POST['barrera_galones'];
 $barrera_unidades = $_POST['barrera_unidades'];
 }
 
-if (isset($_POST['cod_acabado'])) {
+if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
 $cod_acabado = $_POST['cod_acabado'];
 $acabado_espesor = $_POST['acabado_espesor'];
 $acabado_rendimiento_teorico = $_POST['acabado_rendimiento_teorico'];
@@ -68,19 +68,19 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
 
 # Consulta de productos desde la base de datos ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Codigos de productos ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-if (isset($_POST['cod_imprimante'])) {
+if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
 $consulta = "SELECT * FROM productos WHERE referencia = '$cod_imprimante'";
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 $imprimante = mysqli_fetch_array( $resultado );
 }
 
-if (isset($_POST['cod_barrera'])) {
+if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
 $consulta = "SELECT * FROM productos WHERE referencia = '$cod_barrera'";
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 $barrera = mysqli_fetch_array( $resultado );
 }
 
-if (isset($_POST['cod_acabado'])) {
+if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
 	$consulta = "SELECT * FROM productos WHERE referencia = '$cod_acabado'";
 	$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 	$acabado = mysqli_fetch_array( $resultado );
@@ -120,6 +120,10 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 
 
 <div class="container">
+<?php
+if ((isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) OR (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) OR (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0))
+	{
+?>
 <table class='table_report' style="width: 200px;
     margin: 2rem -160px; !important; border: solid black 1px">
 
@@ -140,7 +144,7 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 	</thead>
 	  <tbody style="border: solid black 1px; border-spacing: 0px">
 	  <?php
-	  if (isset($_POST['cod_imprimante'])) {
+	  if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
 		?>
 
         <tr >
@@ -153,7 +157,7 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 		?> 
 		&nbsp;  
 		<?php
-	  if (isset($_POST['cod_acabado'])) {
+	  	if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
 		?>
 		<tr style="border: solid black 1px">
         <?php 
@@ -165,7 +169,7 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 		?>
 		&nbsp;
 		<?php
-	  	if (isset($_POST['cod_acabado'])) {
+	  	if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
 		?>
 		<tr style="border: solid black 1px">
         <?php 
@@ -177,112 +181,231 @@ $imagenBase642 = "data:image/png;base64," . base64_encode(file_get_contents($nom
 		?>	
 	   </tbody>
 	   </table>
+	   <?php
+	}  
+	 
+	 ?>
 
 	
 <div class="container" style="margin: 6rem -100px;">
 
+<?php
+if ((isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) OR (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) OR (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0))
+	{
+?>
+
 	<table style="font-size: 18px;  width: 50rem;">
 	<thead>
 		<th>
-		</th>
 			Caracteristica
+		</th>
+		<?php
+	  	if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
+		?>
 		<th>
 			<?php echo $imprimante['producto']; ?>
 		</th>
+		<?php
+		}
+	  	if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
+		?>
 		<th>
 			<?php echo $barrera['producto']; ?>
 		</th>
+		<?php
+		}
+	  	if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
+		?>
 		<th>
 			<?php echo $acabado['producto']; ?>
 		</th>
+		<?php
+		}
+		?>
 	</thead>
 	<tbody>
 		<tr>
 			<td>
 				<strong>Preparacion de superficie</strong>
 			</td>
+			<?php
+		
+	  		if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['imprimante_preparacion_superficie']; ?>
 			</td>
+			<?php
+			}
+	  		if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['barrera_preparacion_superficie']; ?>
 			</td>
+			<?php
+			}
+	  		if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['acabado_preparacion_superficie']; ?>
 			</td>
+			<?php
+			}
+			?>
 		</tr>
 		<tr>
 			<td>
 				<strong>Disolvente</strong>
 			</td>
+			<?php
+		
+	  		if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['imprimante_disolvente']; ?>
 			</td>
+			<?php
+			}
+	  		if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['barrera_disolvente']; ?>
 			</td>
+			<?php
+			}
+	  		if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['acabado_disolvente']; ?>
 			</td>
+			<?php
+			}
+		
+			?>
 		</tr>
 		<tr>
 			<td>
 				<strong>Espesor Recomendado</strong>
 			</td>
+			<?php
+			
+	  		if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['imprimante_espesor_recomendado']; ?>
 			</td>
+			<?php
+			}
+	  		if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['barrera_espesor_recomendado']; ?>
 			</td>
+			<?php
+			}
+	  		if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['acabado_espesor_recomendado']; ?>
 			</td>
+			<?php
+			}
+			?>
 		</tr>
 		<tr>
 			<td>
 				<strong>Vida de la mezcla</strong>
 			</td>
+
+			<?php
+		
+	  		if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
+			?>
 			<td>
 				<?php echo $_POST['imprimante_vida_mezcla']; ?>
 			</td>
+			<?php
+		}
+	  	if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
+		?>
 			<td>
 				<?php echo $_POST['barrera_vida_mezcla']; ?>
 			</td>
+			<?php
+		}
+	  	if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
+		?>
 			<td>
 				<?php echo $_POST['acabado_vida_mezcla']; ?>
 			</td>
+			<?php
+		}
+		?>
 		</tr>
 		<tr>
 			<td>
 				<strong>Secado al tacto</strong>
 			</td>
+			<?php
+		
+	  	if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
+		?>
 			<td>
 				<?php echo $_POST['imprimante_secado']; ?>
 			</td>
+			<?php
+		}
+	  	if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
+		?>
 			<td>
 				<?php echo $_POST['barrera_secado']; ?>
 			</td>
+			<?php
+		}
+	  	if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
+		?>
 			<td>
 				<?php echo $_POST['acabado_secado']; ?>
 			</td>
+			<?php
+		}
+		?>
 		</tr>
 		<tr>
 			<td>
 				<strong>Repintabilidad</strong>
 			</td>
+			<?php
+		
+	  	if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
+		?>
 			<td>
 				<?php echo $_POST['imprimante_repintabilidad']; ?>
 			</td>
+			<?php
+		}
+	  	if (isset($_POST['cod_barrera']) && $_POST['cod_barrera'] != 0) {
+		?>
 			<td>
 				<?php echo $_POST['barrera_repintabilidad']; ?>
 			</td>
+			<?php
+		}
+	  	if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
+		?>
 			<td>
 				<?php echo $_POST['acabado_repintabilidad']; ?>
 			</td>
+			<?php
+		}
+		?>
 		</tr>
 	</tbody>
 	</table>
+	<?php
+	}
+	
+	?>
 
 </div>
 

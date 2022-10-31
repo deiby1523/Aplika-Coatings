@@ -57,8 +57,13 @@ $acabado = mysqli_fetch_array( $resultado );
 
 #var_dump( $_POST );
 
+
 ?>
 <form method="POST" action="reportes.php">
+
+<h1>Tabla Generada</h1>
+<hr class="separador">
+
 <div class="container">
     <input type="hidden" name="cod_imprimante" value="<?php echo $cod_imprimante; ?>">
     <input type="hidden" name="cod_barrera" value="<?php echo $cod_barrera; ?>">
@@ -66,19 +71,6 @@ $acabado = mysqli_fetch_array( $resultado );
     <input type="hidden" name="nit" value="<?php echo $nit; ?>">    
     <input type="hidden" name="asesor" value="<?php echo $asesor; ?>">    
  
-<div class="row button_cancelarCliente">
-            <div class="col-md-2">
-                <div class="d-grid gap-2">
-		    		<a class="btn btn-danger" href="home.php">Cancelar</a>
-            	</div>
-		    </div>
-            <div class="col-md-3">
-		    	<div class="d-grid gap-2" style="float: end;">
-		    		<button class="btn btn-succes" type="submit">Generar PDF</button>
-            	</div>
-		    </div>
-        </div>
-</div>
 <br>
 <div class="container">
   
@@ -279,23 +271,23 @@ if($cod_imprimante != 0) {
   </div>
 
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">disolvente:</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">disolvente:</span>
     <input type="text" name="imprimante_disolvente" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_disolvente[0]; ?>">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Espesor Recomendado:</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Espesor Recomendado:</span>
     <input type="text" name="imprimante_espesor_recomendado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_espesor_recomendado[0]; ?> Mils">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Vida de la mezcla</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Vida de la mezcla</span>
     <input type="text" name="imprimante_vida_mezcla" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_vida_mezcla[0]; ?>">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Secado al tacto</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Secado al tacto</span>
     <input type="text" name="imprimante_secado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_secado[0]; ?>">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Repintabilidad</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Repintabilidad</span>
     <input type="text" name="imprimante_repintabilidad" class="form-control" aria-describedby="basic-addon1" value="<?php echo $imprimante_repintabilidad[0]; ?>">
   </div>
 
@@ -309,28 +301,28 @@ if ($cod_barrera != 0) {
   <h2><?php echo $barrera['producto']; ?></h2>
   <br>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Preparación de Superficie:</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Preparación de Superficie:</span>
     <input type="text" name="barrera_preparacion_superficie" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_preparacion_superficie[0]; ?>">
   </div>
 
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">disolvente:</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">disolvente:</span>
     <input type="text" name="barrera_disolvente" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_disolvente[0]; ?>">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Espesor Recomendado:</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Espesor Recomendado:</span>
     <input type="text" name="barrera_espesor_recomendado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_espesor_recomendado[0]; ?> Mils">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Vida de la mezcla</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Vida de la mezcla</span>
     <input type="text" name="barrera_vida_mezcla" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_vida_mezcla[0]; ?>">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Secado al tacto</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Secado al tacto</span>
     <input type="text" name="barrera_secado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_secado[0]; ?>">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Repintabilidad</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Repintabilidad</span>
     <input type="text" name="barrera_repintabilidad" class="form-control" aria-describedby="basic-addon1" value="<?php echo $barrera_repintabilidad[0]; ?>">
   </div>
 
@@ -349,23 +341,23 @@ if ($cod_acabado != 0) {
   </div>
 
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">disolvente:</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">disolvente:</span>
     <input type="text" name="acabado_disolvente" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_disolvente[0]; ?>">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Espesor Recomendado:</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Espesor Recomendado:</span>
     <input type="text" name="acabado_espesor_recomendado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_espesor_recomendado[0]; ?> Mils">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Vida de la mezcla</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Vida de la mezcla</span>
     <input type="text" name="acabado_vida_mezcla" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_vida_mezcla[0]; ?>">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Secado al tacto</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Secado al tacto</span>
     <input type="text" name="acabado_secado" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_secado[0]; ?>">
   </div>
   <div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">Repintabilidad</span>
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Repintabilidad</span>
     <input type="text" name="acabado_repintabilidad" class="form-control" aria-describedby="basic-addon1" value="<?php echo $acabado_repintabilidad[0]; ?>">
   </div>
 
@@ -381,6 +373,21 @@ if ($cod_acabado != 0) {
     <textarea class="form-control" name="observaciones adicionales" aria-label="With textarea"></textarea>
   </div>
   <br><br><br>
+
+<div class="container">
+	    <div class="row">
+		    <div class="cancelar col-md-6">
+			    <div class="cancel d-grid gap-2">
+                    <a class="btn btn-danger" href="home.php?pag_actual=inicio">Cancelar</a>
+			    </div>
+		    </div>
+            <div class="agregar col-md-6">
+			    <div class="agrega d-grid gap-2">
+				    <button class="btn btn-succes" type="submit">Generar PDF</button>
+        	    </div>
+		    </div>
+	    </div>
+    </div>
 
 </div>
 </form>

@@ -108,21 +108,13 @@ $imagenBase643 = "data:image/jpg;base64," . base64_encode(file_get_contents($nom
 
 
 <div class="container_general">
-	<div class="encabezado">
-		<!-- <img src="<?php #echo $imagenBase64 ?>" 
-		style=" width: 200px; height: 100px	;"> -->
-		<img src="<?php echo $imagenBase642 ?>" 
-		style=" width: 340px; height: 88px; position: relative;
-		left: 650px; top: 2rem;
-		">
-		<!-- <hr style="margin:0;"> -->
-	</div>
 	<br><br>
 
 	<p style="margin-left: 5.5%;font-size: 20px; margin-top:5rem; font-family: Helvetica">
-		Estimado(a)   <strong><?php echo $empresa['nombre']; ?></strong> con nit: <strong><?php echo $empresa['nit']; ?></strong>.<br><br>
-		Este calculo de rendimiento fue realizado por el asesor <strong><?php echo $asesor; ?></strong>, para determinar el rendimiento del siguiente 
-		sistema de recubrimientos.
+		Señor(a) <br>
+		<strong><?php echo $empresa['nombre']; ?></strong> <br>
+		<strong><?php echo $empresa['nit']; ?></strong>.<br><br>
+		Se presenta la siguiente memoria de calculo de rendimiento y consumo para el siguiente sistema de recubrimientos
 	</p>
 </div>
 

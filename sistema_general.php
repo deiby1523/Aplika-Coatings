@@ -72,7 +72,7 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
 
             <div class="input-group add mb-2" style="height: 60px;">
                 <label class="input-group-text amp" for="area" style="width: 17%;"><strong>Area</strong></label>
-                <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadraddos">
+                <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadrados">
             </div>
 
             

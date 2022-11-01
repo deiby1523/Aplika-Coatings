@@ -39,7 +39,7 @@ if($_POST['busqueda'] != '') {
             while ($cliente = mysqli_fetch_array( $resultado))
             {
             echo "<tr>";
-            echo "<td>" . $cliente['nit'] . "</td><td>" . $cliente['nombre'] . "</td><td>" . $cliente['celular'] . "</td><td>" . $cliente['correo'] . "</td><td>" . $cliente['departamento'] . "</td><td>" . $cliente['ciudad'] . "</td><td>" . $cliente['direccion'] . "</td><td><a href='editar_cliente.php?id=".$cliente['id']."'"." class='btn'><i class='fa-solid fa-pencil'></i></a><a href='eliminar_cliente.php?id=".$cliente['id']."'"." class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
+            echo "<td>" . $cliente['nit'] ."-". $cliente['dv'] . "</td><td>" . $cliente['nombre'] . "</td><td>" . $cliente['celular'] . "</td><td>" . $cliente['correo'] . "</td><td>" . $cliente['departamento'] . "</td><td>" . $cliente['ciudad'] . "</td><td>" . $cliente['direccion'] . "</td><td><a href='editar_cliente.php?id=".$cliente['id']."'"." class='btn'><i class='fa-solid fa-pencil'></i></a><a href='eliminar_cliente.php?id=".$cliente['id']."'"." class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
             echo "</tr>";
             }
             ?>
@@ -77,7 +77,7 @@ if($_POST['busqueda'] != '') {
             while ($cliente = mysqli_fetch_array( $resultado))
             {
             echo "<tr>";
-            echo "<td>" . $cliente['nit'] . "</td><td>" . $cliente['nombre'] . "</td><td>" . $cliente['celular'] . "</td><td>" . $cliente['correo'] . "</td><td>" . $cliente['departamento'] . "</td><td>" . $cliente['ciudad'] . "</td><td>" . $cliente['direccion'] . "</td><td><a href='editar_cliente.php?id=".$cliente['id']."'"." class='btn'><i class='fa-solid fa-pencil'></i></a><a href='eliminar_cliente.php?id=".$cliente['id']."'"." class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
+            echo "<td>" . $cliente['nit'] ."-". $cliente['dv'] . "</td><td>" . $cliente['nombre'] . "</td><td>" . $cliente['celular'] . "</td><td>" . $cliente['correo'] . "</td><td>" . $cliente['departamento'] . "</td><td>" . $cliente['ciudad'] . "</td><td>" . $cliente['direccion'] . "</td><td><a href='editar_cliente.php?id=".$cliente['id']."'"." class='btn'><i class='fa-solid fa-pencil'></i></a><a href='eliminar_cliente.php?id=".$cliente['id']."'"." class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
             echo "</tr>";
             }
             ?>

@@ -16,7 +16,7 @@
             </div>
             <div class="col-md">
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputGrid" name="dig" required>
+                    <input type="number" class="form-control" id="floatingInputGrid" name="dv">
                     <label for="floatingInputGrid">digito de verificación</label>
                 </div>
             </div>

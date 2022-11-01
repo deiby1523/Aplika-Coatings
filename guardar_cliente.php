@@ -12,7 +12,7 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
 
 if (isset($_POST['nit'])) {
     $nit = $_POST['nit'];
-    $dig = $_POST['dig'];
+    $dv = $_POST['dv'];
     $nombre = $_POST['nombre'];
     $tel = $_POST['tel'];
     $correo = $_POST['correo'];
@@ -25,9 +25,9 @@ if (isset($_POST['nit'])) {
 }
 
 # Añadir cliente ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$consulta = "INSERT INTO clientes VALUES (null,'$nit','$nombre','$tel','$correo','$dep','$ciudad','$dir')";
-$productos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+$consulta = "INSERT INTO clientes VALUES (null,'$nit','$dv','$nombre','$tel','$correo','$dep','$ciudad','$dir')";
+$clientes = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 
-if ( $productos ) {
+if ( $clientes ) {
     header('location: cliente.php?msg=ok');
 }

@@ -36,7 +36,15 @@ $cliente = mysqli_fetch_array($resultado);
                 <label for="floatingInputGrid">NIT</label>
               </div>
             </div>
-            
+        </div>
+
+        <div class="row g-2 form-client" >
+            <div class="col-md">
+                <div class="form-floating">
+                  <input value="<?php echo $cliente['dv']; ?>" type="number" class="form-control" id="floatingInputGrid" name="dv">
+                  <label for="floatingInputGrid">Digito de verificación</label>
+                </div>
+            </div>
         </div>
 
         <div class="row g-2 form-client" >

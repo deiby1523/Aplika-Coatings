@@ -13,6 +13,7 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
 if (isset($_POST['nit'])) {
     $id = $_POST['id'];
     $nit = $_POST['nit'];
+    $dv = $_POST['dv'];
     $nombre = $_POST['nombre'];
     $tel = $_POST['tel'];
     $correo = $_POST['correo'];
@@ -25,7 +26,7 @@ if (isset($_POST['nit'])) {
 }
 
 # Añadir cliente ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$consulta = "UPDATE clientes SET nit = '$nit', nombre = '$nombre', celular ='$tel', correo = '$correo', departamento ='$dep', ciudad = '$ciudad', direccion ='$dir' WHERE id = '$id'";
+$consulta = "UPDATE clientes SET nit = '$nit',dv = '$dv', nombre = '$nombre', celular ='$tel', correo = '$correo', departamento ='$dep', ciudad = '$ciudad', direccion ='$dir' WHERE id = '$id'";
 $cliente = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 
 if ( $cliente ) {

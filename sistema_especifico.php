@@ -60,20 +60,65 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                   
                 </select>
             </div>
-            <div class="input-group add mb-2">
-                <label class="input-group-text amp" for="select_marca"><strong>Marca</strong></label>
-                <select name="marca" class="form-select" id="select_marca" required>
-                  <option selected disabled></option>
-                  <option value="Sika">Sika</option>
-                  <option value="International Paint">International Paint</option>
-                </select>
-            </div>
-            <br><br><br>
+            <br>
 
             <div class="input-group add mb-2" style="height: 60px;">
                 <label class="input-group-text amp" for="area" style="width: 17%;"><strong>Area</strong></label>
                 <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadraddos">
             </div>
+            <br>
+            <div class="input-group add mb-2">
+                <label class="input-group-text amp " for="inputGroupSelect01"><strong>Uso</strong></label>
+                <select name="uso" class="form-select" id="inputGroupSelect01" required>
+                    <option selected disabled></option>
+                    <option>Tuberias Enterradas</option>
+                    <option>Tuberias Aereas</option>
+                    <option>Refineria</option>
+                    <?php
+                    /*
+                    while ($usos = mysqli_fetch_array( $uso)) {
+                        echo "<option value='".$asesor['nombre']."'>".$asesor['nombre']."</option>";
+                    }
+                    */
+                    ?>             
+                </select>
+            </div>
+<br>
+            <div class="input-group add mb-2">
+                <label class="input-group-text amp " for="inputGroupSelect01"><strong>Temperatura</strong></label>
+                <select name="temperatura" class="form-select" id="inputGroupSelect01" required>
+                    <option selected disabled></option>
+                    <option> < 70°C </option>
+                    <option> 70°C > 120°C</option>
+                    <option> 120°C > </option>
+                    <?php
+                    /*
+                    while ($usos = mysqli_fetch_array( $uso)) {
+                        echo "<option value='".$asesor['nombre']."'>".$asesor['nombre']."</option>";
+                    }
+                    */
+                    ?>             
+                </select>
+            </div>
+            <br>
+            <div class="input-group add mb-2">
+                <label class="input-group-text amp " for="inputGroupSelect01"><strong>Temperatura</strong></label>
+                <select name="temperatura" class="form-select" id="inputGroupSelect01" required>
+                    <option selected disabled></option>
+                    <option> < 70°C </option>
+                    <option> 70°C > 120°C</option>
+                    <option> 120°C > </option>
+                    <?php
+                    /*
+                    while ($usos = mysqli_fetch_array( $uso)) {
+                        echo "<option value='".$asesor['nombre']."'>".$asesor['nombre']."</option>";
+                    }
+                    */
+                    ?>             
+                </select>
+            </div>
+
+            
 
             
 

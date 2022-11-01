@@ -27,8 +27,9 @@ function imprimante(solidos, espesor, desperdicio, areav, presentacion)
     imprimante_rendimiento_p.value = resultado_rp;
         
     var resultado_gal = area / resultado_rp;
+    resultado_gal = Math.ceil(resultado_gal / present) * present;
     var imprimante_gal = document.getElementById("imprimante_galones");
-    imprimante_gal.value = resultado_gal;   
+    imprimante_gal.value = resultado_gal;
 
     var resultado_und = resultado_gal / present;
     resultado_und = Math.ceil(resultado_und);
@@ -127,6 +128,7 @@ function barrera(solidos, espesor, desperdicio, areav, presentacion)
     barrera_rendimiento_p.value = resultado_rp;
         
     var resultado_gal = area / resultado_rp;
+    resultado_gal = Math.ceil(resultado_gal / present) * present;
     var barrera_gal = document.getElementById("barrera_galones");
     barrera_gal.value = resultado_gal;   
 
@@ -229,6 +231,7 @@ function acabado(solidos, espesor, desperdicio, areav, presentacion)
     acabado_rendimiento_p.value = resultado_rp;
         
     var resultado_gal = area / resultado_rp;
+    resultado_gal = Math.ceil(resultado_gal / present) * present;
     var acabado_gal = document.getElementById("acabado_galones");
     acabado_gal.value = resultado_gal;   
 

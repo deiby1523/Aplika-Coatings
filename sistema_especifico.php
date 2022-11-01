@@ -18,11 +18,17 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
 $consulta = "SELECT * FROM user WHERE rol = 'asesor'";
 $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 
+$consulta = "SELECT * FROM clientes";
+$clientes = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+
+$consulta = "SELECT uso FROM normas GROUP BY uso";
+$usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+
 ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="cliente/cliente.js"></script>
 <script src="producto/producto.js"></script>
+<script src="normas.js"></script>
 
         <h1 class="titleDato">Solicitud de sistema por especificacion</h1>
 
@@ -30,63 +36,27 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
 
     <div class="container">
         <form method='POST' class='form-control form-data' action='tabla_especifica.php'>
-
-            <div class="input-group texting">
-                <span class="input-group-text"><strong>Información de la Empresa</strong></span>
-                <div class="col-3">
-                    <input type="number" aria-label="First name" placeholder="Nit" class="form-control" name="nit" id="inputnit" required>
-                    <input disabled type="text" aria-label="Last name" placeholder="Nombre " class="form-control disabled" id="nombre_cliente" name="nombre_cliente">
-                    
-                </div>
-                <div class="col-3">
-                    <input disabled type="text" aria-label="Last name" placeholder="Direccion" class="form-control disabled" id="direccion_cliente" name="direccion">
-                    <input disabled type="text" aria-label="Last name" placeholder="Telefono" class="form-control disabled" id="telefono_cliente" name="telefono">
-                </div>
-                <div class="col-3">
-                    <input disabled type="text" aria-label="Last name" placeholder="Departamento" class="form-control disabled" id="dep_cliente" name="departamento">
-                    <input disabled type="text" aria-label="Last name" placeholder="Correo" class="form-control disabled" id="correo_cliente" name="correo">
-                </div>
-            </div>
-            <br>
-            <div class="input-group add mb-2">
-                <label class="input-group-text amp " for="inputGroupSelect01"><strong>Asesor</strong></label>
-                <select name="asesor" class="form-select" id="inputGroupSelect01" required>
-                    <option selected disabled></option>
+            
+            <div class="input-group add mb-2" style="margin-bottom: 30px !important;">
+                <label class="input-group-text amp " for="inputGroupSelect01"><strong>Entidad</strong></label>
+                <select name="select_cliente" class="form-select" id="select_cliente" required>
+                    <option selected></option>
                     <?php
-                    while ($asesor = mysqli_fetch_array( $asesores)) {
-                        echo "<option value='".$asesor['nombre']."'>".$asesor['nombre']."</option>";
+                    while ($cliente = mysqli_fetch_array( $clientes)) {
+                        echo "<option value='".$cliente['nit']."'>".$cliente['nombre']."</option>";
                     }
                     ?>
                   
                 </select>
             </div>
-            <br>
+            
 
-            <div class="input-group add mb-2" style="height: 60px;">
-                <label class="input-group-text amp" for="area" style="width: 17%;"><strong>Area</strong></label>
-                <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadraddos">
+            <div id="seccion_usos" class="input-group add mb-2" style="margin-bottom: 30px !important;">        
             </div>
-            <br>
-            <div class="input-group add mb-2">
-                <label class="input-group-text amp " for="inputGroupSelect01"><strong>Uso</strong></label>
-                <select name="uso" class="form-select" id="inputGroupSelect01" required>
-                    <option selected disabled></option>
-                    <option>Tuberias Enterradas</option>
-                    <option>Tuberias Aereas</option>
-                    <option>Refineria</option>
-                    <?php
-                    /*
-                    while ($usos = mysqli_fetch_array( $uso)) {
-                        echo "<option value='".$asesor['nombre']."'>".$asesor['nombre']."</option>";
-                    }
-                    */
-                    ?>             
-                </select>
-            </div>
-<br>
-            <div class="input-group add mb-2">
-                <label class="input-group-text amp " for="inputGroupSelect01"><strong>Temperatura</strong></label>
-                <select name="temperatura" class="form-select" id="inputGroupSelect01" required>
+
+            <div id="seccion_temperaturas" class="input-group add mb-2" style="margin-bottom: 30px !important;">
+                <label class="input-group-text amp " for="select_temperatura"><strong>Temperatura</strong></label>
+                <select name="select_temperatura" class="form-select" id="select_temperatura" required>
                     <option selected disabled></option>
                     <option> < 70°C </option>
                     <option> 70°C > 120°C</option>
@@ -100,6 +70,12 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                     ?>             
                 </select>
             </div>
+
+            <div class="input-group add mb-2" style="margin-bottom: 30px !important;" style="height: 60px;">
+                <label class="input-group-text amp" for="area" style="width: 17%;"><strong>Area</strong></label>
+                <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadraddos">
+            </div>
+            
             <br>
             <div class="input-group add mb-2">
                 <label class="input-group-text amp " for="inputGroupSelect01"><strong>Temperatura</strong></label>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 01-11-2022 a las 13:07:41
+-- Tiempo de generación: 01-11-2022 a las 21:53:31
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.3.21
 
@@ -20,28 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `recubrimientos`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `asesores`
---
-
-DROP TABLE IF EXISTS `asesores`;
-CREATE TABLE IF NOT EXISTS `asesores` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `asesores`
---
-
-INSERT INTO `asesores` (`id`, `nombre`) VALUES
-(1, 'Juan Manuel Arenas'),
-(2, 'Edwin Javier Duran'),
-(3, 'Juan David Duarte Duran');
 
 -- --------------------------------------------------------
 
@@ -68,60 +46,35 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `nit`, `dv`, `nombre`, `celular`, `correo`, `departamento`, `ciudad`, `direccion`) VALUES
-(1, 987654321, 8, 'MEGATIENDAS SUPERMAYORISTA S.A.S', '3145262974', 'tiendasmayor@gmail.com', 'Santander', 'Bucaramanga', 'Centro Comercial El cacique '),
-(4, 100145823, 0, 'SHAWARMA LA PLAYITA SHAWARMA LA PLAYITA', '...', '...', 'Santander', 'Barrancabermeja', 'CL 50 C C LA PLAYITA'),
-(6, 1001941117, 0, 'JUAN JOSE DUNCAN ROCHA', '3012407485', 'juanjoseduncanrocha@gmail.com', 'Atlántico', 'Barranquilla', 'CALLE 47B 26 100 ARCADA DE SAN ISIDRO APTO BLOQUE 39 APTO 3A'),
-(7, 1002330722, 0, 'LAURA VALENTINA RIVERA PAEZ', '3005513435', 'lauravalentinarivera27@gmail.com', 'Boyacá', 'Tunja', 'cr 2 este 23 27'),
-(9, 1005051487, 0, 'JEAN CARLOS QUINTERO MOSQUERA', '...', '...', 'Santander', 'Bucaramanga', 'CRA 33 48 109 L 111'),
-(10, 1005075093, 0, 'MARITZA CARDENAS RODRIGUEZ', '3333', '...', 'Santander', 'Bucaramanga', 'CL 77  69 B  36'),
-(11, 1005181187, 0, 'JOHAN ANDRES CAÑAS', '3045544936', 'johaenandrescana@gmail.com', 'Santander', 'Barrancabermeja', 'Calle 76 A casa 16 Barrio Brisas del Rosario.'),
-(12, 10051997, 0, 'JESUS ROMERO', '...', 'jesusromero033@hotmail.com', 'Atlántico', 'Barranquilla', 'CL 27  55  01'),
-(13, 1005307176, 0, 'SILVIA FERNANDA PEDRAZA ALMEIDA', '3174991056', 'silviapedrazaal06@gmail.com', 'Santander', 'Floridablanca', 'CR 15 B  3  12 BRR JARDIN DE LIMONCITO'),
-(14, 1005325407, 0, 'MANUEL ALEXANDER DUARTE BARRERA', '3204391957', 'auxcontabilidad1@aplika.com.co', 'Santander', 'Floridablanca', 'CLL 113 47 11'),
-(15, 1005326157, 0, 'DEIBY FABIAN MORALES', '...', 'deibyfabianmoralesrodriguez@gmail.com', 'Santander', 'Bucaramanga', 'CL 2 D  16 A  67'),
-(16, 1005335903, 0, 'ANDRES CAMILO GARCIA OLARTE', '3012724568', 'sankateo346@gmail.com', 'Santander', 'Floridablanca', 'cra 14b 57 57 barrio reposo'),
-(17, 1005335946, 0, 'CAMILA ANDREA PIÑERES SOLANO', '3008066997', 'carroceriasbumanguesa@gmail.com', 'Santander', 'Bucaramanga', 'CR 16 4 57'),
-(18, 1005336971, 0, 'MAIRA ALEXANDRA FLOREZ SUAREZ', '315890252', '...', 'Santander', 'Bucaramanga', 'CL 61  17  31'),
-(19, 1007665781, 0, 'BRAYAN ALEXIS CUBIDES', '...', '...', 'Santander', 'Bucaramanga', 'CRA 17F  # 61 -56'),
-(20, 1007665918, 0, 'RAUL EDUARDO GARCIA JEREZ', '3103071387', 'raulgarcia.cnc@hotmail.com', 'Santander', 'Lebrija', 'CR 8A 14 27 LC 01'),
-(21, 1007801892, 0, 'WENDY MARCELA BOLIVAR MEJIA', '3214816279', '...', 'Meta', 'Villavicencio', 'KM  VIA PTO LOPEZ'),
-(22, 10112320, 0, 'OSCAR RAUSEO', '3143363394', 'rausseo372@gmail.com', 'Santander', 'Floridablanca', 'Residencia el Bosque 1 apto 303'),
-(23, 1013621899, 0, 'SINDY LILIANA VELASQUEZ GOMEZ', '...', '...', 'Atlántico', 'Barranquilla', 'CR 43  32  102'),
-(24, 1014180517, 0, 'HUBERT ALFREDO BLANCO BUSTOS', '...', 'jesusnavas628@gmail.com', 'Santander', 'Bucaramanga', 'CR 24 #30 19'),
-(25, 1016029056, 0, 'JUAN ANDRES GONZALES  PRIETO', '...', '...', 'Bogotá', 'Bogotá, D.C.', 'CR 117  17 G  26'),
-(26, 10163325, 0, 'MARCO ANTONIO VERA FORERO', '3174357553', '...', 'Santander', 'Bucaramanga', 'CL 50  18  27'),
-(27, 1017128652, 0, 'NATALIA ANDREA PALACIO CANO', '...', '...', 'Antioquia', 'Medellín', 'CR 70  45 E  161'),
-(28, 1017132804, 0, 'DISGO ALEJANDRO MARIN GALVIS', '...', '...', 'Bogotá', 'Bogotá, D.C.', 'BOGOTA'),
-(29, 1017135652, 0, 'JORGE ANDRES HERNANDEZ AGUIRRE', '3216053384', 'jarodriguezaguirre@gmail.com', 'Antioquia', 'Medellín', 'CL 111 49 C 60'),
-(30, 1017219871, 0, 'JUAN DAVID ARANGO CASTRILLON', '...', 'judarangoca@unal.edu.co', 'Antioquia', 'Medellín', 'CR 72 B 95 111'),
-(31, 1017244262, 0, 'WILLIAM ANDRES GOMEZ AYALA', '...', '...', 'Santander', 'Bucaramanga', 'CL 52  20  03'),
-(32, 101842824, 0, 'ANDRES FELIPE ORDONEZ SILVA', '...', '...', 'Santander', 'Bucaramanga', 'CL 42 N 29 91'),
-(33, 1018479970, 0, 'SILVIA JULIANA LARIOS MORENO', '3138342496', 'julilarios@hotmail.com', 'Bogotá', 'Bogotá, D.C.', 'CR 8 46 34 AP 503 ED LA PLAZOLETA'),
-(34, 1019039550, 0, 'CASTELLANOS VILLAREAL LAURA CRISTINA', '3183927257', 'lau.castellanos21@gmail.com', 'Atlántico', 'Barranquilla', 'cra 41 67 06 lc 1'),
-(35, 1019109098, 0, 'YEIMI JULIETH PARRA MORA', '...', '...', 'Bogotá', 'Bogotá, D.C.', 'CL 132 D 154 A 05'),
-(36, 1019606449, 0, 'JOSE GREGORIO BEDOYA FLORIAN', '3116852919', '...', 'Bolívar', 'Cartagena De Indias', 'TV 45  21 45 LT 7'),
-(37, 1020720164, 0, 'ORNAMENTACIONES  SOFI', '3146724891', '...', 'Santander', 'Barrancabermeja', 'C EL CEN ECOPETROL VRD EL DIAMANTE'),
-(38, 1020735121, 0, 'ANA MILENA VILLAMIZAR COBOS', '3153711443', '...', 'Santander', 'Bucaramanga', 'CR 40 A 41 24 AP 501 BRR CABECERA'),
-(39, 1020746983, 0, 'LEIDY MARCELA VARGAS GAITAN', '...', '...', 'Atlántico', 'Barranquilla', 'VIA 40  79 B  06'),
-(40, 1020751244, 0, 'MARIA CLAUDIA TARAZONA VASQUEZ', '3154198322', 'divisa.bga@gmail.com', 'Santander', 'Bucaramanga', 'AV QUEBRADA SECA  24  37 BRR ALARCON'),
-(41, 1020786484, 0, 'DANIEL ALEJANDRE MARTINEZ CASQUEZ', '...', '...', 'Santander', 'Bucaramanga', 'CC LA QUINTA ET LC 509'),
-(42, 1020813903, 0, 'MARIA PAULA VARGAS GARNICA', '...', '...', 'Santander', 'Bucaramanga', 'C C SAN SILVESTRE LC 320'),
-(43, 10231751, 0, 'CARLOS  EMILIO SOTO  JIMENEZ', '...', '...', 'Norte de Santander', 'Cúcuta', 'AV  6  14  24'),
-(44, 10265190, 0, 'GILDARDO AGUIRRE GOMEZ', '...', '...', 'Santander', 'Bucaramanga', 'CR 18  25  4 LC 4'),
-(45, 1026567571, 0, 'ANDRES ADOLFO ARDILA POVEDA', '...', '...', 'Santander', 'Floridablanca', 'CL 6  11  124'),
-(46, 1026573858, 0, 'MARIA ALEJANDRA TORRES PIMIENTO', '...', '...', 'Santander', 'Bucaramanga', 'CRA 29 41 26'),
-(47, 1031142401, 0, 'YIRLEY MARGARITA SIERRA', '69211657', '...', 'Santander', 'Bucaramanga', 'CRA'),
-(48, 1032363059, 0, 'LUZ ANGELICA TORRES VARGAS', '...', '...', 'Santander', 'Bucaramanga', 'PLAZA GOURMET ACROPOLIS R5'),
-(49, 1032504805, 0, 'JUAN DIEGO PIÑARETE JIMENEZ', '312592 9524', 'juanpina426@gmail.com', 'Bogotá', 'Bogotá, D.C.', 'Carrera 88a #21-42\r\nConjunto bosques de hayuelos Interior 6 apartamento 623 - Hayuelos, Fontibón, Bogotá D.C.'),
-(50, 1035222893, 0, 'CARLOS ANDRES AGUDELO AGUDELO', '...', 'karlo20s@hotmail.com', 'Antioquia', 'Barbosa', 'CR 21 13 14'),
-(51, 1036223239, 0, 'JHON MONSALVE', '...', '...', 'Santander', 'Bucaramanga', 'HOTEL BYG'),
-(52, 1036627980, 0, 'JUAN CARLOS OROZCO PERALTA', '...', '...', 'Atlántico', 'Barranquilla', 'CRA 57 99 197'),
-(53, 1037574143, 0, 'JUAN GUILLERMO ACOSTA LONDOÑO', '...', '...', 'Santander', 'Bucaramanga', 'KM 17 VIA'),
-(54, 1038404574, 0, 'CRISTIAN CAMILO DUQUE GALLEGO', '...', '...', 'Boyacá', 'Puerto Boyacá', 'CR 3  3  12'),
-(55, 1038419012, 0, 'MARIA ISABEL BURITICA CLAVIJO', '...', '...', 'Sucre', 'Sincelejo', 'CR 19  23  61 CEN'),
-(56, 1042417842, 0, 'LAURENS MARIA BOLIVAR MEZA', '...', '...', 'Atlántico', 'Barranquilla', 'CR 50  76  82'),
-(57, 1042428494, 0, 'SHIRLEY PAOLA NIEBLES NAVARRO NIEBLES NAVARRO', '...', '...', 'Santander', 'Bucaramanga', 'ALMIRANTE COLON MZ U LT 14 SEGUNTA ETAPA'),
 (58, 123456789, 0, 'Ecopetrol Colombia', '3003214567', 'ecopetrol@gmail.com', 'Santander', 'Bucaramanga', 'Carrera 49 #45-03');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `normas`
+--
+
+DROP TABLE IF EXISTS `normas`;
+CREATE TABLE IF NOT EXISTS `normas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo` varchar(60) NOT NULL,
+  `entidad` varchar(150) NOT NULL,
+  `uso` varchar(150) NOT NULL,
+  `temperatura_min` int(11) DEFAULT NULL,
+  `temperatura_max` int(11) DEFAULT NULL,
+  `sistema` varchar(60) NOT NULL,
+  `capa1` varchar(150) DEFAULT NULL,
+  `capa2` varchar(150) DEFAULT NULL,
+  `capa3` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `normas`
+--
+
+INSERT INTO `normas` (`id`, `codigo`, `entidad`, `uso`, `temperatura_min`, `temperatura_max`, `sistema`, `capa1`, `capa2`, `capa3`) VALUES
+(1, 'PRUEBA1', '123456789', 'Tuberia Enterrada', 70, 120, 'A1', 'Epoxico', 'Silicato de zinc', 'Poliuretano');
 
 -- --------------------------------------------------------
 
@@ -716,9 +669,9 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `nombre`, `username`, `password`, `rol`) VALUES
-(1, '0', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'admin'),
-(2, '0', 'jduarte', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'admin'),
-(3, '0', 'dprada', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'admin'),
+(1, 'Administrador', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'admin'),
+(2, 'Juan David Duarte', 'jduarte', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'admin'),
+(3, 'Deiby admin', 'dprada', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'admin'),
 (5, 'Juan Manuel Arenas', 'jmanuel', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'asesor');
 COMMIT;
 

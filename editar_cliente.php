@@ -30,21 +30,18 @@ $cliente = mysqli_fetch_array($resultado);
     <input type="hidden" value="<?php echo $id; ?>" name="id">
     <div class="container">
         <div class="row g-2 form-client">
-            <div class="col-md-12">
-              <div class="form-floating">
-                <input value="<?php echo $cliente['nit']; ?>" type="text" class="form-control" name="nit" id="floatingInputGrid" required>
-                <label for="floatingInputGrid">NIT</label>
-              </div>
-            </div>
-        </div>
-
-        <div class="row g-2 form-client" >
-            <div class="col-md">
+            <div class="col-md-10">
                 <div class="form-floating">
-                  <input value="<?php echo $cliente['dv']; ?>" type="number" class="form-control" id="floatingInputGrid" name="dv">
-                  <label for="floatingInputGrid">Digito de verificación</label>
+                    <input value="<?php echo $cliente['nit']; ?>" type="text" class="form-control" name="nit" id="floatingInputGrid" required>
+                    <label for="floatingInputGrid">NIT</label>
                 </div>
             </div>
+            <div class="col-md-2">
+                <div class="form-floating">
+                    <input value="<?php echo $cliente['dv']; ?>" type="number" class="form-control" id="floatingInputGrid" name="dv">
+                    <label for="floatingInputGrid">Digito de verificación</label>
+                </div>
+            </div> 
         </div>
 
         <div class="row g-2 form-client" >

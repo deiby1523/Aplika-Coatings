@@ -55,20 +55,7 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
             </div>
 
             <div id="seccion_temperaturas" class="input-group add mb-2" style="margin-bottom: 30px !important;">
-                <label class="input-group-text amp " for="select_temperatura"><strong>Temperatura</strong></label>
-                <select name="select_temperatura" class="form-select" id="select_temperatura" required>
-                    <option selected disabled></option>
-                    <option> < 70°C </option>
-                    <option> 70°C > 120°C</option>
-                    <option> 120°C > </option>
-                    <?php
-                    /*
-                    while ($usos = mysqli_fetch_array( $uso)) {
-                        echo "<option value='".$asesor['nombre']."'>".$asesor['nombre']."</option>";
-                    }
-                    */
-                    ?>             
-                </select>
+            
             </div>
 
             <div class="input-group add mb-2" style="margin-bottom: 30px !important;" style="height: 60px;">
@@ -76,31 +63,9 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
                 <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadraddos">
             </div>
             
-            <br>
-            <div class="input-group add mb-2">
-                <label class="input-group-text amp " for="inputGroupSelect01"><strong>Temperatura</strong></label>
-                <select name="temperatura" class="form-select" id="inputGroupSelect01" required>
-                    <option selected disabled></option>
-                    <option> < 70°C </option>
-                    <option> 70°C > 120°C</option>
-                    <option> 120°C > </option>
-                    <?php
-                    /*
-                    while ($usos = mysqli_fetch_array( $uso)) {
-                        echo "<option value='".$asesor['nombre']."'>".$asesor['nombre']."</option>";
-                    }
-                    */
-                    ?>             
-                </select>
-            </div>
+            <br>        
 
             
-
-            
-
-            
-
-
 
 <!-------------------------------------------------- acordion  ------------------------------------------------------------------------------------------------------------------------------>
 

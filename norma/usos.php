@@ -19,7 +19,7 @@ if($_POST['nit'] != "") {
         ?>
         <label class="input-group-text amp " for="select_uso"><strong>Uso</strong></label>  
         <select name="select_uso" class="form-select" id="select_uso" required>
-            <option selected disabled></option>
+            <option selected></option>
             <?php
             while ($uso = mysqli_fetch_array( $resultado)) {
                 echo "<option value='".$uso[0]."'>".$uso[0]."</option>";

@@ -13,7 +13,7 @@ if(isset($_POST['temp']) && isset($_POST['uso']) && isset($_POST['nit'])) {
     if ($_POST['temp'] == "" && $_POST['uso'] != "" && $_POST['nit'] != "") {
         $uso = $_POST['uso'];
         $nit = $_POST['nit'];
-        $consulta = "SELECT sistema FROM normas Where entidad = '$nit' AND uso = '$uso' AND temperatura_max IS NULL AND temperatura_min IS NULL ORDER by sistema ASC";
+        $consulta = "SELECT id, sistema FROM normas Where entidad = '$nit' AND uso = '$uso' AND temperatura_max IS NULL AND temperatura_min IS NULL ORDER by sistema ASC";
         $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
         if (mysqli_num_rows($resultado) > 0 ) {
             ?>
@@ -22,7 +22,7 @@ if(isset($_POST['temp']) && isset($_POST['uso']) && isset($_POST['nit'])) {
                 <option selected></option>
                 <?php
                 while ($sistema = mysqli_fetch_array( $resultado)) {
-                    echo "<option value='".$sistema[0]."'>". $sistema[0]."</option>";
+                    echo "<option value='".$sistema['id']."'>". $sistema['sistema']."</option>";
                 }
                 ?>             
             </select>
@@ -33,7 +33,7 @@ if(isset($_POST['temp']) && isset($_POST['uso']) && isset($_POST['nit'])) {
             $uso = $_POST['uso'];
             $nit = $_POST['nit'];
             $temp = $_POST['temp'];
-            $consulta = "SELECT sistema FROM normas Where entidad = '$nit' AND uso = '$uso' AND temperatura_max = '$temp' ORDER by sistema ASC";
+            $consulta = "SELECT id, sistema FROM normas Where entidad = '$nit' AND uso = '$uso' AND temperatura_max = '$temp' ORDER by sistema ASC";
             $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
             if (mysqli_num_rows($resultado) > 0 ) {
                 ?>
@@ -42,7 +42,7 @@ if(isset($_POST['temp']) && isset($_POST['uso']) && isset($_POST['nit'])) {
                     <option selected></option>
                     <?php
                     while ($sistema = mysqli_fetch_array( $resultado)) {
-                        echo "<option value='".$sistema[0]."'>". $sistema[0]."</option>";
+                        echo "<option value='".$sistema['id']."'>". $sistema['sistema']."</option>";
                     }
                     ?>             
                 </select>

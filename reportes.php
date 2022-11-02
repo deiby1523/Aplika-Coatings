@@ -106,7 +106,7 @@ $imagenBase643 = "data:image/jpg;base64," . base64_encode(file_get_contents($nom
 
 
 <div class="container_general">
-	<br><br>
+	<br><br><br><br>
 
 	<p style="margin-left: 5.5%;font-size: 20px; margin-top:5rem; font-family: Helvetica">
 		Señor(a) <br>

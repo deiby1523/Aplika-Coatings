@@ -27,7 +27,7 @@ if($_POST['busqueda'] != '') {
             <?php
 			  
     } else {
-    echo "No se ha encontrado el cliente";
+    echo "";
     }
 } 
     

@@ -16,7 +16,7 @@ if(isset($_POST['nit'])){
         $empresa = mysqli_fetch_array($resultado);  
         echo $empresa['correo'];
     } else {
-    echo "...";
+    echo "";
     }
 } else {
     echo "";

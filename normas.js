@@ -11,6 +11,9 @@ function usos(nit)
 
     .done(function(uso){
         $("#seccion_usos").html(uso);
+        if (uso != "") {
+            document.getElementById("seccion_usos").className += " mb-4";
+        }
     })
 }
 
@@ -40,6 +43,9 @@ function temperaturas(uso, nit)
 
     .done(function(temp){
         $("#seccion_temperaturas").html(temp);
+        if (temp != "") {
+        document.getElementById("seccion_temperaturas").className += " mb-4";
+        }
     })
 }
 
@@ -48,7 +54,7 @@ $(document).on('change', '#select_uso', function()
     var uso = $('#select_uso').val();
     var nit = $('#select_cliente').val();
 
-    if (uso != "" && uso != 'refineria')
+    if (uso != "")
     {
         temperaturas(uso, nit);
     }
@@ -63,12 +69,89 @@ $(document).on('change', '#select_cliente', function()
     var uso = $('#select_uso').val();
     var nit = $('#select_cliente').val();
 
-    if (uso != "" && uso != 'refineria')
+    if (uso != "")
     {
         temperaturas(uso, nit);
     }
     else
     {
         temperaturas();
+    }
+});
+
+$(sistemas());
+
+
+function sistemas(uso, nit, temp)
+{
+    $.ajax({
+        url : 'norma/sistemas.php',
+        type : 'POST',
+        dataType : 'HTML',
+        data : { uso : uso , nit : nit, temp : temp},
+    })
+
+    .done(function(sistema){
+        $("#seccion_sistemas").html(sistema);
+        if (sistema != "") {
+        document.getElementById("seccion_sistemas").className += " mb-4";
+        }
+    })
+}
+
+$(document).on('change', '#select_uso', function()
+{
+    var uso = $('#select_uso').val();
+    var nit = $('#select_cliente').val();
+    var temp = $('#select_temperatura').val();
+    if (temp == undefined ) {
+        temp = "";
+    }
+
+    if (uso != "" && nit != "")
+    {
+        sistemas(uso, nit, temp);
+    }
+    else
+    {
+        sistemas();
+    }
+});
+
+$(document).on('change', '#select_cliente', function()
+{
+    var uso = $('#select_uso').val();
+    var nit = $('#select_cliente').val();
+    var temp = $('#select_temperatura').val();
+    if (temp == undefined ) {
+        temp = "";
+    }
+
+    if (uso != "" && nit != "")
+    {
+        sistemas(uso, nit, temp);
+    }
+    else
+    {
+        sistemas();
+    }
+});
+
+$(document).on('change', '#select_temperatura', function()
+{
+    var uso = $('#select_uso').val();
+    var nit = $('#select_cliente').val();
+    var temp = $('#select_temperatura').val();
+    if (temp == undefined ) {
+        temp = "";
+    }
+
+    if (uso != "" && nit != "")
+    {
+        sistemas(uso, nit, temp);
+    }
+    else
+    {
+        sistemas();
     }
 });

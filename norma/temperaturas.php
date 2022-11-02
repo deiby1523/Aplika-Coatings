@@ -11,10 +11,11 @@ $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a 
 if(!isset($_POST['uso'])) {
     $_POST['uso'] = "";
 }
-if($_POST['uso'] != "" && $_POST['uso'] != "Refineria") {
+if($_POST['uso'] != "") {
     $uso = $_POST['uso'];
     $nit = $_POST['nit'];
-    $consulta = "SELECT temperatura_min, temperatura_max FROM normas Where entidad = '$nit' AND uso = '$uso' ORDER by temperatura_min ASC";
+
+    $consulta = "SELECT temperatura_min, temperatura_max FROM normas Where entidad = '$nit' AND uso = '$uso' AND temperatura_min IS NOT NULL AND temperatura_max IS NOT NULL ORDER by temperatura_min ASC";
     $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
     if (mysqli_num_rows($resultado) > 0 ) {
         ?>
@@ -22,13 +23,19 @@ if($_POST['uso'] != "" && $_POST['uso'] != "Refineria") {
         <select name="select_temperatura" class="form-select" id="select_temperatura" required>
             <option selected></option>
             <?php
-            while ($uso = mysqli_fetch_array( $resultado)) {
-                echo "<option value='".$uso['temperatura_max']."'>".$uso['temperatura_min']."°C"."     a     ".$uso['temperatura_max']."°C"."</option>";
+            while ($temperatura = mysqli_fetch_array($resultado)) {
+                echo "<option value='".$temperatura['temperatura_max']."'>".$temperatura['temperatura_min']."°C"."     a     ".$temperatura['temperatura_max']."°C"."</option>";
             }
             ?>             
         </select>
         <?php
 
+    } else {
+        ?>
+        <select hidden name="select_temperatura" class="form-select" id="select_temperatura" required>  
+            <option value="" selected></option>     
+        </select>
+        <?php
     }
 }
 ?>

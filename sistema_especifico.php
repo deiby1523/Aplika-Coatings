@@ -35,9 +35,12 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
         <hr class="separador">
 
     <div class="container">
+       
         <form method='POST' class='form-control form-data' action='tabla_especifica.php'>
+        <div class="row">
+            <div class="col">
             
-            <div class="input-group add mb-2" style="margin-bottom: 30px !important;">
+            <div class="input-group add mb-4">
                 <label class="input-group-text amp " for="inputGroupSelect01"><strong>Entidad</strong></label>
                 <select name="select_cliente" class="form-select" id="select_cliente" required>
                     <option selected></option>
@@ -51,16 +54,23 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
             </div>
             
 
-            <div id="seccion_usos" class="input-group add mb-2" style="margin-bottom: 30px !important;">        
+            <div id="seccion_usos" class="input-group add">        
             </div>
 
-            <div id="seccion_temperaturas" class="input-group add mb-2" style="margin-bottom: 30px !important;">
-            
+            <div id="seccion_temperaturas" class="input-group add">
             </div>
 
-            <div class="input-group add mb-2" style="margin-bottom: 30px !important;" style="height: 60px;">
+            <div id="seccion_sistemas" class="input-group add">
+            </div>
+
+            <div class="input-group add mb-2" style="height: 60px;">
                 <label class="input-group-text amp" for="area" style="width: 17%;"><strong>Area</strong></label>
                 <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadraddos">
+            </div>
+            </div>
+            <div class="col">
+            <h1> Panel de selección de productos </h1>
+            </div>
             </div>
             
             <br>        

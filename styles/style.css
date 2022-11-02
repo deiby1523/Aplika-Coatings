@@ -187,7 +187,6 @@ form{
 
 .form-control .disabled:disabled {
     background-color: white;
-    cursor: not-allowed;
 }
 div .add{
     width: 40% ;

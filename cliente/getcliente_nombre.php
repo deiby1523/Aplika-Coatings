@@ -16,7 +16,7 @@ if(isset($_POST['nit'])){
         $empresa = mysqli_fetch_array($resultado);  
         echo $empresa['nombre'];
     } else {
-    echo "No se ha encontrado el cliente";
+    echo "";
     }
 } else {
     echo "";

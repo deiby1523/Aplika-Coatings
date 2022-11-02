@@ -16,7 +16,7 @@ if(isset($_POST['nit'])){
         $cliente = mysqli_fetch_array($resultado);  
         echo $cliente['celular'];
     } else {
-    echo "...";
+    echo "";
     }
 } else {
     echo "";

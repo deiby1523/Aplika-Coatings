@@ -35,16 +35,16 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                 <span class="input-group-text"><strong>Información de la Empresa</strong></span>
                 <div class="col-3">
                     <input type="number" aria-label="First name" placeholder="Nit" class="form-control" name="nit" id="inputnit" required>
-                    <input disabled type="text" aria-label="Last name" placeholder="Nombre " class="form-control disabled" id="nombre_cliente" name="nombre_cliente">
+                    <input  type="text" aria-label="Last name" placeholder="Nombre " class="form-control disabled" id="nombre_cliente" name="nombre_cliente">
                     
                 </div>
                 <div class="col-3">
-                    <input disabled type="text" aria-label="Last name" placeholder="Direccion" class="form-control disabled" id="direccion_cliente" name="direccion">
-                    <input disabled type="text" aria-label="Last name" placeholder="Telefono" class="form-control disabled" id="telefono_cliente" name="telefono">
+                    <input type="text" aria-label="Last name" placeholder="Direccion" class="form-control disabled" id="direccion_cliente" name="direccion">
+                    <input type="text" aria-label="Last name" placeholder="Telefono" class="form-control disabled" id="telefono_cliente" name="telefono">
                 </div>
                 <div class="col-3">
-                    <input disabled type="text" aria-label="Last name" placeholder="Departamento" class="form-control disabled" id="dep_cliente" name="departamento">
-                    <input disabled type="text" aria-label="Last name" placeholder="Correo" class="form-control disabled" id="correo_cliente" name="correo">
+                    <input  type="text" aria-label="Last name" placeholder="Departamento" class="form-control disabled" id="dep_cliente" name="departamento">
+                    <input  type="text" aria-label="Last name" placeholder="Correo" class="form-control disabled" id="correo_cliente" name="correo">
                 </div>
             </div>
             <br>

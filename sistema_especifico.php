@@ -31,57 +31,53 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
 <script src="normas.js"></script>
 
         <h1 class="titleDato">Solicitud de sistema por especificacion</h1>
-
         <hr class="separador">
 
     <div class="container">
-       
         <form method='POST' class='form-control form-data' action='tabla_especifica.php'>
-        <div class="row">
-            <div class="col">
-            
-            <div class="input-group add mb-4">
-                <label class="input-group-text amp " for="inputGroupSelect01"><strong>Entidad</strong></label>
-                <select name="select_cliente" class="form-select" id="select_cliente" required>
-                    <option selected></option>
-                    <?php
-                    while ($cliente = mysqli_fetch_array( $clientes)) {
-                        echo "<option value='".$cliente['nit']."'>".$cliente['nombre']."</option>";
-                    }
-                    ?>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group add mb-2">
+                        <label class="input-group-text amp " for="inputGroupSelect01"><strong>Entidad</strong></label>
+                        <select name="select_cliente" class="form-select" id="select_cliente" required>
+                            <option selected></option>
+                            <?php
+                                while ($cliente = mysqli_fetch_array( $clientes)) {
+                                    echo "<option value='".$cliente['nit']."'>".$cliente['nombre']."</option>";
+                                }
+                            ?>
                   
-                </select>
+                        </select>
+                    </div>
+            
+<!--------------------------------------------- Select sistema especifico  -------------------------------------------------------------------------->
+                    
+                    <div id="seccion_usos" class="input-group add">        
+                    </div>
+
+                    <div id="seccion_temperaturas" class="input-group add">
+                    </div>
+
+                    <div id="seccion_sistemas" class="input-group add">
+                    </div>
+
+                    <div class="input-group add mb-2" style="height: 60px;">
+                        <label class="input-group-text amp" for="area" style="width: 17%;"><strong>Area</strong></label>
+                        <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadraddos">
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Selección de productos </h3>
+                </div>
             </div>
             
-
-            <div id="seccion_usos" class="input-group add">        
-            </div>
-
-            <div id="seccion_temperaturas" class="input-group add">
-            </div>
-
-            <div id="seccion_sistemas" class="input-group add">
-            </div>
-
-            <div class="input-group add mb-2" style="height: 60px;">
-                <label class="input-group-text amp" for="area" style="width: 17%;"><strong>Area</strong></label>
-                <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadraddos">
-            </div>
-            </div>
-            <div class="col">
-            <h1> Panel de selección de productos </h1>
-            </div>
-            </div>
-            
-            <br>        
-
             
 
 <!-------------------------------------------------- acordion  ------------------------------------------------------------------------------------------------------------------------------>
 
 
             
-<div class="accordion accordion-flush" id="accordionFlushExample">
+<!-- <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -205,51 +201,25 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
             </div>
         </div>
     </div>
-  </div>
-
-<br><br>
-
-<div class="container">
-	    <div class="row">
-		    <div class="cancelar col-md-6">
-			    <div class="cancel d-grid gap-2">
-                    <a class="btn btn-danger" href="home.php?pag_actual=inicio">Cancelar</a>
-			    </div>
-		    </div>
-            <div class="agregar col-md-6">
-			    <div class="agrega d-grid gap-2">
-				    <button class="btn btn-succes" type="submit">Generar Tabla</button>
-        	    </div>
-		    </div>
-	    </div>
-    </div>
-
-<br><br><br><br>
-
-
-</div>
+  </div> -->
 
 
 
-
-
-
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div class="container">
+            	    <div class="row">
+            		    <div class="cancelar col-md-6">
+            			    <div class="cancel d-grid gap-2">
+                                <a class="btn btn-danger" href="home.php?pag_actual=inicio">Cancelar</a>
+            			    </div>
+            		    </div>
+                        <div class="agregar col-md-6">
+            			    <div class="agrega d-grid gap-2">
+            				    <button class="btn btn-succes" type="submit">Generar Tabla</button>
+                    	    </div>
+            		    </div>
+            	    </div>
+                </div>            
+            </div>
         </form>
     </div>
 

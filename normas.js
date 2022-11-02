@@ -12,7 +12,7 @@ function usos(nit)
     .done(function(uso){
         $("#seccion_usos").html(uso);
         if (uso != "") {
-            document.getElementById("seccion_usos").className += " mb-4";
+            document.getElementById("seccion_usos").className += " mb-2";
         }
     })
 }
@@ -44,7 +44,7 @@ function temperaturas(uso, nit)
     .done(function(temp){
         $("#seccion_temperaturas").html(temp);
         if (temp != "") {
-        document.getElementById("seccion_temperaturas").className += " mb-4";
+        document.getElementById("seccion_temperaturas").className += " mb-2";
         }
     })
 }
@@ -94,7 +94,7 @@ function sistemas(uso, nit, temp)
     .done(function(sistema){
         $("#seccion_sistemas").html(sistema);
         if (sistema != "") {
-        document.getElementById("seccion_sistemas").className += " mb-4";
+        document.getElementById("seccion_sistemas").className += " mb-2";
         }
     })
 }

@@ -14,6 +14,7 @@ ob_start(); //iniciamos un output buffer
 <?php
 #var_dump($_POST);
 $nit = $_POST['nit'];
+$nombre = $_POST['nombre'];
 $asesor = $_POST['asesor'];
 
 if (isset($_POST['cod_imprimante']) && $_POST['cod_imprimante'] != 0) {
@@ -86,9 +87,6 @@ if (isset($_POST['cod_acabado']) && $_POST['cod_acabado'] != 0) {
 	$acabado = mysqli_fetch_array( $resultado );
 }
 
-$consulta = "SELECT * FROM clientes WHERE nit = '$nit'";
-$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-$empresa = mysqli_fetch_array( $resultado );
 
 
 $nombreImagen = "img/marcaAPLIKA.png";
@@ -112,8 +110,8 @@ $imagenBase643 = "data:image/jpg;base64," . base64_encode(file_get_contents($nom
 
 	<p style="margin-left: 5.5%;font-size: 20px; margin-top:5rem; font-family: Helvetica">
 		Señor(a) <br>
-		<strong><?php echo $empresa['nombre']; ?></strong> <br>
-		<strong><?php echo $empresa['nit']; ?></strong>.<br><br>
+		<strong><?php echo $nombre; ?></strong> <br>
+		<strong><?php echo $nit; ?></strong>.<br><br>
 		Se presenta la siguiente memoria de calculo de rendimiento y consumo para el siguiente sistema de recubrimientos
 	</p>
 </div>

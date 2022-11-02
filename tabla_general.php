@@ -12,6 +12,7 @@ include("template/encabezado.php"); ?>
 <?php
 
 $nit = $_POST['nit'];
+$nombre = $_POST['nombre_cliente'];
 $asesor = $_POST['asesor'];
  
 $cod_imprimante = $_POST['imprimante'];
@@ -56,6 +57,7 @@ $acabado = mysqli_fetch_array( $resultado );
 
 
 
+
 #var_dump( $_POST );
 
 
@@ -70,7 +72,8 @@ $acabado = mysqli_fetch_array( $resultado );
     <input type="hidden" name="cod_barrera" value="<?php echo $cod_barrera; ?>">
     <input type="hidden" name="cod_acabado" value="<?php echo $cod_acabado; ?>">   
     <input type="hidden" name="nit" value="<?php echo $nit; ?>">    
-    <input type="hidden" name="asesor" value="<?php echo $asesor; ?>">    
+    <input type="hidden" name="asesor" value="<?php echo $asesor; ?>"> 
+    <input type="hidden" name="nombre" value="<?php echo $nombre; ?> ">    
  
 <br>
 <div class="container">

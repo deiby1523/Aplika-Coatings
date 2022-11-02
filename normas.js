@@ -155,3 +155,35 @@ $(document).on('change', '#select_temperatura', function()
         sistemas();
     }
 });
+
+$(area());
+
+function area(sistema)
+{
+    $.ajax({
+        url : 'norma/area.php',
+        type : 'POST',
+        dataType : 'HTML',
+        data : { sistema : sistema },
+    })
+
+    .done(function(area){
+        $("#seccion_area").html(area);
+    })
+}
+
+$(document).on('change', '#select_sistemas', function()
+{
+    var sistema = $(this).val();
+    if (sistema != "")
+    {
+        area(sistema);
+    }
+    else
+    {
+        area();
+    }
+});
+
+
+

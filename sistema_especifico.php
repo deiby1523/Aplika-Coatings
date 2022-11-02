@@ -50,7 +50,7 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
                         </select>
                     </div>
             
-<!--------------------------------------------- Select sistema especifico  -------------------------------------------------------------------------->
+<!--------------------------------------------- Selects sistema especifico  -------------------------------------------------------------------------->
                     
                     <div id="seccion_usos" class="input-group add">        
                     </div>
@@ -61,13 +61,11 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
                     <div id="seccion_sistemas" class="input-group add">
                     </div>
 
-                    <div class="input-group add mb-2" style="height: 60px;">
-                        <label class="input-group-text amp" for="area" style="width: 17%;"><strong>Area</strong></label>
-                        <input name="area" type="number" class="form-control" id="area" placeholder="Metros Cuadraddos">
+                    <div id="seccion_area" class="input-group add" style="height: 60px;">
+                        
                     </div>
                 </div>
-                <div class="col">
-                    <h3>Selección de productos </h3>
+                <div class="col" id="panel_productos">
                 </div>
             </div>
             

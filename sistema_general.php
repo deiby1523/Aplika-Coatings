@@ -31,11 +31,17 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
     <div class="container">
         <form method='POST' class='form-control form-data' action='tabla_general.php'>
 
+            <div class="input-group add mb-2" style="height: 60px; width: 100%">
+                <label class="input-group-text amp" for="area" style="width: 18%;"><strong>Nombre del sistema</strong></label>
+                <input name="system_name" type="text" class="form-control" id="system_name" placeholder="Nombre para el sistema de recubrimientos (Opcional)">
+            </div>
+
+            <br>
             <div class="input-group texting">
                 <span class="input-group-text"><strong>Información de la Empresa</strong></span>
                 <div class="col-3">
                     <input type="number" aria-label="First name" placeholder="Nit" class="form-control" name="nit" id="inputnit" required>
-                    <input  type="text" aria-label="Last name" placeholder="Nombre " class="form-control disabled" id="nombre_cliente" name="nombre_cliente">
+                    <input  type="text" aria-label="Last name" placeholder="Nombre " class="form-control disabled" id="nombre_cliente" name="nombre_cliente" required>
                     
                 </div>
                 <div class="col-3">
@@ -108,7 +114,7 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                         <option value="6">90% - 100%</option>
                     </select>
                     <div class="form-floating float-eps">
-                        <input name="imprimante_espesor" type="number" class="form-control" id="floatingInputGroup1">
+                        <input name="imprimante_espesor" type="number" step="any" min="0" class="form-control" id="floatingInputGroup1">
                         <label for="floatingInputGroup1">Espesor de pelicula seca</label>
                     </div>
                 </div>
@@ -149,7 +155,7 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                         <option value="3">Especial</option>
                     </select>
                     <div class="form-floating float-eps">
-                        <input name="barrera_espesor" type="number" class="form-control" id="floatingInputGroup1">
+                        <input name="barrera_espesor" type="number" step="any" min="0" class="form-control" id="floatingInputGroup1">
                         <label for="floatingInputGroup1">Espesor de pelicula seca</label>
                     </div>
                 </div>
@@ -189,7 +195,7 @@ $asesores = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la
                         <option value="4">Acrílica</option>
                     </select>
                     <div class="form-floating float-eps">
-                        <input type="number" name="acabado_espesor" class="form-control" id="floatingInputGroup1">
+                        <input type="number" name="acabado_espesor" step="any" min="0" class="form-control" id="floatingInputGroup1">
                         <label for="floatingInputGroup1">Espesor de pelicula seca</label>
                     </div>
                 </div>

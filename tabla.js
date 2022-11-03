@@ -10,11 +10,11 @@ imprimante(imprimante_solidos, imprimante_espesor, imprimante_desperdicio, impri
 function imprimante(solidos, espesor, desperdicio, areav, presentacion) 
 {
     var n = 1.5;
-    var solid = parseInt(solidos);
-    var eps = parseInt(espesor);
-    var desp = parseInt(desperdicio);
-    var area = parseInt(areav);
-    var present = parseInt(presentacion);
+    var solid = parseFloat(solidos);
+    var eps = parseFloat(espesor);
+    var desp = parseFloat(desperdicio);
+    var area = parseFloat(areav);
+    var present = parseFloat(presentacion);
     var porcentaje = 100-desp;
 
     var resultado_rt = (n * solid) / eps;
@@ -35,6 +35,8 @@ function imprimante(solidos, espesor, desperdicio, areav, presentacion)
     resultado_und = Math.ceil(resultado_und);
     var imprimante_unidades = document.getElementById("imprimante_unidades");
     imprimante_unidades.value = resultado_und;
+
+    console.log(eps);
 } 
     
 
@@ -111,11 +113,11 @@ barrera(barrera_solidos, barrera_espesor, barrera_desperdicio, barrera_area, bar
 function barrera(solidos, espesor, desperdicio, areav, presentacion) 
 {
     var n = 1.5;
-    var solid = parseInt(solidos);
-    var eps = parseInt(espesor);
-    var desp = parseInt(desperdicio);
-    var area = parseInt(areav);
-    var present = parseInt(presentacion);
+    var solid = parseFloat(solidos);
+    var eps = parseFloat(espesor);
+    var desp = parseFloat(desperdicio);
+    var area = parseFloat(areav);
+    var present = parseFloat(presentacion);
     var porcentaje = 100-desp;
 
     var resultado_rt = (n * solid) / eps;
@@ -214,11 +216,11 @@ acabado(acabado_solidos, acabado_espesor, acabado_desperdicio, acabado_area, aca
 function acabado(solidos, espesor, desperdicio, areav, presentacion) 
 {
     var n = 1.5;
-    var solid = parseInt(solidos);
-    var eps = parseInt(espesor);
-    var desp = parseInt(desperdicio);
-    var area = parseInt(areav);
-    var present = parseInt(presentacion);
+    var solid = parseFloat(solidos);
+    var eps = parseFloat(espesor);
+    var desp = parseFloat(desperdicio);
+    var area = parseFloat(areav);
+    var present = parseFloat(presentacion);
     var porcentaje = 100-desp;
 
     var resultado_rt = (n * solid) / eps;

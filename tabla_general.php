@@ -14,6 +14,11 @@ include("template/encabezado.php"); ?>
 $nit = $_POST['nit'];
 $nombre = $_POST['nombre_cliente'];
 $asesor = $_POST['asesor'];
+if (isset($_POST['system_name'])) {
+   $system_name = $_POST['system_name'];
+}
+
+
  
 $cod_imprimante = $_POST['imprimante'];
 $imprimante_espesor = $_POST['imprimante_espesor'];
@@ -67,18 +72,27 @@ $acabado = mysqli_fetch_array( $resultado );
 <h1>Tabla Generada</h1>
 <hr class="separador">
 
+
+
 <div class="container">
     <input type="hidden" name="cod_imprimante" value="<?php echo $cod_imprimante; ?>">
     <input type="hidden" name="cod_barrera" value="<?php echo $cod_barrera; ?>">
     <input type="hidden" name="cod_acabado" value="<?php echo $cod_acabado; ?>">   
     <input type="hidden" name="nit" value="<?php echo $nit; ?>">    
     <input type="hidden" name="asesor" value="<?php echo $asesor; ?>"> 
-    <input type="hidden" name="nombre" value="<?php echo $nombre; ?> ">    
+    <input type="hidden" name="nombre" value="<?php echo $nombre; ?> ">
+    
  
 <br>
 <div class="container">
-  
+
     <table class='table table-hover table-bordered' style='width: 100%; margin: 0%; border-radius: 10px'>
+    <br>
+    <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1" style="width: 208px;">Nombre del Sistema:</span>
+    <input type="text" name="system_name" class="form-control" <?php if ($system_name != "") {echo "value='$system_name'"; }?>>
+    </div>  
+    <br>
 	<thead class="table-secondary">
 		<tr>
 			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Código</th>
@@ -107,7 +121,7 @@ $acabado = mysqli_fetch_array( $resultado );
             echo "<td id='imprimante_presentacion'>" . $imprimante['presentacion'] . "</td>";
             echo "<td id='imprimante_solidos'>" . $imprimante['solidos'] . "</td>";
 
-            echo "<td><input id='imprimante_espesor' name='imprimante_espesor' type='number' class='form-control' value='" . $imprimante_espesor. "'></td>";
+            echo "<td><input id='imprimante_espesor' name='imprimante_espesor' type='number' step='any' min='0' max='100' class='form-control' value='" . $imprimante_espesor. "'></td>";
       
             echo "<td><input readonly class='form-control' name='imprimante_rendimiento_teorico' id='imprimante_rendimiento_teorico'></td>";
 
@@ -133,7 +147,7 @@ $acabado = mysqli_fetch_array( $resultado );
             echo "<td id='barrera_presentacion'>" . $barrera['presentacion'] . "</td>";
             echo "<td id='barrera_solidos'>" . $barrera['solidos'] . "</td>";
 
-            echo "<td><input id='barrera_espesor' name='barrera_espesor' type='number' class='form-control' value='" . $barrera_espesor. "'></td>";
+            echo "<td><input id='barrera_espesor' name='barrera_espesor' type='number' step='any' min='0' max='100' class='form-control' value='" . $barrera_espesor. "'></td>";
       
             echo "<td><input readonly class='form-control' name='barrera_rendimiento_teorico' id='barrera_rendimiento_teorico'></td>";
 
@@ -158,7 +172,7 @@ $acabado = mysqli_fetch_array( $resultado );
             echo "<td id='acabado_presentacion'>" . $acabado['presentacion'] . "</td>";
             echo "<td id='acabado_solidos'>" . $acabado['solidos'] . "</td>";
 
-            echo "<td><input id='acabado_espesor' name='acabado_espesor' type='number' class='form-control' value='" . $acabado_espesor. "'></td>";
+            echo "<td><input id='acabado_espesor' name='acabado_espesor' step='any' min='0' max='100' type='number' class='form-control' value='" . $acabado_espesor. "'></td>";
       
             echo "<td><input readonly class='form-control' name='acabado_rendimiento_teorico' id='acabado_rendimiento_teorico'></td>";
 

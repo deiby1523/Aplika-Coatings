@@ -11,6 +11,8 @@ $dbname = 'recubrimientos';
 
 $conexion = mysqli_connect( $host, $username, $password ) or die ("No se ha podido conectar al servidor de Base de datos");
 $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a la base de datos");
+$charset = mysqli_set_charset($conexion, "utf8");
+
 
 #var_dump($_POST);
 

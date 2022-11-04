@@ -17,6 +17,8 @@ $dbname = 'recubrimientos';
 
 $conexion = mysqli_connect( $host, $db_username, $db_password ) or die ("No se ha podido conectar al servidor de Base de datos");
 $db = mysqli_select_db( $conexion, $dbname) or die ("No se ha podido conectar a la base de datos");
+$charset = mysqli_set_charset($conexion, "utf8");
+
    
   // Consulta segura para evitar inyecciones SQL.
   $consulta = "SELECT * FROM user WHERE username='$username' AND password=SHA2('$password',256)";

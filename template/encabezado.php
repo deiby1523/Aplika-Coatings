@@ -89,7 +89,7 @@ if ($_SESSION['user_rol'] == 'admin') {
                     <ul class="menu-vertical">
                         <li><a class="underline" <?php if($Pagina == 'Solicitud_General') { echo ("style='color: #F28E2A;'"); } ?> href="sistema_general.php?pag_actual=Solicitud General">Generales</a></li>
                         <li><a class="underline" <?php if($Pagina == 'Solicitud_Espeficica') { echo ("style='color: #F28E2A;'"); } ?>href="sistema_especifico.php?pag_actual=Solicitud Especifica">Especificos</a></li>
-                        <li><a class="underline" <?php if($Pagina == 'Normas') { echo ("style='color: #F28E2A;'"); } ?>href="#">Normas</a></li>
+                        <li><a class="underline" <?php if($Pagina == 'Normas') { echo ("style='color: #F28E2A;'"); } ?>href="norma.php">Normas</a></li>
                     </ul>
                 </li>
                 <li><a class="underline" href="cerrar_sesion.php">Salir &nbsp<i class="fa-solid fa-right-from-bracket"></i></a></li>

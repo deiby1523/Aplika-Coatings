@@ -34,7 +34,7 @@ input[type=number] { -moz-appearance:textfield; }
 }
 .menu img {
    height: 50px;
-   width: 13rem;
+   width: 10rem;
    margin: 0 12px;
 }
 
@@ -42,11 +42,13 @@ header ul {
     display: flex;
     position: sticky;
     top: 0;
+    z-index: 10000;
 }
 
 header ul li {
     margin: 0 20px;
     list-style-type: none;
+    z-index: 10000;
 }
 
 header ul li a {
@@ -57,6 +59,7 @@ header ul li a {
     letter-spacing: 0.5px;
     padding: 0 10px;
     font-size: 20px;
+    z-index: 10000;
 }
 
 header .menu ul li ul{
@@ -194,6 +197,14 @@ div .add{
 
 div .add2{
     width: 100% ;
+}
+
+div .add2 label{
+    width: 8rem;
+}
+
+div #seccion_area label{
+    width: 8rem;
 }
 
 div .producto{

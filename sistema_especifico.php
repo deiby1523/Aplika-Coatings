@@ -52,20 +52,20 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
             
 <!--------------------------------------------- Selects sistema especifico  -------------------------------------------------------------------------->
                     
-                    <div id="seccion_usos" class="input-group add">        
+                    <div id="seccion_usos" class="input-group add2">        
                     </div>
 
-                    <div id="seccion_temperaturas" class="input-group add">
+                    <div id="seccion_temperaturas" class="input-group add2">
                     </div>
 
-                    <div id="seccion_sistemas" class="input-group add">
+                    <div id="seccion_sistemas" class="input-group add2">
                     </div>
 
-                    <div id="seccion_area" class="input-group add" style="height: 60px;">
+                    <div id="seccion_area" class="input-group add2" style="height: 60px;">
                         
                     </div>
                 </div>
-                <div class="col" id="panel_productos">
+                <div class="col" id="panel_productos add2">
                 </div>
             </div>
             
@@ -212,7 +212,7 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
             		    </div>
                         <div class="agregar col-md-6">
             			    <div class="agrega d-grid gap-2">
-            				    <button class="btn btn-succes" type="submit">Generar Tabla</button>
+            				    <button class="btn btn-succes" disabled type="submit">Generar Tabla</button>
                     	    </div>
             		    </div>
             	    </div>

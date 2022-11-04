@@ -5,14 +5,23 @@
 	--color-segundarioGrisClaro1: #A6A6A6;
 	--color-segundarioGrisClaro2: #C4C4C5;
 	--color-segundarioNaranjaClaro: #F8A556; 
+    --blur: 20px;
 }
 
+
 body{
-    background: linear-gradient(var(--color-principalGris), var(--color-segundarioGrisClaro1));
+    box-shadow: 0 15px 25px rgba(0,0,0,.20);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;  
     background-attachment: fixed;
+}
+
+.bacground_home{
+    filter: blur(3px);
+    height: 130vh;
+    width: 100%;
+    background-repeat: no-repeat;
 }
 
 .home{

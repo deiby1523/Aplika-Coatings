@@ -14,9 +14,18 @@
     <title>Document</title>
 </head>
 <body>
+    <img class="bacground_home"src="img/proyecto_aplika_es1557157705">
        <div class="home">
             <img src="img/LogoAPK.png">
         </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+               
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 <?php include("template/pie.php");?>

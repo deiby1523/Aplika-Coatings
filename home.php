@@ -18,14 +18,6 @@
        <div class="home">
             <img src="img/LogoAPK.png">
         </div>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-               
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
 <?php include("template/pie.php");?>

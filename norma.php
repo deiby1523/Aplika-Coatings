@@ -87,7 +87,7 @@ if (isset($_GET['msg'])){
 	<div class="row">
         <div class="col-md-12 button_Crear">
 			<div class="d-grid gap-2">
-				<a class="btn btn-succes" href="crear_norma.php?pag_actual=Crear norma">Nueva Norma</a>
+				<a class="btn btn-succes"href="crear_norma.php?pag_actual=Crear norma">Nueva Norma</a>
         	</div>
 		</div>
 		

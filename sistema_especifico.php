@@ -37,7 +37,7 @@ $usos = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la con
         <form method='POST' class='form-control form-data' action='tabla_especifica.php'>
             <div class="row">
                 <div class="col">
-                    <div class="input-group add mb-2">
+                    <div class="input-group add2 mb-2">
                         <label class="input-group-text amp " for="inputGroupSelect01"><strong>Entidad</strong></label>
                         <select name="select_cliente" class="form-select" id="select_cliente" required>
                             <option selected></option>

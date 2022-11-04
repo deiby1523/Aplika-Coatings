@@ -111,7 +111,7 @@ $imagenBase643 = "data:image/jpg;base64," . base64_encode(file_get_contents($nom
 
 
 <div class="container_general">
-	<br><br><br><br>
+	<br><br><br><br><br>
 
 	<p style="margin-left: 5.5%;font-size: 20px; margin-top:5rem; font-family: Helvetica">
 		Señor(a) <br>
@@ -147,17 +147,17 @@ if ($system_name != "") {
 
 	<thead style="border: solid black 1px">
 		<tr>
-			<th style="text-align: center; vertical-align: middle; margin-rigth:2px; margin:3px" class='col-sm-1'>Código</th>
-			<th style='text-align: center; vertical-align: middle; width: 110%;'>Producto</th>
-			<th style="text-align: center; vertical-align: middle;" class='col-sm-1'>Presentacion</th>
-			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>Solidos % </th>
-			<th style='text-align: center; vertical-align: middle;' class='col-sm-1'>EPS(Mils)</th>
-			<th style='text-align: center; vertical-align: middle;'>Rendimiento Teórico Mts2/GAL</th>
-            <th style='text-align: center; vertical-align: middle;'>Desperdicio</th>
-			<th style='text-align: center; vertical-align: middle;'>Rendimiento Práctico Mt2/GAL</th>
-            <th style='text-align: center; vertical-align: middle; width: 70px' class='col-sm-2'>Area Mt2</th>
-            <th style='text-align: center; vertical-align: middle;'>Cantidad de galones</th>
-            <th style='text-align: center; vertical-align: middle;'>Cantidad de Unidades</th>
+			<th style="text-align: center; vertical-align: middle; margin-rigth:2px; margin:3px; border: solid black 1px" class='col-sm-1'>Código</th>
+			<th style='text-align: center; vertical-align: middle; width: 110%; border: solid black 1px'>Producto</th>
+			<th style="text-align: center; vertical-align: middle; border: solid black 1px" class='col-sm-1'>Presentacion (GAL)</th>
+			<th style='text-align: center; vertical-align: middle; border: solid black 1px' class='col-sm-1'>Solidos % </th>
+			<th style='text-align: center; vertical-align: middle; border: solid black 1px' class='col-sm-1'>EPS(Mils)</th>
+			<th style='text-align: center; vertical-align: middle; border: solid black 1px'>Rendimiento Teórico Mts2/GAL</th>
+            <th style='text-align: center; vertical-align: middle; border: solid black 1px'>Desperdicio %</th>
+			<th style='text-align: center; vertical-align: middle; border: solid black 1px'>Rendimiento Práctico Mt2/GAL</th>
+            <th style='text-align: center; vertical-align: middle; border: solid black 1px width: 70px' class='col-sm-2'>Area Mt2</th>
+            <th style='text-align: center; vertical-align: middle; border: solid black 1px'>Cantidad de galones</th>
+            <th style='text-align: center; vertical-align: middle; border: solid black 1px'>Cantidad de Unidades</th>
 		</tr>
 	</thead>
 	  <tbody style="border: solid black 1px; border-spacing: 0px">

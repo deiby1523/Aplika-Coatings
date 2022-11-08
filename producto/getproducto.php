@@ -41,7 +41,7 @@ if($_POST['busqueda'] != '') {
             while ($producto = mysqli_fetch_array( $resultado))
             {
             echo "<tr>";
-            echo "<td>" . $producto['referencia'] . "</td><td>" . $producto['producto'] . "</td><td>" . $producto['tipo'] . "</td><td>" . $producto['capa'] . "</td><td>" . $producto['presentacion'] . "</td><td><a href='editar_producto.php?id=".$producto['id']."'"." class='btn'><i class='fa-solid fa-pencil'></i></a><a href='eliminar_producto.php?id=".$producto['id']."'"." class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
+            echo "<td>" . $producto['referencia'] . "</td><td>" . $producto['producto'] . "</td><td>" . $producto['tipo'] . "</td><td>" . $producto['capa'] . "</td><td>" . $producto['presentacion'] . "</td><td><a href='eliminar_producto.php?id=".$producto['id']."'"." class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
             echo "</tr>";
             }
             ?>
@@ -77,7 +77,7 @@ if($_POST['busqueda'] != '') {
             while ($producto = mysqli_fetch_array( $resultado))
             {
             echo "<tr>";
-            echo "<td>" . $producto['referencia'] . "</td><td>" . $producto['producto'] . "</td><td>" . $producto['tipo'] . "</td><td>" . $producto['capa'] . "</td><td>" . $producto['presentacion'] . "</td><td><a href='editar_producto.php?id=".$producto['id']."'"." class='btn'><i class='fa-solid fa-pencil'></i></a><a href='eliminar_producto.php?id=".$producto['id']."'"." class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
+            echo "<td>" . $producto['referencia'] . "</td><td>" . $producto['producto'] . "</td><td>" . $producto['tipo'] . "</td><td>" . $producto['capa'] . "</td><td>" . $producto['presentacion'] . "</td><td><a href='eliminar_producto.php?id=".$producto['id']."'"." class='btn'><i class='fa-solid fa-trash-can'></i></a></td>";
             echo "</tr>";
             }
             ?>
